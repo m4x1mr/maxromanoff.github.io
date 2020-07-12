@@ -131,7 +131,8 @@ a {
 }
 
 .project-tile:hover {
-    background-color: #f8f8f8;
+    background-color: #f4f4f4;
+    border: 0.5px solid #d1d1d1;
     opacity: 1;
     transform: rotate(1.15deg);
 }
