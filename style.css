@@ -15,14 +15,6 @@ body {
     transition: ease-in-out 0.5s;
 }
 
-.home {
-    background-color: white;
-}
-
-.home .topnav {
-    box-shadow: none;
-}
-
 h1 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 2.5em;
@@ -64,10 +56,9 @@ a {
 .topnav {
     grid-column: 1 / span 12;
     display: block;
-    /*overflow: hidden;*/
     position: sticky;
     top: 0;
-    height: 4.2em;
+    height: 4em;
     transition: top 0.25s;
     background-color: white;
     z-index: 1;
@@ -75,9 +66,13 @@ a {
 }
 
 .logo-me {
-    max-height: 55px;
-    padding: 0.75em 1.5em;
+    max-height: 50px;
+    padding: 0.5em 1.5em;
     transition: ease-in-out 0.2s;
+}
+
+.topnav .icon{
+    padding: 1.5em 1.5em;
 }
 
 .logo-me:hover {
@@ -105,7 +100,7 @@ a {
 }
 
 .menu-links a {
-    padding: 1.75em 1.5em;
+    padding: 1.5em 1.5em;
 }
 
 .left-side {
@@ -197,6 +192,10 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+    .topnav {
+        height: unset;
+    }
+
     h1 {
         font-size: 1.7em;
     }
@@ -225,9 +224,6 @@ footer {
     .menu-links a {
         display: none;
     }
-    .topnav {
-        height: unset;
-    }
     .topnav a.icon {
         float: right;
         display: block;
@@ -236,10 +232,13 @@ footer {
         position: absolute;
         right: 0;
         top: 0;
+        border-bottom: none;
+
     }
     .topnav.responsive a {
         float: none;
         display: block;
         text-align: left;
+        border-bottom: 0.5px solid #eeeeee;
     }
 }
