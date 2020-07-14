@@ -108,10 +108,6 @@ a {
     line-height: 1;
 }
 
-.menu-links a:hover {
-    opacity: 0.45;
-}
-
 .topnav .icon {
     display: none;
 }
@@ -122,6 +118,10 @@ a {
 
 .menu-links a {
     padding: 1.5em 1.5em;
+}
+
+.menu-links a:hover {
+    opacity: 0.45;
 }
 
 .left-side {
@@ -210,6 +210,10 @@ footer {
     left: 0;
     right: 0;
     position: absolute;
+}
+
+footer a:hover{
+    opacity: 0.45;
 }
 
 @media screen and (max-width: 800px) {
