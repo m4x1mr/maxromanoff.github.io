@@ -11,7 +11,7 @@ body {
     row-gap: 10px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 18px;
-    background-color: #fafafa;
+    background-color: #fcfafa;
     transition: ease-in-out 0.5s;
 }
 
@@ -81,9 +81,9 @@ a {
     top: 0;
     height: 4em;
     transition: top 0.25s;
-    background-color: white;
+    background-color: #fcfafa;
     z-index: 1;
-    box-shadow: 1px -20px 50px #00000015;
+    border-bottom: 0.5px solid rgb(219, 219, 219);
 }
 
 .logo-me {
