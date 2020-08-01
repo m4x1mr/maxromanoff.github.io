@@ -10,29 +10,36 @@ body {
     column-gap: 10px;
     row-gap: 10px;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 18px;
     background-color: #fcfafa;
-    transition: ease-in-out 0.5s;
 }
 
-::selection{
+::selection {
     background: black;
     color: white;
 }
-#spotify ::selection{
+
+#spotify ::selection {
     background: #15ad4a;
     color: white;
 }
- #recipeflow ::selection{
+
+#recipeflow ::selection {
     background: rgb(185, 116, 12);
     color: white;
 }
-#raincheque ::selection{
+
+#raincheque ::selection {
     background: #6c48e5;
     color: white;
 }
-#capstone ::selection{
+
+#capstone ::selection {
     background: #3cb3e0;
+    color: white;
+}
+
+#News ::selection {
+    background: #467feb;
     color: white;
 }
 
@@ -58,6 +65,13 @@ h3 {
     line-height: 1.5;
 }
 
+h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0.5em 0;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
 p {
     font-size: 1em;
     line-height: 1.75;
@@ -80,7 +94,6 @@ a {
     position: sticky;
     top: 0;
     height: 4em;
-    transition: top 0.25s;
     background-color: #fcfafa;
     z-index: 1;
     border-bottom: 0.5px solid rgb(228, 228, 228);
@@ -92,12 +105,12 @@ a {
     transition: ease-in-out 0.2s;
 }
 
-.topnav .icon{
-    padding: 1.5em 1.5em;
-}
-
 .logo-me:hover {
     transform: rotate(5deg);
+}
+
+.topnav .icon {
+    padding: 1.5em 1.5em;
 }
 
 .topnav a {
@@ -124,23 +137,15 @@ a {
     opacity: 0.45;
 }
 
-.left-side {
-    grid-column: 1 / span 4;
-    padding: 0 1.5em 0 1.5em;
-}
-
 .right-side {
-    grid-column: span 8;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 10px;
     row-gap: 10px;
-    padding: 0.5em 1em;
 }
 
 .project-tile {
-    grid-column: span 6;
-    padding: 0.5em 0.5em;
+    padding: 1em;
     transition: ease-in-out 0.2s;
     text-decoration: none;
     border-radius: 0.2em;
@@ -154,7 +159,25 @@ a {
 .project-tile img {
     grid-column: 1/-1;
     width: 100%;
+    border-radius: 0.1em;
+}
+
+.small-project {
+    transition: ease-in-out 0.2s;
+    text-decoration: none;
     border-radius: 0.2em;
+    padding: 1em;
+}
+
+.small-project:hover {
+    background-color: #f5f5f5;
+    opacity: 1;
+}
+
+.small-project img {
+    grid-column: 1/-1;
+    width: 100%;
+    border-radius: 0.1em;
 }
 
 article {
@@ -166,12 +189,11 @@ article {
     padding: 0 1.5em;
 }
 
-article a:hover{
+article a:hover {
     opacity: 0.45;
 }
 
 section {
-    grid-column: 4 / span 6;
     margin-top: 4em;
     margin-bottom: 2em;
 }
@@ -203,7 +225,7 @@ video {
 
 footer {
     grid-column: 1 / span 12;
-    background-color: #f5f5f5;
+    background-color: #f6f6f6;
     padding: 1em 1.5em;
     bottom: 0;
     left: 0;
@@ -211,15 +233,71 @@ footer {
     position: absolute;
 }
 
-footer a:hover{
+footer a:hover {
     opacity: 0.45;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 15px;
+    }
+    section {
+        grid-column: 3 / span 8;
+    }
+    .left-side {
+        grid-column: 1 / span 4;
+        padding: 0 1em;
+    }
+    .right-side {
+        grid-column: span 8;
+        padding: 0.5em;
+    }
+    .project-tile {
+        grid-column: span 6;
+
+    }
+    .small-project {
+        grid-column: span 4;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+    section {
+        grid-column: 4 / span 6;
+    }
+    .left-side {
+        grid-column: 1 / span 4;
+        padding: 0 1.5em;
+    }
+    .right-side {
+        grid-column: span 8;
+        padding: 0.5em 1em;
+    }
+    .project-tile {
+        grid-column: span 6;
+
+    }
+    .small-project {
+        grid-column: span 4;
+        font-size: 0.85em;
+    }
+}
+
+/*
+    For screen sizes lower than 800px
+*/
+
+@media screen and (max-width: 799px) {
+    body {
+        font-size: 18px;
+    }
     .topnav {
         height: unset;
     }
-
     h1 {
         font-size: 1.7em;
     }
@@ -229,8 +307,15 @@ footer a:hover{
     h3, p {
         font-size: 0.8em;
     }
-    .left-side, .right-side, .project-tile, section, .img-lrg, .img-med {
+    .left-side, .right-side, .project-tile, .small-project, section, .img-lrg, .img-med {
         grid-column: 1 / span 12;
+    }
+
+    .left-side {
+        padding: 0 1.5em;
+    }
+    .right-side {
+        padding: 2.5em 0.5em;
     }
     article {
         padding-left: 1em;
@@ -257,7 +342,6 @@ footer a:hover{
         right: 0;
         top: 0;
         border-bottom: none;
-
     }
     .topnav.responsive a {
         float: none;
