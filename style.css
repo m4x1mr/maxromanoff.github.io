@@ -142,7 +142,21 @@ a {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 10px;
     row-gap: 10px;
+    animation: slidein .5s both;
+    animation-delay: 0.2s;
 }
+
+@keyframes slidein{
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 
 .project-tile {
     padding: 1em;
