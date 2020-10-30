@@ -278,7 +278,7 @@ footer a:hover {
 
 @media screen and (min-width: 1200px) {
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
     section {
         grid-column: 4 / span 6;
