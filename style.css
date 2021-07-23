@@ -9,7 +9,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 10px;
     row-gap: 10px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family:  'IBM Plex Sans', sans-serif;
     background-color: #fcfafa;
 }
 
