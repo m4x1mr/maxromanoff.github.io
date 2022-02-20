@@ -5,112 +5,90 @@
 }
 
 body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
-    font-family:  'IBM Plex Sans', sans-serif;
-    background-color: #fcfafa;
+    /*display: grid;*/
+    font-family: 'Helvetica Neue', Helvetica, 'Open Sans', sans-serif;
+    background-color: #f1f1f1;
 }
 
-::selection {
-    background: black;
-    color: white;
-}
-
-#spotify ::selection {
-    background: #15ad4a;
-    color: white;
-}
-
-#recipeflow ::selection {
-    background: rgb(185, 116, 12);
-    color: white;
-}
-
-#raincheque ::selection {
-    background: #6c48e5;
-    color: white;
-}
-
-#capstone ::selection {
-    background: #3cb3e0;
-    color: white;
-}
-
-#News ::selection {
-    background: #467feb;
-    color: white;
-}
+/*
+*
+*
+*
+*
+*** Fonts
+*
+*
+*/
 
 h1 {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    font-weight: 500;
+    font-weight: 400;
+    color: #333333;
 }
 
 h2 {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1.8em;
-    margin: 0.5em 0;
     font-weight: 400;
+    color: #333333;
 }
 
 h3 {
-    font-size: 1em;
-    color: rgb(168, 168, 168);
-    margin: 0.5em 0;
     font-weight: 400;
-    line-height: 1.5;
+    color: #333333;
 }
 
 h4 {
-    font-family: 'IBM Plex Sans', sans-serif;
-    margin: 0.5em 0;
-    font-size: 1.4em;
-    font-weight: 500;
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: -0.9px;
+}
+
+h5 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: normal;
+    color: #a1a1a1;
+    text-transform: uppercase;
 }
 
 p {
-    font-size: 1em;
-    line-height: 1.75;
-    color: #464646;
-    letter-spacing: -0.01em;
-}
-
-strong {
-    color: black;
+    font-weight: 400;
+    color: #333333;
+    letter-spacing: -0.15px;
 }
 
 a {
-    color: black;
-    transition: ease-in-out 0.1s;
+    color: #000000;
+    text-decoration: underline;
 }
+
+img {
+    width: 100%;
+}
+
+/*
+*
+*
+*
+*
+*** Top Nav
+*
+*
+*/
 
 .topnav {
-    grid-column: 1 / span 12;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     position: sticky;
     top: 0;
-    height: 4em;
-    background-color: #fcfafa;
     z-index: 1;
-    border-bottom: 0.5px solid rgb(228, 228, 228);
-}
-
-.logo-me {
-    max-height: 50px;
-    padding: 0.5em 1.5em;
-    transition: ease-in-out 0.2s;
-}
-
-.logo-me:hover {
-    transform: rotate(5deg);
+    background-color: #f1f1f1;
 }
 
 .topnav .icon {
-    padding: 1.5em 1.5em;
+    display: none;
+}
+
+.topnav #name {
+    font-weight: 700;
 }
 
 .topnav a {
@@ -121,246 +99,515 @@ a {
     line-height: 1;
 }
 
-.topnav .icon {
-    display: none;
-}
-
 .menu-links {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
     float: right;
 }
 
 .menu-links a {
-    padding: 1.5em 1.5em;
+    color: #a1a1a1;
+    font-weight: 400;
+    transition: 0.15s;
 }
 
 .menu-links a:hover {
-    opacity: 0.45;
+    color: #333333;
 }
 
-.right-side {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
-    animation: slidein .5s both;
-    animation-delay: 0.2s;
+.menu-links #active {
+    color: #333333;
 }
 
-@keyframes slidein{
-    0%{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
+/*
+**
+*/
 
+/* The Overlay (background) */
 
-.project-tile {
-    padding: 1em;
-    transition: ease-in-out 0.2s;
-    text-decoration: none;
-    border-radius: 0.2em;
-}
-
-.project-tile:hover {
-    background-color: #f5f5f5;
-    opacity: 1;
-}
-
-.project-tile img {
-    grid-column: 1/-1;
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    height: 100%;
+    opacity: 0;
+    margin-top: 200%;
     width: 100%;
-    border-radius: 0.1em;
-}
-
-.small-project {
-    transition: ease-in-out 0.2s;
-    text-decoration: none;
-    border-radius: 0.2em;
-    padding: 1em;
-}
-
-.small-project:hover {
-    background-color: #f5f5f5;
-    opacity: 1;
-}
-
-.small-project img {
-    grid-column: 1/-1;
-    width: 100%;
-    border-radius: 0.1em;
-}
-
-article {
-    grid-column: 1 / span 12;
-    display: grid;
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-columns: repeat(12, 1fr);
-    padding: 0 1.5em;
-}
-
-article a:hover {
-    opacity: 0.45;
-}
-
-section {
-    margin-top: 4em;
-    margin-bottom: 2em;
-}
-
-section img {
-    width: 100%;
-    margin: 2em 0;
-}
-
-video {
-    width: 100%;
-    height: auto;
-}
-
-.img-full {
-    grid-column: 1/-1;
-    width: 100%;
-}
-
-.img-lrg {
-    grid-column: 2/ span 10;
-    width: 100%;
-}
-
-.img-med {
-    grid-column: span 6;
-    width: 100%;
-}
-
-footer {
-    grid-column: 1 / span 12;
-    background-color: #f6f6f6;
-    padding: 1em 1.5em;
-    bottom: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
-    right: 0;
+    top: 60px;
+    background-color: #f1f1f1;
+    /* Black fallback color */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.35s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.open {
+    margin-top: 0;
+    opacity: 1;
+}
+
+.bar1, .bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(2px, 7px);
+    transform: rotate(-45deg) translate(2px, 7px);
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(0px, -8px);
+    transform: rotate(45deg) translate(0px, -8px);
+}
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+}
+
+/* The navigation links inside the overlay */
+
+.overlay a {
+    text-decoration: none;
+    font-size: 36px;
+    color: #a1a1a1;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+    float: none;
+    padding: 16px;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay a:hover, .overlay a:focus {
+    color: #333333;
+}
+
+/* Position the close button (top right corner) */
+
+.topnav .closebtn {
     position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
 }
 
-footer a:hover {
-    opacity: 0.45;
+/*
+*
+*
+*
+*
+*** Right Side for Index page
+*
+*
+*/
+
+.main, .text {
+    display: grid;
 }
 
-@media screen and (min-width: 800px) {
-    body {
-        font-size: 15px;
-    }
-    section {
-        grid-column: 3 / span 8;
-    }
-    .left-side {
-        grid-column: 1 / span 4;
-        padding: 0 1em;
-    }
-    .right-side {
-        grid-column: span 8;
-        padding: 0.5em;
-    }
-    .project-tile {
-        grid-column: span 6;
-
-    }
-    .small-project {
-        grid-column: span 4;
-        font-size: 0.9em;
-    }
+.projects {
+    display: grid;
+    animation: slidein .55s both;
+    animation-delay: 0.15s;
 }
 
-@media screen and (min-width: 1200px) {
-    body {
-        font-size: 16px;
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
     }
-    section {
-        grid-column: 4 / span 6;
-    }
-    .left-side {
-        grid-column: 1 / span 4;
-        padding: 0 1.5em;
-    }
-    .right-side {
-        grid-column: span 8;
-        padding: 0.5em 1em;
-    }
-    .project-tile {
-        grid-column: span 6;
 
-    }
-    .small-project {
-        grid-column: span 4;
-        font-size: 0.85em;
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 
 /*
-    For screen sizes lower than 800px
+*
+*
+*
+*
+*** Projects
+*
+*
 */
 
-@media screen and (max-width: 799px) {
-    body {
-        font-size: 18px;
-    }
+.project-tile {
+    transition: ease-in-out 0.2s;
+    text-decoration: none;
+}
+
+.project-img {
+    overflow: hidden;
+    margin-bottom: 8px;
+    /*
+    *** https://cssgradient.io
+    */
+}
+
+.project-img img {
+    grid-column: 1/-1;
+    width: 100%;
+    border-radius: 0.1em;
+    transition: transform .4s;
+}
+
+.project-img img:hover {
+    transform: scale(1.02);
+}
+
+/*
+*
+*
+*
+*
+*** Selection Styles
+*
+*
+*/
+
+::selection {
+    background: black;
+    color: white;
+}
+
+@media screen and (min-width: 900px) {
+
+    /*
+    *** 900 + Screensize
+    */
     .topnav {
-        height: unset;
-    }
-    h1 {
-        font-size: 1.7em;
-    }
-    h2 {
-        font-size: 1.3em;
-    }
-    h3, p {
-        font-size: 0.8em;
-    }
-    .left-side, .right-side, .project-tile, .small-project, section, .img-lrg, .img-med {
-        grid-column: 1 / span 12;
+        font-size: 20px;
+        margin-bottom: 48px;
     }
 
-    .left-side {
-        padding: 0 1.5em;
+    .topnav a, .topnav .icon {
+        padding: 24px 40px;
     }
-    .right-side {
-        padding: 2.5em 0.5em;
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 16px;
+        row-gap: 52px;
+        margin: 0 40px;
     }
-    article {
-        padding-left: 1em;
-        padding-right: 1em;
+
+    .text-intro {
+        grid-column: 1 / span 4;
     }
-    section {
-        margin-top: 2em;
+
+    .projects {
+        grid-column: 1 / span 8;
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 16px;
+        row-gap: 48px;
     }
+
+    .project-tile {
+        grid-column: span 4;
+    }
+
+    .project-img {
+        /*padding: 80px;*/
+    }
+
+    /*
+    *** Inside Pages
+    */
+    .project-title {
+        grid-column: span 8;
+        margin: 24px 0 16px 0;
+    }
+
+    .quote {
+        grid-column: span 6;
+        margin: 32px 0 0 0;
+    }
+
+    .small-info {
+        grid-column: span 4;
+        margin: 36px 0 36px 0;
+    }
+
+    .img-full {
+        grid-column: span 8;
+        /*height: 700px;
+        background-color: #c9c9c9;*/
+    }
+
+    .gif-full {
+        grid-column: span 8;
+        padding: 128px;
+        background: rgb(60,179,224);
+        background: linear-gradient(124deg, rgba(60,179,224,0.20) 0%, rgba(254,208,244,0.1) 100%);
+    }
+
+    .video-full {
+        grid-column: span 8;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+    }
+
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-half {
+        grid-column: span 4;
+        /*height: 700px;
+        background-color: #c9c9c9;*/
+    }
+
+    .text {
+        grid-column: span 8;
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 16px;
+        row-gap: 24px;
+        margin: 96px 0 0 0;
+    }
+
+    .text-heading {
+        grid-column: 1 / span 3;
+    }
+
+    .text-body {
+        grid-column: 5 / span 4;
+    }
+
     footer {
-        position: unset;
+        grid-column: 1 / span 8;
+        padding: 30px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 128px;
+        position: relative;
     }
+    #abs-footer {
+        position: absolute;
+    }
+
+    /*
+    *** Fonts
+    */
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 34px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 899px) {
+
+    /*
+    *** < 800px Screensize
+    */
+    body {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 32px;
+    }
+
+    /*
+    *** Nav bar
+    */
+    .topnav {
+        grid-column: 1 / span 4;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .topnav #name, .topnav .icon {
+        padding: 20px;
+    }
+
     .menu-links {
         float: none;
     }
+
     .menu-links a {
         display: none;
     }
+
     .topnav a.icon {
         float: right;
         display: block;
     }
+
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
         border-bottom: none;
     }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-        border-bottom: 0.5px solid #eeeeee;
+
+    /*
+    *** Home Page
+    */
+    .text-intro {
+        margin: 48px 0;
+    }
+
+    .text-intro, .projects, .project-tile {
+        grid-column: 1 / span 4;
+    }
+
+    .projects {
+        row-gap: 48px;
+    }
+
+    .main {
+        grid-column: span 4;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 32px;
+        row-gap: 40px;
+        margin: 0 20px;
+    }
+
+    /*
+    *** Inside Pages
+    */
+    .text {
+        grid-column: span 4;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 32px;
+        row-gap: 16px;
+        margin: 40px 0 0 0;
+    }
+
+    .text-heading, .text-body {
+        grid-column: span 4;
+    }
+
+    .project-title {
+        grid-column: span 4;
+        margin: 48px 0;
+    }
+
+    .quote {
+        grid-column: span 4;
+        margin: 32px 0;
+    }
+
+    .small-info {
+        grid-column: span 4;
+    }
+
+    .img-full {
+        grid-column: span 4;
+    }
+
+    .gif-full {
+        grid-column: span 4;
+    }
+
+    .img-half {
+        grid-column: span 4;
+    }
+
+    .video-full {
+        grid-column: span 4;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .responsive-iframe {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*
+    *** Fonts
+    */
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h5 {
+        line-height: 1;
+        font-size: 12px;
+    }
+
+    h4, p {
+        font-size: 16px;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    footer {
+        grid-column: 1 / span 4;
+        padding: 20px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 64px;
+    }
+    #abs-footer {
+        position: relative;
     }
 }
