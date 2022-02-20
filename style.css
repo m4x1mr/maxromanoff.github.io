@@ -7,7 +7,7 @@
 body {
     /*display: grid;*/
     font-family: 'Helvetica Neue', Helvetica, 'Open Sans', sans-serif;
-    background-color: #f1f1f1;
+    background-color: #000000;
 }
 
 /*
@@ -22,40 +22,47 @@ body {
 
 h1 {
     font-weight: 400;
-    color: #333333;
+    /*color: #333333;*/
+    color: #fff;
 }
 
 h2 {
     font-weight: 400;
-    color: #333333;
+    /*color: #333333;*/
+    color: #fff;
 }
 
 h3 {
     font-weight: 400;
-    color: #333333;
+    /*color: #333333;*/
+    color: #fff;
 }
 
 h4 {
     font-weight: 700;
-    color: #333333;
+        /*color: #333333;*/
+        color: #fff;
     letter-spacing: -0.9px;
 }
 
 h5 {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: normal;
-    color: #a1a1a1;
+        /*color: #333333;*/
+        color: rgb(214, 214, 214);
     text-transform: uppercase;
 }
 
 p {
     font-weight: 400;
-    color: #333333;
+        /*color: #333333;*/
+        color: #fff;
     letter-spacing: -0.15px;
 }
 
 a {
-    color: #000000;
+        /*color: #333333;*/
+        color: #fff;
     text-decoration: underline;
 }
 
@@ -80,7 +87,6 @@ img {
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: #f1f1f1;
 }
 
 .topnav .icon {
@@ -106,17 +112,19 @@ img {
 }
 
 .menu-links a {
-    color: #a1a1a1;
+    color: #c9c9c9;
     font-weight: 400;
     transition: 0.15s;
 }
 
 .menu-links a:hover {
-    color: #333333;
+        /*color: #333333;*/
+        color: #fff;
 }
 
 .menu-links #active {
-    color: #333333;
+        /*color: #333333;*/
+        color: #fff;
 }
 
 /*
@@ -139,7 +147,7 @@ img {
     /* Sit on top */
     left: 0;
     top: 60px;
-    background-color: #f1f1f1;
+    background-color: #000000;
     /* Black fallback color */
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -155,7 +163,7 @@ img {
 .bar1, .bar3 {
     width: 28px;
     height: 3px;
-    background-color: #333;
+    background-color: #fff;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -187,7 +195,7 @@ img {
 .overlay a {
     text-decoration: none;
     font-size: 36px;
-    color: #a1a1a1;
+    color: #fff;
     display: block;
     /* Display block instead of inline */
     transition: 0.3s;
@@ -199,7 +207,7 @@ img {
 /* When you mouse over the navigation links, change their color */
 
 .overlay a:hover, .overlay a:focus {
-    color: #333333;
+    color: #fff;
 }
 
 /* Position the close button (top right corner) */
@@ -288,8 +296,8 @@ img {
 */
 
 ::selection {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
 }
 
 @media screen and (min-width: 900px) {
