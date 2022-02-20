@@ -616,6 +616,6 @@ img {
         margin-top: 64px;
     }
     #abs-footer {
-        position: relative;
+        position: absolute;
     }
 }
