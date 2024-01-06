@@ -88,6 +88,8 @@ img {
     position: sticky;
     top: 0;
     z-index: 1;
+    background-color: #000000;
+    border-bottom: 1.5px solid #3c3c3c;
 }
 
 .topnav .icon {
@@ -308,7 +310,7 @@ img {
     */
     .topnav {
         font-size: 20px;
-        margin-bottom: 48px;
+        margin-bottom: 32px;
     }
 
     .topnav a, .topnav .icon {
