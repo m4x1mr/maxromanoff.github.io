@@ -474,7 +474,7 @@ img {
         grid-column: 1 / span 4;
         grid-template-columns: repeat(4, 1fr);
         margin-top: 0;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .topnav #name, .topnav .icon {
@@ -505,7 +505,7 @@ img {
     *** Home Page
     */
     .text-intro {
-        margin: 48px 0;
+        margin: 32px 0;
     }
 
     .text-intro, .projects, .project-tile {
