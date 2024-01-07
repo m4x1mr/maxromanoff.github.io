@@ -312,6 +312,8 @@ img {
         margin: 0 40px;
         top: -100%;
         animation: slideDown 3s ease-out forwards; /* Animation for sliding down */
+        animation-delay: 1s; /* Delay the animation to start after 1 second */
+
     }
 
     @keyframes slideDown {
