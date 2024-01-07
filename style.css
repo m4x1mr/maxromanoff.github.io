@@ -302,7 +302,6 @@ img {
     body::before {
         content: "";
         position: fixed;
-        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -311,12 +310,13 @@ img {
         background: linear-gradient(to right, #1e1e1e 1px, transparent 1px);
         background-size: calc((100% - 1px)/ 8) 100%; /* Calculate the width of one column based on the number of columns */
         margin: 0 40px;
-        animation: backgroundLines 5s linear infinite; /* Animation for the background lines */
+        top: -100%;
+        animation: slideDown 3s ease-out forwards; /* Animation for sliding down */
     }
 
-    @keyframes backgroundLines {
+    @keyframes slideDown {
         to {
-            background-position: 0 100%;
+            top: 0; /* Slide down to the bottom of the viewport */
         }
     }
 
