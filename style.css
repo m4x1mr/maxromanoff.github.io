@@ -342,7 +342,7 @@ img {
     }
 
     .about-me {
-        grid-column: 1 / span 4;
+        grid-column: 6 / span 3;
     }
 
     .projects {
@@ -537,7 +537,7 @@ img {
     /*
     *** Home Page
     */
-    .text-intro, .about-me {
+    .text-intro {
         margin: 32px 0;
     }
 
