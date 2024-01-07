@@ -72,7 +72,7 @@ img {
     top: 0;
     z-index: 1;
     background-color: #121212;
-    border-bottom: 1px solid #1e1e1e;
+    border-bottom: 1px solid #232323;
 }
 
 .topnav .icon {
@@ -306,7 +306,7 @@ img {
         bottom: 1200px;
         z-index: -1;
         pointer-events: none;
-        background: linear-gradient(to right, #1e1e1e 1px, transparent 1px);
+        background: linear-gradient(to right, #232323 1px, transparent 1px);
         background-size: calc((100% - 1px)/ 8) 100%; /* Calculate the width of one column based on the number of columns */
         margin: 0 40px;
         top: 0;
@@ -490,7 +490,7 @@ img {
         bottom: 800px;
         z-index: -1;
         pointer-events: none;
-        background: linear-gradient(to right, #1e1e1e 1px, transparent 1px);
+        background: linear-gradient(to right, #232323 1px, transparent 1px);
         background-size: calc((100% - 1px)/ 4) 100%; /* Calculate the width of one column based on the number of columns */
         margin: 0 20px;
         animation: slideDown 2s ease-out forwards; /* Animation for sliding down */
