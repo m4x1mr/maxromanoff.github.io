@@ -389,9 +389,6 @@ img {
 
     .gif-full {
         grid-column: span 8;
-        padding: 128px;
-        background: rgb(60,179,224);
-        background: linear-gradient(124deg, rgba(60,179,224,0.20) 0%, rgba(254,208,244,0.1) 100%);
     }
 
     .video-full {
