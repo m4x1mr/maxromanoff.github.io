@@ -311,9 +311,14 @@ img {
         background: linear-gradient(to right, #1e1e1e 1px, transparent 1px);
         background-size: calc((100% - 1px)/ 8) 100%; /* Calculate the width of one column based on the number of columns */
         margin: 0 40px;
+        animation: backgroundLines 5s linear infinite; /* Animation for the background lines */
     }
 
-
+    @keyframes backgroundLines {
+        to {
+            background-position: 0 100%;
+        }
+    }
 
     /*
     *** 900 + Screensize
