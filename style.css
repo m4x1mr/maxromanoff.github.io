@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +8,28 @@
 
 body {
     /*display: grid;*/
-    font-family: 'Helvetica Neue', Helvetica, 'Open Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;    
     background-color: #000000;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Adjust the number of columns based on your layout */
+    background-color: #121212; /* Set the background color of the body */
+    position: relative;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(to right, #1e1e1e 1px, transparent 1px);
+    background-size: calc((100% - 1px)/ 8) 100%; /* Calculate the width of one column based on the number of columns */
+    margin: 0 40px;
+}
+
 
 /*
 *
@@ -19,29 +40,13 @@ body {
 *
 *
 */
-
-h1 {
+h1, h2, h3, h4 {
     font-weight: 400;
-    /*color: #333333;*/
-    color: #fff;
-}
-
-h2 {
-    font-weight: 400;
-    /*color: #333333;*/
-    color: #fff;
-}
-
-h3 {
-    font-weight: 400;
-    /*color: #333333;*/
     color: #fff;
 }
 
 h4 {
     font-weight: 700;
-        /*color: #333333;*/
-        color: #fff;
     letter-spacing: -0.9px;
 }
 
@@ -49,21 +54,18 @@ h5 {
     font-family: 'IBM Plex Mono', monospace;
     line-height: 1.5;
     font-weight: normal;
-        /*color: #333333;*/
-        color: rgb(214, 214, 214);
+    color: rgb(214, 214, 214);
     text-transform: uppercase;
 }
 
 p {
-    font-weight: 400;
-        /*color: #333333;*/
-        color: #fff;
-    letter-spacing: -0.15px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.1px;
 }
 
 a {
-        /*color: #333333;*/
-        color: #fff;
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -82,14 +84,14 @@ img {
 */
 
 .topnav {
-    display: flex;
+    grid-column: span 8;
     justify-content: space-between;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: #000000;
-    border-bottom: 1.5px solid #3c3c3c;
+    background-color: #121212;
+    border-bottom: 1px solid #1e1e1e;
 }
 
 .topnav .icon {
@@ -130,6 +132,7 @@ img {
         color: #fff;
 }
 
+
 /*
 **
 */
@@ -150,7 +153,7 @@ img {
     /* Sit on top */
     left: 0;
     top: 60px;
-    background-color: #000000;
+    background-color: #121212;
     /* Black fallback color */
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -233,7 +236,12 @@ img {
 */
 
 .main, .text {
+    grid-column: span 8;
+    margin: 0 40px;
     display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 0px;
+    row-gap: 52px; 
 }
 
 .projects {
@@ -271,7 +279,8 @@ img {
 
 .project-img {
     overflow: hidden;
-    margin-bottom: 8px;
+    margin: 2px;
+    background-color: #000;
     /*
     *** https://cssgradient.io
     */
@@ -280,7 +289,7 @@ img {
 .project-img img {
     grid-column: 1/-1;
     width: 100%;
-    border-radius: 0.1em;
+    border-radius: 0.25em;
     transition: transform .4s;
 }
 
@@ -320,7 +329,7 @@ img {
     .main {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        column-gap: 16px;
+        column-gap: 0px;
         row-gap: 52px;
         margin: 0 40px;
     }
@@ -332,7 +341,7 @@ img {
     .projects {
         grid-column: 1 / span 8;
         grid-template-columns: repeat(8, 1fr);
-        column-gap: 16px;
+        column-gap: 0px;
         row-gap: 48px;
     }
 
@@ -402,7 +411,7 @@ img {
     .text {
         grid-column: span 8;
         grid-template-columns: repeat(8, 1fr);
-        column-gap: 16px;
+        column-gap: 0px;
         row-gap: 24px;
         margin: 96px 0 0 0;
     }
@@ -452,7 +461,7 @@ img {
     }
 
     p {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.5;
     }
 }
