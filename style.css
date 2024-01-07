@@ -261,7 +261,6 @@ img {
 
 .project-img {
     overflow: hidden;
-    margin: 2px;
     background-color: #000;
     /*
     *** https://cssgradient.io
@@ -357,7 +356,7 @@ img {
     }
 
     .project-img {
-        /*padding: 80px;*/
+        margin: 2px;
     }
 
     /*
