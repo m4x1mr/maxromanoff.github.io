@@ -346,6 +346,10 @@ img {
         grid-column: 1 / span 5;
     }
 
+    .about-me {
+        grid-column: 1 / span 4;
+    }
+
     .projects {
         grid-column: 1 / span 8;
         grid-template-columns: repeat(8, 1fr);
@@ -538,11 +542,11 @@ img {
     /*
     *** Home Page
     */
-    .text-intro {
+    .text-intro, .about-me {
         margin: 32px 0;
     }
 
-    .text-intro, .projects, .project-tile {
+    .text-intro, .projects, .project-tile, .about-me {
         grid-column: 1 / span 4;
     }
 
