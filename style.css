@@ -9,7 +9,6 @@
 body {
     /*display: grid;*/
     font-family: 'IBM Plex Sans', sans-serif;    
-    background-color: #000000;
     display: grid;
     grid-template-columns: repeat(8, 1fr); /* Adjust the number of columns based on your layout */
     background-color: #121212; /* Set the background color of the body */
