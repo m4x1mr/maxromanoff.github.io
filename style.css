@@ -310,17 +310,17 @@ img {
         background: linear-gradient(to right, #1e1e1e 1px, transparent 1px);
         background-size: calc((100% - 1px)/ 8) 100%; /* Calculate the width of one column based on the number of columns */
         margin: 0 40px;
-        top: -100%;
-        animation: slideDown 3s ease-out forwards; /* Animation for sliding down */
-        animation-delay: 1s; /* Delay the animation to start after 1 second */
-
+        top: 1200px;
+        animation: slideUp 3s ease-out forwards; /* Animation for sliding down */
+        animation-delay: 0.15s; /* Delay the animation to start after 1 second */
     }
 
-    @keyframes slideDown {
-        to {
-            top: 0; /* Slide down to the bottom of the viewport */
+    @keyframes slideUp {
+        to{
+            top: 0;
         }
     }
+
 
     /*
     *** 900 + Screensize
