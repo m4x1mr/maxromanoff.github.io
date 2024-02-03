@@ -1,165 +1,280 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Max Romanoff — Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Romanoff - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'IBM Plex Mono', sans-serif;
+            background-color: #eee;
+            /* Set your preferred background color */
+            border-top: 40px solid transparent;
+            /* Add a 40px top border with transparent color */
+            color: #333;
+        }
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135516909-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-135516909-2');
-    </script>
+        .container {
+            max-width: 1300px;
+            /* Adjust max-width */
+            margin: 0 auto;
+            padding: 0 16px;
+            /* Adjust padding for mobile */
+        }
 
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow columns to wrap to the next row on smaller screens */
+            justify-content: space-between;
+            padding: 0;
+            /* Set padding to zero for mobile */
+        }
 
+        .left-column {
+            width: 100%;
+            /* Full width on mobile */
+            overflow-y: scroll;
+            margin-bottom: 64px;
+            /* Add spacing between divs */
+            position: relative;
+        }
+
+        .right-column {
+            width: 100%;
+            /* Full width on mobile */
+        }
+
+        .right-column-item {
+            margin-bottom: 24px;
+            /* Add 24px spacing between items in the right column */
+        }
+
+        p {
+            font-size: 20px;
+            /* Set font size to 24px */
+            font-weight: normal;
+            /* Set font weight to regular */
+            margin: 0;
+            /* Remove margin */
+            padding: 0;
+            /* Remove padding */
+        }
+
+        .highlight {
+            background-color: yellow;
+            /* Set the highlight background color */
+            padding: 2px;
+            /* Adjust padding as needed */
+        }
+
+        .resume-section {
+            margin-top: 0;
+            /* Remove top margin for the Resume section */
+            top: 40px;
+            /* Offset by the height of the top border */
+        }
+
+        .resume-heading {
+            display: flex;
+            align-items: center;
+            color: #333;
+        }
+
+        .resume-svg {
+            width: 24px;
+            /* Set the width of your SVG icon */
+            height: 24px;
+            /* Set the height of your SVG icon */
+            margin-left: 8px;
+            /* Adjust margin as needed */
+        }
+
+        .text-section {
+            margin-bottom: 80px;
+            /* Add spacing between text-sections */
+        }
+
+        .text-section:first-child {
+            border-bottom: 2px dotted #333;
+            /* Add horizontal line only after the first text section */
+            padding-bottom: 48px;
+            /* Add padding for better spacing */
+        }
+
+        .job-experience {
+            margin-bottom: 48px;
+            /* Add spacing between job experiences */
+        }
+
+        .job-title {
+            text-decoration: underline;
+            /* Underline job titles */
+            position: relative;
+        }
+
+                /* Ellipsis animation */
+                .ellipsis {
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: bottom;
+            animation: ellipsis 1.5s infinite;
+        }
+
+        @keyframes ellipsis {
+            0%, 100% {
+                width: 0;
+            }
+            25% {
+                width: 0.75em;
+            }
+            50% {
+                width: 1.4em;
+            }
+            75% {
+                width: 2.2em;
+            }
+        }
+
+        @media (min-width: 968px) {
+            .main {
+                padding: 0 32px;
+                /* Adjust padding for desktop */
+            }
+
+            .resume-section {
+                position: sticky;
+            }
+
+            .left-column {
+                width: calc(80% - 64px);
+                /* Adjust width and consider padding */
+                margin-right: 64px;
+                /* Add spacing between columns on desktop */
+            }
+
+            .right-column {
+                width: calc(20% - 64px);
+                /* Adjust width and consider padding */
+            }
+
+            .resume-section {
+                order: 2;
+                /* Move the resume to the right column in desktop view */
+            }
+
+            body {
+                padding-top: 40px;
+                /* Move the top border inside the body for desktop */
+            }
+
+        }
+
+        @media (max-width: 967px) {
+            .main {
+                flex-direction: column-reverse;
+                /* Reverse the order of columns for mobile */
+            }
+
+            .right-column {
+                width: 100%;
+                order: 1;
+                /* Move the right column to the top in mobile view */
+                margin-bottom: 32px;
+
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" id="name">MAX R. 👋</a>
+    <div class="container">
+        <div class="main">
+            <div class="left-column">
+                <div class="text-section">
+                    <p><span class="highlight">Max Romanoff</span> is a product designer and strategist with 4+ years of
+                        experience. He’s currently working on grocery e-commerce at Loblaw Digital.</p>
+                </div>
 
+                <div class="text-section">
+                    <p>Ummm... what else... I like to ride my bike a lot?</p>
+                </div>
 
-        <div class="menu-links">
-            <a href="#" id="active">WORK</a>
-            <a href="About.html">ABOUT</a>
-            <a target="_blank"
-                href="https://drive.google.com/file/d/1FF5j0RmlDo6hD11dwtmB1FFg18skRUx9/view?usp=sharing">RESUME</a>
-        </div>
+                <div class="text-section">
+                    <p>Uhhh.... okay...</p>
+                </div>
 
+                <div class="text-section">
+                    <p>Some of my job experience:</p>
+                </div>
 
-        <!-- The overlay -->
-        <div id="myNav" class="overlay">
-            <!-- Overlay content -->
-            <div class="overlay-content">
-                <a href="#" id="active">WORK</a>
-                <a href="About.html">ABOUT</a>
-                <a target="_blank"
-                    href="https://drive.google.com/file/d/1FF5j0RmlDo6hD11dwtmB1FFg18skRUx9/view?usp=sharing">RESUME</a>
+                <div class="text-section job-experience">
+                    <div class="job-experience">
+                        <p class="job-title">Loblaw Digital</p>
+                        <p>04.22 - Present</p>
+                        <p>So I’m on the PC Express team. I’ve helped design and launch features such as Rapid Delivery
+                            (a joint venture with DoorDash), PC Express Pass, and more.</p>
+                    </div>
+
+                    <div class="job-experience">
+                        <p class="job-title">Royal Bank of Canada (RBC)</p>
+                        <p>11.21 - 04.22</p>
+                        <p>So I was a Design Researcher on the MyAdvisor team, their goal setting platform for clients.
+                            I ran focus group sessions with advisors and coordinated a year-long research roadmap.</p>
+                    </div>
+
+                    <div class="job-experience">
+                        <p class="job-title">Publicis Sapient</p>
+                        <p>09.20 - 11.21</p>
+                        <p>I worked on a couple projects here. I helped launch an app from scratch for Academy Sports
+                            with 2 other amazing designers. I also helped with research strategy for UPS with the goal
+                            of a more efficient product development process.</p>
+                    </div>
+
+                    <div class="job-experience">
+                        <p class="job-title">RBC Insurance (internship)</p>
+                        <p>05.19 - 08.19</p>
+                        <p>I worked in an innovation lab called Genoa Labs. We worked on a job-loss insurance product
+                            until COVID shut those plans down. I designed flows, ran usability tests, and researched the
+                            insurance field. </p>
+                    </div>
+                    <div class="job-experience">
+                        <p class="job-title">RBC (internship)</p>
+                        <p>09.18 - 05.19</p>
+                        <p>The most fun team I've been on, honestly. I worked on the Digital Content Services team,
+                            building RBC's intranet sites for internal clients. I ran kick-offs, designed experiences
+                            using our design system, and presented work to our clients.</p>
+                    </div>
+                </div>
             </div>
 
+            <div class="right-column">
+                <div class="resume-section">
+                    <div class="right-column-item">
+                        <a class="resume-heading"
+                            href="https://drive.google.com/file/d/1FF5j0RmlDo6hD11dwtmB1FFg18skRUx9/view?usp=sharing"
+                            target="_blank">
+                            <p>Resume</p>
+                            <img src="img/in-new-tab.svg" alt="Resume Icon" class="resume-svg">
+                        </a>
+                        <a class="resume-heading" href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank">
+                            <p>LinkedIn</p>
+                            <img src="img/in-new-tab.svg" alt="Icon" class="tab-svg">
+                        </a>
+                    </div>
+
+
+                    <div class="right-column-item">
+                        <p>My portfolio is a WIP, so enjoy this instead<span class="ellipsis">...</span></p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-
-        <a href="javascript:void(0);" id="ham" class="icon" onclick="toggleNav()">
-
-            <div class="bar1"></div>
-            <div class="bar3"></div>
-
-        </a>
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-    <div class="main">
-
-        <div class="text-intro">
-
-            <h3>I'm a product designer with over 4 years of experience working across retail, grocery, and financial industries.</h3>
-            <br>
-            <h5>
-                Based in Toronto, ON.<br>
-                Currently:
-                <a href="https://linkedin.com/in/maxim-romanoff/">Product Designer @ Loblaw Digital</a>
-            </h5>
-        </div>
-
-        <div class="projects">
-
-            <a class="project-tile" href="pass.html">
-                <div class="project-img">
-                    <img src="img/PCXPass/pass-thumbnail.png">
-                </div>
-                <h5>02-2023</h5>
-                <p>Delivering Value to our Delivery Customers</p>
-            </a>
-
-            <a class="project-tile" href="capstone.html">
-                <div class="project-img">
-                    <img src="img/capstone/capstone-thumbnail.png">
-                </div>
-                <h5>04-2020</h5>
-                <p>Improving the Synoptic Report Development Process</p>
-            </a>
-
-
-            <a class="project-tile" href="WIP.html">
-                <div class="project-img">
-                    <img src="img/academy/academy-thumbnail.png">
-                </div>
-                <h5>04-2021</h5>
-                <p>A Mobile Shopping App for a Retail Giant</p>
-            </a>
-
-            <a class="project-tile" href="global-shipping-company.html">
-                <div class="project-img">
-                    <img src="img/SupplyChain/supplychain-thumbnail.png">
-                </div>
-                <h5>10-2021</h5>
-                <p>Striving to Achieve Transparency in the Supply Chain</p>
-            </a>
-            <!--
-            <a class="project-tile" href="WIP.html">
-                <div class="project-img">
-                    <img src="img/GoGreen/GG-thumbnail.png">
-                </div>
-                <h5>11-2022</h5>
-                <p>🚧 WIP: Going Green with Sustainable Packaging Options</p>
-            </a>-->
-
-        </div>
-
-
-
-
-
-
-    </div>
-
-    <footer>
-        <h5>
-            🎨 & 🛠️ by me.
-        </h5>
-    </footer>
-
-
-
-
-
-    <script>
-
-        function toggleNav() {
-            document.getElementById("myNav").classList.toggle("open");
-            document.getElementById("ham").classList.toggle("open");
-        }
-
-
-    </script>
 
 </body>
-
 
 </html>
