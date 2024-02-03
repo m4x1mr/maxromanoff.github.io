@@ -58,7 +58,6 @@
         }
 
         p {
-            font-size: 20px;
             /* Set font size to 24px */
             font-weight: normal;
             /* Set font weight to regular */
@@ -176,6 +175,7 @@
             }
 
             body {
+                font-size: 20px;
                 padding-top: 40px;
                 /* Move the top border inside the body for desktop */
             }
@@ -183,6 +183,9 @@
         }
 
         @media (max-width: 967px) {
+            body {
+                font-size: 16px;
+            }
             .main {
                 flex-direction: column-reverse;
                 /* Reverse the order of columns for mobile */
