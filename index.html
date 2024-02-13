@@ -7,14 +7,16 @@
     <title>Max Romanoff - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+    <link <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+
     <style>
         body {
             margin: 0;
-            font-family: 'IBM Plex Mono', monospace;
+            font-family: 'IBM Plex Serif', serif;
             font-weight: 400;
-            background-color: #eee;
+            background-color: #f5f5f5;
             /* Set your preferred background color */
             border-top: 40px solid transparent;
             /* Add a 40px top border with transparent color */
@@ -38,7 +40,7 @@
             /* Set padding to zero for mobile */
         }
 
-        .left-column {
+        .middle-column {
             width: 100%;
             /* Full width on mobile */
             margin-bottom: 64px;
@@ -51,8 +53,19 @@
             /* Full width on mobile */
         }
 
+        .left-column {
+            width: 100%;
+            /* Full width on mobile */
+        }
+
         .right-column-item {
             margin-bottom: 24px;
+            /* Add 24px spacing between items in the right column */
+        }
+
+        .left-column-item {
+            margin-bottom: 24px;
+            position: sticky;
             /* Add 24px spacing between items in the right column */
         }
 
@@ -73,7 +86,7 @@
             /* Adjust padding as needed */
         }
 
-        .resume-section {
+        .sticky-section {
             margin-top: 0;
             /* Remove top margin for the Resume section */
             top: 40px;
@@ -87,16 +100,23 @@
         }
 
         .tab-svg {
-            width: 20px;
+            width: 16px;
             /* Set the width of your SVG icon */
-            height: 20px;
+            height: 16px;
             /* Set the height of your SVG icon */
-            margin-left: 8px;
+            margin-left: 4px;
             /* Adjust margin as needed */
         }
 
         .text-section {
-            margin-bottom: 80px;
+            margin-bottom: 40px;
+            /* Add spacing between text-sections */
+        }
+
+        .img-section {
+            border: 1px solid #000;
+            margin-bottom: 40px;
+
             /* Add spacing between text-sections */
         }
 
@@ -151,24 +171,30 @@
                 /* Adjust padding for desktop */
             }
 
-            .resume-section {
+            .sticky-section {
                 position: sticky;
             }
 
             .left-column {
-                width: calc(75% - 64px);
+                width: calc(15%);
+                /* Adjust width and consider padding */
+            }
+
+            .middle-column {
+                width: calc(55% - 64px);
                 /* Adjust width and consider padding */
                 margin-right: 64px;
                 /* Add spacing between columns on desktop */
             }
 
             .right-column {
-                width: calc(25% - 64px);
+                width: calc(30% - 64px);
                 /* Adjust width and consider padding */
             }
 
-            .resume-section {
-                order: 2;
+
+            .sticky-section {
+                order: 1;
                 /* Move the resume to the right column in desktop view */
             }
 
@@ -190,13 +216,19 @@
                 /* Reverse the order of columns for mobile */
             }
 
+            .left-column {
+                display: none;
+            }
+
             .right-column {
                 width: 100%;
-                order: 1;
+                order: 2;
                 /* Move the right column to the top in mobile view */
                 margin-bottom: 32px;
+                border-bottom: 1px solid black;
 
             }
+
         }
     </style>
 </head>
@@ -205,7 +237,18 @@
 
     <div class="container">
         <div class="main">
+
             <div class="left-column">
+                <div class="sticky-section">
+                    <div class="left-column-item">
+                        <p>Max R.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="middle-column">
                 <div class="text-section">
                     <p>Yo, I'm <span class="highlight">Max</span>. I’m a Toronto-based product designer focused on
                         design strategy, digital experiences, and process improvement. </p>
@@ -224,20 +267,27 @@
                         which has biased me to focus on ”how do we improve the way we work to achieve our outcome?”
                     </p>
                 </div>
+
+                <div class="img-section">
+                    <img src="img/me.jpeg" style="width: 100%; height: auto; margin-bottom: -6px;">
+                </div>
+
+                <div>
+                    <p>Last updated [02/13/24]</p>
+                </div>
+
             </div>
 
             <div class="right-column">
-                <div class="resume-section">
+                <div class="sticky-section">
                     <div class="right-column-item">
                         <a class="resume-heading"
                             href="https://drive.google.com/file/d/1FF5j0RmlDo6hD11dwtmB1FFg18skRUx9/view?usp=sharing"
                             target="_blank">
                             <p>Resume</p>
-                            <img src="img/in-new-tab.svg" alt="Icon" class="tab-svg">
                         </a>
                         <a class="resume-heading" href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank">
                             <p>LinkedIn</p>
-                            <img src="img/in-new-tab.svg" alt="Icon" class="tab-svg">
                         </a>
                     </div>
 
@@ -247,6 +297,9 @@
                     </div>
                 </div>
             </div>
+
+
+
         </div>
     </div>
 
