@@ -1,0 +1,661 @@
+body {
+    margin: 0;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
+    background-color: #f5f5f5;
+    /* Set your preferred background color */
+    /* Add a 40px top border with transparent color */
+    color: #333;
+}
+
+
+
+/*
+*
+*
+*
+*
+*** Top Nav
+*
+*
+*/
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    z-index: 2000;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #d4d4d4;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 8px 40px;
+
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.topnav #name {
+    font-weight: 900;
+}
+
+.topnav a {
+    font-family: Helvetica, sans-serif;
+    float: left;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    line-height: 1;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-links a {
+    padding: 8px 0px 8px 40px;
+}
+
+.menu-links a:hover {
+    /*color: #333333;*/
+    text-decoration: underline;
+}
+
+
+/*
+**
+*/
+
+/* The Overlay (background) */
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    opacity: 0;
+    margin-top: 200%;
+    width: 100%;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 49px;
+    background-color: #f5f5f5;
+    /* Black fallback color */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.35s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.footer {
+    padding: 24px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 48px;
+    position: absolute;
+    border-top: 1px solid #d4d4d4;
+}
+
+.open {
+    margin-top: 0;
+    opacity: 1;
+}
+
+.bar1,
+.bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(2px, 7px);
+    transform: rotate(-45deg) translate(2px, 7px);
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(0px, -8px);
+    transform: rotate(45deg) translate(0px, -8px);
+}
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: left;
+    /* Centered text/links */
+}
+
+/* The navigation links inside the overlay */
+
+.overlay a {
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 32px;
+    color: #333;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+    padding: 16px;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay a:hover,
+.overlay a:focus {
+    text-decoration: underline;
+}
+
+/* Position the close button (top right corner) */
+
+.topnav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+
+
+
+
+
+.image-container {
+    width: 160%;
+    display: flex;
+    justify-content: space-between;
+    /* Adjust alignment as needed */
+    overflow: hidden;
+    /* Ensure the container doesn't overflow horizontally */
+    margin-left: -30%;
+}
+
+.marketing-image-container {
+    width: 200%;
+    display: flex;
+    justify-content: space-between;
+    /* Adjust alignment as needed */
+    overflow: hidden;
+    /* Ensure the container doesn't overflow horizontally */
+    margin-left: -50%;
+}
+
+.marketing-image {
+    width: 200%;
+    /* Expand the image to 130% of the width of its containing block */
+    height: auto;
+    /* Maintain aspect ratio */
+    position: relative;
+    /* Set positioning to relative to allow for overlap */
+    left: -50%;
+    /* Adjust the position to slightly overlap into the left column */
+    margin-right: -50%;
+    /* Adjust the position to slightly overlap into the right column */
+    z-index: 1;
+}
+
+.marketing-image-container img {
+    width: 48%;
+    /* Adjust the width of each image as needed */
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.image-container img {
+    width: 48%;
+    /* Adjust the width of each image as needed */
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.img-section img {
+    margin-bottom: 16px;
+}
+
+
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px 16px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: 0.5px solid #909090;
+    text-align: center;
+    width: 44%;
+}
+
+.card-container {
+    margin: 24px 0 40px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Adjust alignment as needed */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*Gallery start*/
+.gallery-section {
+    position: relative;
+    max-width: 100%;
+    margin: 24px 0;
+}
+
+.slideshow-container {
+    display: flex;
+    transition: transform 0.8s ease-out;
+    margin-bottom: 24px;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 16px;
+}
+
+.slide video {
+    height: 500px;
+    width: auto;
+    margin-left: 30%;
+
+}
+
+.arrow-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.arrow {
+    position: relative;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    background-color: transparent;
+    border: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/*Gallery end*/
+
+
+
+
+
+/* 
+.container {
+    margin: 0 auto;
+    padding: 0 16px;
+}*/
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow columns to wrap to the next row on smaller screens */
+    justify-content: space-between;
+    padding: 0;
+    overflow-x: hidden;
+    /* Set padding to zero for mobile */
+}
+
+.middle-column {
+    width: 100%;
+    /* Full width on mobile */
+    margin-bottom: 64px;
+    /* Add spacing between divs */
+    position: relative;
+}
+
+.right-column {
+    width: 100%;
+    /* Full width on mobile */
+}
+
+.left-column {
+    width: 100%;
+    /* Full width on mobile */
+}
+
+.right-column-item {
+    margin-bottom: 24px;
+    /* Add 24px spacing between items in the right column */
+}
+
+.left-column-item {
+    margin-bottom: 24px;
+    position: sticky;
+    /* Add 24px spacing between items in the right column */
+}
+
+p {
+    /* Set font size to 24px */
+    font-weight: normal;
+    /* Set font weight to regular */
+    margin: 0;
+    /* Remove margin */
+    padding: 0;
+    /* Remove padding */
+}
+
+.heading {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.highlight {
+    background-color: yellow;
+    /* Set the highlight background color */
+    padding: 2px;
+    /* Adjust padding as needed */
+}
+
+.sticky-section {
+    margin-top: 0;
+    /* Remove top margin for the Resume section */
+    top: 40px;
+    /* Offset by the height of the top border */
+}
+
+.resume-heading {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.tab-svg {
+    width: 16px;
+    /* Set the width of your SVG icon */
+    height: 16px;
+    /* Set the height of your SVG icon */
+    margin-left: 4px;
+    /* Adjust margin as needed */
+}
+
+.text-section {
+    margin: 32px 0 48px 0;
+    /* Add spacing between text-sections */
+}
+
+.img-section {
+    margin-bottom: 48px;
+    width: 100%;
+    /* Add spacing between text-sections */
+}
+
+.expand-image {
+    width: 160%;
+    /* Expand the image to 130% of the width of its containing block */
+    height: auto;
+    /* Maintain aspect ratio */
+    position: relative;
+    /* Set positioning to relative to allow for overlap */
+    left: -30%;
+    /* Adjust the position to slightly overlap into the left column */
+    margin-right: -30%;
+    /* Adjust the position to slightly overlap into the right column */
+    z-index: 1;
+    /* Ensure the image appears above other content */
+}
+
+.flow {
+    box-shadow: none;
+}
+
+.job-experience {
+    margin-bottom: 48px;
+    /* Add spacing between job experiences */
+}
+
+.job-title {
+    text-decoration: underline;
+    /* Underline job titles */
+    position: relative;
+}
+
+/* Ellipsis animation */
+.ellipsis {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: ellipsis 1.5s infinite;
+}
+
+@keyframes ellipsis {
+
+    0%,
+    100% {
+        width: 0;
+    }
+
+    25% {
+        width: 0.75em;
+    }
+
+    50% {
+        width: 1.4em;
+    }
+
+    75% {
+        width: 2.2em;
+    }
+}
+
+@media (min-width: 968px) {
+    .main {
+        padding: 40px 32px 24px 32px;
+        margin: 0 16px;
+        /* Adjust padding for desktop */
+    }
+
+    .quote {
+        font-size: 32px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .sticky-section {
+        position: sticky;
+        order: 1;
+    }
+
+    .left-column {
+        width: calc(15%);
+        /* Adjust width and consider padding */
+    }
+
+    .middle-column {
+        width: calc(55% - 64px);
+        /* Adjust width and consider padding */
+        margin-right: 64px;
+        /* Add spacing between columns on desktop */
+    }
+
+    .right-column {
+        width: calc(30% - 64px);
+        /* Adjust width and consider padding */
+    }
+
+    .caption {
+        font-size: 16px;
+        color: #696969;
+    }
+
+    /*
+.container {
+    overflow-x: hidden;
+}*/
+
+    body {
+        font-size: 20px;
+
+        /* Move the top border inside the body for desktop */
+    }
+
+}
+
+@media (max-width: 967px) {
+    body {
+        font-size: 18px;
+    }
+
+    .topnav {
+        grid-column: 1 / span 4;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 0;
+        padding: 12px 16px;
+    }
+
+    .topnav #name,
+    .topnav .icon {
+        padding: 0;
+    }
+
+
+    .menu-links a {
+        display: none;
+    }
+
+    .topnav a.icon {
+        display: block;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-bottom: none;
+    }
+
+
+
+    .image-container {
+        width: 100%;
+        /* Set width to 100% for smaller screens */
+        margin-left: 0;
+        /* Remove negative margin */
+        flex-direction: column;
+        /* Stack images on top of each other */
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-container {
+        margin: 24px 0 40px 0;
+    }
+
+    .image-container img {
+        width: 100%;
+        /* Set image width to 100% for smaller screens */
+        margin-bottom: 40px;
+        /* Add spacing between stacked images */
+    }
+
+    .expand-image {
+        width: 100%;
+        /* Reset width to 100% for mobile screens */
+        left: 0;
+        /* Reset left position */
+        margin-right: 0;
+        /* Reset right margin */
+    }
+
+    .marketing-image-container {
+        width: 100%;
+        /* Set width to 100% for smaller screens */
+        margin-left: 0;
+        /* Remove negative margin */
+        flex-direction: column;
+    }
+
+    .marketing-image-container img {
+        width: 100%;
+        /* Set image width to 100% for smaller screens */
+        margin-bottom: 40px;
+    }
+
+    .marketing-image {
+        width: 100%;
+        /* Reset width to 100% for mobile screens */
+        left: 0;
+        /* Reset left position */
+        margin-right: 0;
+    }
+
+
+
+    .quote {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    /*
+    .container {
+        overflow-x: hidden;
+
+    }*/
+
+    .main {
+        flex-direction: column-reverse;
+        margin: 0 16px;
+        padding-top: 40px;
+        /* Reverse the order of columns for mobile */
+    }
+
+    .caption {
+        font-size: 14px;
+        color: #696969;
+    }
+
+    .left-column {
+        display: none;
+    }
+
+    .right-column {
+        width: 100%;
+        order: 2;
+        border-bottom: 1px solid black;
+    }
+
+
+}
