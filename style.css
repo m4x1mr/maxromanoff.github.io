@@ -20,6 +20,10 @@ body {
 *
 */
 
+hr {
+    border: 0.5px solid #9a9a9a;
+}
+
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -30,7 +34,7 @@ body {
     border-bottom: 1px solid #d4d4d4;
     box-sizing: border-box;
     align-items: center;
-    padding: 8px 40px;
+    padding: 8px 16px;
 
 }
 
@@ -39,8 +43,30 @@ body {
 }
 
 .topnav #name {
-    font-weight: 900;
+    font-weight: 400;
 }
+
+
+
+.fade {
+    background-color: #413547;
+}
+
+.fade a, .fade .caption{
+    color: #fff !important;
+}
+
+.fade .bar1, .fade .bar3 {
+    background-color: #fff;
+}
+
+.fade .footer {
+
+    border: none;
+}
+
+
+
 
 .topnav a {
     font-family: Helvetica, sans-serif;
@@ -80,8 +106,8 @@ body {
     z-index: 1;
     /* Sit on top */
     left: 0;
-    top: 49px;
-    background-color: #f5f5f5;
+    top: 47px;
+    background-color: #413547;
     /* Black fallback color */
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -182,25 +208,54 @@ body {
 }
 
 .marketing-image-container {
-    width: 200%;
+    width: 160%;
     display: flex;
     justify-content: space-between;
     /* Adjust alignment as needed */
     overflow: hidden;
     /* Ensure the container doesn't overflow horizontally */
-    margin-left: -50%;
+    margin-left: -30%;
+}
+
+.divider-sm {
+    margin: 40px 0px 64px 0px;
+    /* Add spacing between text-sections */
+}
+
+.divider-lg {
+    margin: 64px 0px;
+    width: 160%;
+    left: -30%;
+    /* Adjust the position to slightly overlap into the left column */
+    margin-right: -30%;
+    /* Adjust the position to slightly overlap into the right column */
+    height: auto;
+    /* Maintain aspect ratio */
+    position: relative;
+    /* Set positioning to relative to allow for overlap */
+}
+
+.small-image {
+    width: 40%;
+    position: relative;
+    /* Set positioning to relative to allow for overlap */
+    left: 30%;
+    /* Adjust the position to slightly overlap into the left column */
+    margin-right: 30%;
+    border-radius: 32px;
 }
 
 .marketing-image {
-    width: 200%;
+    margin: 24px 0px;
+    width: 160%;
     /* Expand the image to 130% of the width of its containing block */
     height: auto;
     /* Maintain aspect ratio */
     position: relative;
     /* Set positioning to relative to allow for overlap */
-    left: -50%;
+    left: -30%;
     /* Adjust the position to slightly overlap into the left column */
-    margin-right: -50%;
+    margin-right: -30%;
     /* Adjust the position to slightly overlap into the right column */
     z-index: 1;
 }
@@ -220,20 +275,31 @@ body {
 }
 
 .img-section img {
-    margin-bottom: 16px;
+    margin: 16px 0px;
 }
 
 
 
 .card {
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 24px 16px;
+    /*background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+    padding: 16px 12px;
     margin: 12px 0;
-    border-radius: 6px;
-    border: 0.5px solid #909090;
+    border-radius: 4px;
+    border: 0.5px solid #575757;
     text-align: center;
     width: 44%;
+}
+
+.card-small {
+    /*background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+    padding: 16px 16px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 0.5px solid #575757;
+    text-align: left;
+    width: 28%;
 }
 
 .card-container {
@@ -476,7 +542,7 @@ p {
 
 @media (min-width: 968px) {
     .main {
-        padding: 40px 32px 24px 32px;
+        padding: 128px 32px 24px 32px;
         margin: 0 16px;
         /* Adjust padding for desktop */
     }
@@ -495,19 +561,19 @@ p {
     }
 
     .left-column {
-        width: calc(15%);
+        width: calc(20%);
         /* Adjust width and consider padding */
     }
 
     .middle-column {
-        width: calc(55% - 64px);
+        width: calc(60% - 64px);
         /* Adjust width and consider padding */
         margin-right: 64px;
         /* Add spacing between columns on desktop */
     }
 
     .right-column {
-        width: calc(30% - 64px);
+        width: calc(20% - 64px);
         /* Adjust width and consider padding */
     }
 
@@ -562,6 +628,9 @@ p {
         border-bottom: none;
     }
 
+    .text-section {
+        margin: 16px 0;
+    }
 
 
     .image-container {
@@ -573,7 +642,8 @@ p {
         /* Stack images on top of each other */
     }
 
-    .card {
+    .card,
+    .card-small {
         width: 100%;
     }
 
@@ -584,8 +654,12 @@ p {
     .image-container img {
         width: 100%;
         /* Set image width to 100% for smaller screens */
-        margin-bottom: 40px;
+        margin-bottom: 24px;
         /* Add spacing between stacked images */
+    }
+
+    .img-section {
+        margin-bottom: 24px;
     }
 
     .expand-image {
@@ -608,10 +682,19 @@ p {
     .marketing-image-container img {
         width: 100%;
         /* Set image width to 100% for smaller screens */
-        margin-bottom: 40px;
+        margin-bottom: 24px;
     }
 
     .marketing-image {
+        width: 100%;
+        /* Reset width to 100% for mobile screens */
+        left: 0;
+        /* Reset left position */
+        margin-right: 0;
+    }
+
+    .divider-lg,
+    .divider-sm {
         width: 100%;
         /* Reset width to 100% for mobile screens */
         left: 0;
