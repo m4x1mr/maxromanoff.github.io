@@ -652,6 +652,7 @@ p {
     .card-container {
         margin: 24px 0 40px 0;
         width: 100%;
+        left: 0;
     }
 
     .image-container img {
@@ -724,7 +725,7 @@ p {
     .main {
         flex-direction: column-reverse;
         margin: 0 16px;
-        padding-top: 40px;
+        padding-top: 96px;
         /* Reverse the order of columns for mobile */
     }
 
@@ -740,7 +741,6 @@ p {
     .right-column {
         width: 100%;
         order: 2;
-        border-bottom: 1px solid black;
     }
 
 
