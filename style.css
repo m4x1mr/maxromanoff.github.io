@@ -304,7 +304,9 @@ hr {
 
 .card-container {
     margin: 24px 0 40px 0;
-    width: 100%;
+    width: 140%;
+    position: relative;
+    left: -20%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -649,6 +651,7 @@ p {
 
     .card-container {
         margin: 24px 0 40px 0;
+        width: 100%;
     }
 
     .image-container img {
