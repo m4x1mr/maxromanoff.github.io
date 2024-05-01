@@ -142,7 +142,7 @@
             </div>
 
 
-            <div class="text-section">
+            <div class="text-section" id="tldr">
                 <p class="heading">TL;DR</p>
                 <p>PC Express is a grocery e-commerce service for Canada’s largest grocery chain — Loblaws. Though the
                     service has hundreds of thousands of loyal customers and accrued billions in revenue, we’ve been
@@ -150,8 +150,8 @@
                     32% said their reason for leaving was due to high fees.
                 </p><br>
                 <p>To combat this problem, we launched PC Express Pass: a subscription service for customers to receive
-                    $0 fees on regular grocery pickup and delivery, and receive reduced fees on additional services such
-                    as Rapid Delivery (with DoorDash), and deliveries within 3 hours.
+                    $0 fees on grocery pickup and delivery orders! My contributions on this project were designing the
+                    end-to-end flows across both web and app. 
                 </p><br>
                 <p>
                     PC Express Pass went live in March 2023, and within 6 months, we've reached over 109,000 subscribers
@@ -160,39 +160,6 @@
                     recurring purchases, as we've been able to increase retention year-over-year by over 10%.
                 </p>
             </div>
-
-
-
-            <!--
-            <div class="text-section">
-
-                <div class="card-container">
-
-                    <div class="card">
-                        <p class="quote">+109,000 subscribers</p>
-                        <p class="caption">over 21% conversion</p>
-                    </div>
-
-
-                    <div class="card">
-                        <p class="quote">+10% increase in retention</p>
-                        <p class="caption">year-over-year</p>
-                    </div>
-
-                    <div class="card">
-                        <p class="quote">$5M+ in subscription revenue</p>
-                        <p class="caption">$260M+ in order sales</p>
-                    </div>
-
-
-                    <div class="card">
-                        <p class="quote">$9M+ saved in fees for customers</p>
-                    </div>
-                </div>
-            </div>-->
-
-
-
 
 
             <div class="divider-lg">
@@ -230,10 +197,21 @@
 
 
             <div class="text-section">
-                <p class="heading">The problem: Churn</p>
-                <p>You might be thinking: if it's so successful and the loyalty program is so good, why is the problem
-                    titled "Churn"? One word: Fees. We learned from surveys that 32% of churned customers said their
-                    reason for leaving PC Express was due to high fees.</p><br>
+                <p class="heading">The problem: churn</p>
+                <p>You might be thinking: if it's so successful and the loyalty program is so good, why are customers
+                    churning? The answer is high fees. When surveying existing customers, we heard that 11% mention high
+                    fees as being one of the primary areas of improvement. In contrast, when surveying customers that
+                    have recently churned from shopping with PC Express, 32% attributed their
+                    reason for leaving PC Express as high fees.</p>
+            </div>
+
+
+            <div class="image-container">
+                <img src="img/Pass/area-of-improvement.webp" class="flow">
+                <img src="img/Pass/reason-for-churn.webp" class="flow">
+            </div>
+
+            <div class="text-section">
                 <p>
                     Pickup fees have been relatively stable, however delivery fees have been increasing to account for
                     rising operational costs. For orders being delivered within the same day, delivery fees are $9.99,
@@ -257,18 +235,24 @@
             </div>
 
             <div class="text-section">
-                <p class="heading">Defining a subscription program</p>
+                <p class="heading">The solution space</p>
                 <p>From our research, the question we had to answer was: How might we reduce delivery fees for our most
                     loyal customers, yet still continue to earn revenue for PC Express?</p><br>
                 <p>
                     Working with our stakeholders and the business, numerous ideas came up around dynamic pricing for
-                    fees, as a percentage of the order value. The issue with these ideas was that they didn't solve for
-                    the core problem: customers encountering fees much higher than competitors.
-                </p><br>
-                <p>What we proceeded with was a subscription program to remove fees. This would double-down on us
+                    fees, as a percentage of the order value. What this meant was, if
+                    customers had smaller orders, they would pay lesser fees (and the converse). The issue with this
+                    idea was that it didn't solve for the core problem of high fees and also disincentivized
+                    customers from having large orders, directly competing with a core PC Express business objective of
+                    attaining higher AOVs. </p><br>
+                <p>What we proceeded with was a subscription program to remove fees. This would
+                    double-down on us
                     servicing our most loyal customers, as well as outline an additional revenue stream that would
                     supplement revenue lost from fees. </p>
+
             </div>
+
+
 
 
             <div class="divider-sm">
@@ -585,7 +569,7 @@
 
             <div class="img-section">
                 <img src="img/Pass/thirdparty-manage.webp" class="flow">
-                <p class="caption">We had to cut scope to make room for other functionality on the manage screen. 
+                <p class="caption">We had to cut scope to make room for other functionality on the manage screen.
                 </p>
             </div>
 

@@ -20,6 +20,15 @@ body {
 *
 */
 
+/*
+#tldr {
+    border: 0.5px solid #cdab71;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #feffef;
+}*/
+
+
 hr {
     border: 0.5px solid #9a9a9a;
 }
@@ -549,6 +558,11 @@ p {
         /* Adjust padding for desktop */
     }
 
+    .heading {
+        font-size: 24px;
+        padding-bottom: 8px;
+    }
+
     .quote {
         font-size: 32px;
     }
@@ -601,6 +615,7 @@ p {
     body {
         font-size: 18px;
     }
+
 
     .topnav {
         grid-column: 1 / span 4;
@@ -708,7 +723,7 @@ p {
 
 
 
-    .quote {
+    .quote, .heading {
         font-size: 24px;
     }
 

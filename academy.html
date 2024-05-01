@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Express Pass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7cf7ea6a26.js" crossorigin="anonymous"></script>
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeGallery('.gallery-section1'); // Initialize the first gallery
+            initializeGallery('.gallery-section2'); // Initialize the second gallery
+            // Add more galleries as needed
+        });
+
+        function initializeGallery(gallerySelector) {
+            let slideIndex = 1;
+            showSlides(slideIndex, gallerySelector);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n, gallerySelector);
+            }
+
+            function showSlides(n, gallerySelector) {
+                let slides = document.querySelectorAll(`${gallerySelector} .slide`);
+
+                if (n > slides.length) {
+                    slideIndex = 1;
+                } else if (n < 1) {
+                    slideIndex = slides.length;
+                }
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.transition = 'opacity 0.3s ease-in';
+                    slides[i].style.opacity = 0.25;
+                    slides[i].style.marginRight = '32px'; // Adjust the margin value
+                }
+
+                slides[slideIndex - 1].style.opacity = 1;
+
+                // Calculate the translation considering 100% + 16px for each slide
+                let translateXValue = `calc(-100% * ${slideIndex - 1} - 32px * ${slideIndex - 1})`; // 8px to center each image
+                document.querySelector(`${gallerySelector} .slideshow-container`).style.transform = `translateX(${translateXValue})`;
+
+                document.querySelector(`${gallerySelector} #currentSlideIndex`).innerText = slideIndex;
+            }
+
+            // Add event listeners to the buttons
+            document.querySelector(`${gallerySelector} .arrow.prev`).addEventListener('click', function () {
+                plusSlides(-1);
+            });
+
+            document.querySelector(`${gallerySelector} .arrow.next`).addEventListener('click', function () {
+                plusSlides(1);
+            });
+        }
+
+        function toggleNav() {
+            document.getElementById("myNav").classList.toggle("open");
+            document.getElementById("ham").classList.toggle("open");
+            document.getElementById("myTopnav").classList.toggle("fade");
+        }
+    </script>
+
+</head>
+
+
+
+
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home" id="name">Max—R</a>
+        <div class="menu-links">
+            <a href="#">About</a>
+            <a target="_blank"
+                href="https://drive.google.com/file/d/1FF5j0RmlDo6hD11dwtmB1FFg18skRUx9/view?usp=sharing">Resume</a>
+            <a href="About.html">Contact</a>
+        </div>
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="#">About</a>
+                <a target="_blank"
+                    href="https://drive.google.com/file/d/1FF5j0RmlDo6hD11dwtmB1FFg18skRUx9/view?usp=sharing">Resume</a>
+                <a href="About.html">Contact</a>
+            </div>
+
+            <div class="footer caption">
+                <p>
+                    © Designed and built by Max Romanoff. 2024.
+                </p>
+            </div>
+        </div>
+
+        <a href="javascript:void(0);" id="ham" class="icon" onclick="toggleNav()">
+            <div class="bar1"></div>
+            <div class="bar3"></div>
+        </a>
+    </div>
+
+
+
+
+
+    <div class="main">
+
+        <div class="left-column"></div>
+
+        <div class="middle-column">
+
+
+            <div class="text-section">
+                <p class="title">Academy</p>
+            </div>
+
+            <div class="text-section caption">
+                <p>Timeline: Jan 2021 - Apr 2021</p>
+                <p>Role: Product Designer</p>
+                <p>Team: Myself, Gopika S. (Product Designer), Aurelio A. (Design Lead)</p>
+            </div>
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="marketing-image flow">
+            </div>
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+
+            <div class="text-section" id="tldr">
+                <p class="heading">TL;DR</p>
+                <p>The onset of the pandemic saw a surge in e-commerce sales across many businesses, including Academy
+                    Sports + Outdoors; in 2020, the company’s revenue exceeded $5.6B. Despite having this large influx
+                    of sales, the company lacked a way to easily reach their customers through a mobile channel.
+                </p><br>
+                <p>Alongside my team at Publicis Sapient, I worked to design and help launch Academy’s first mobile app,
+                    all within 12 weeks. I contributed to all aspects of the design of the app, but I solely owned the
+                    research strategy and execution, and the designs of the product details pages.
+                </p><br>
+                <p>Within the first week of launch on the App Store, we had a 4.8 rating from over 8,000 reviewers,
+                    today this sits at a 4.9 rating from over 85,000 reviews! And also in the first week, we saw a 25%
+                    increase in AOV over web orders. This was all achieved with $0 marketing spend for the launch.
+                </p>
+            </div>
+
+
+            <div class="divider-lg">
+                <hr>
+            </div>
+
+
+            <div class="text-section quote">
+                <p>This entire engagement took 12-weeks from conception to final designs. Let’s walk through in detail
+                    how we did it and what this process looked like, specifically focusing on the PDP. </p>
+            </div>
+
+            <div class="divider-lg">
+                <hr>
+            </div>
+
+
+            <div class="text-section">
+                <p class="heading">Who are Academy’s customers?</p>
+                <p>The type of customers that shop for sporting goods differ a lot. Even if we ignore the products they
+                    shop for, how they shop is even different; and that was the most important for us to consider as
+                    designers for the app.
+                </p><br>
+                <ul>
+                    <li>
+                        <p>Convenience Chaser</p>
+                        <p>I shop for what’s most convenient. I prioritize faster shipping, local stores, easy access to
+                            what I need.</p>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Passion Pursuer</p>
+                        <p>I want the newest, best, and hottest products. I need details about the products,
+                            testimonials, and to be notified about new launches.</p>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Value Verifier</p>
+                        <p>I look at the price and its value. I try to get the most bang-for-my-buck by looking at
+                            what’s cheapest, and what’s best in that category.</p>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+            <div class="text-section quote">
+                <p>How might we increase sales and engagement in the mobile channel, while also creating a more
+                    convenient purchasing experience for Academy’s customer segments?</p>
+            </div>
+
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+
+            <div class="text-section">
+                <p class="heading">Our guiding principle for design</p>
+                <p>Our primary principle was to maintain parity with the web experience when it came to functionality.
+                </p><br>
+                <p>As one of the primary success metrics for the app was to increase engagement in the mobile channel,
+                    maintaining parity with the website was a non-negotiable to ensure customers weren’t getting a
+                    “lesser” experience.
+                </p><br>
+                <p>This seemed “easy”, however we learned too late in the process that Academy was redesigning their
+                    experience. The question became, how do we maintain parity, if we don’t even know what parity is
+                    yet? More on this later…
+                </p>
+            </div>
+
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+            <div class="text-section">
+                <p class="heading">Gathering research on the Product Details Page (PDP)</p>
+                <p>I took on the work for the PDP, while my team tackled other areas of the experience. Through
+                    resources such as Baymard and NNG, I took note of practices I should incorporate for the PDP.</p>
+                <br>
+                <p>As customers are used to scrolling and swiping up, I should avoid hiding information behind a drop
+                    down. The concept of “above the fold” doesn’t exist for app, and so content should be laid out that
+                    reduces friction from the main action, scrolling.
+                </p>
+            </div>
+
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+            <div class="text-section">
+                <p>We also worked with our clients to understand who they feel are their competitors in the space.
+                    Though Dick’s Sporting Goods was their biggest direct competitor (and still is), their app was a
+                    webview of their website experience. At the same time, Target’s iOS app was consistently used as a
+                    reference for a best-in-class experience. </p>
+                <br>
+                <p>For the PDP, I specifically took note of their approach to expose all options and information, and
+                    their extensive related products list towards the bottom of the page.
+                </p>
+            </div>
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+            <div class="text-section">
+                <p class="heading">Designing the PDP</p>
+                <p>Academy supports five different product types on their website, all of which had different PDPs, and
+                    thus all needed their own designs: “Regular” products, gift cards, e-gift cards, bundles, and
+                    firearms and ammunition.
+                </p><br>
+                <p>I started with designs for the regular PDP as this covered most of the products.</p>
+            </div>
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+            <div class="text-section">
+                <p class="heading">Challenge I: Firearms are prohibited on the App Store</p>
+                <p>After hearing that firearms were being sold on Academy’s site, I had an assumption that this wouldn’t
+                    be allowed through a mobile app, considering Apple’s guidelines.
+                </p>
+            </div>
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+            <div class="text-section">
+                <p>I did some digging in the App Store Review guidelines and found that this was true. I then contacted
+                    Apple’s developer support and tried to determine scenarios in which the app could get taken down. It
+                    turned out, we also weren’t allowed to:
+                </p>
+                <ul>
+                    <li>
+                        <p>Add firearms to cart</p>
+                    </li>
+                    <li>
+                        <p>Advertise firearms</p>
+                    </li>
+                    <li>
+                        <p>Add firearms to wish list </p>
+                    </li>
+                    <li>
+                        <p>Use messaging to shift the blame onto Apple’s guidelines</p>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+            <div class="text-section">
+                <p class="heading">Directing customers to the web experience</p>
+                <p>I raised the findings to the Design and Product teams as a risk to our strategy. Working with the
+                    Product team, I updated our client with the following next-steps and incorporated it into the
+                    designs:
+                </p>
+                <ul>
+                    <li>
+                        <p>Use generic messaging to say we aren’t able to sell firearms in the app</p>
+                    </li>
+                    <li>
+                        <p>Display in-store availability</p>
+                    </li>
+                    <li>
+                        <p>Re-route customers to the website</p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+
+            <div class="text-section">
+                <p class="heading">Challenge II: Redesigning the PDP</p>
+                <p>Remember I mentioned Academy was redesigning their website? This is when I learned about it, while I
+                    was designing the PDP. This impacted the work I was doing because their strategy for the fulfillment
+                    options was different.
+                </p><br>
+                <p>They requested to use just one sticky Add to Cart button, with Apple Pay, and to use a radio button
+                    that defaults to Free Store Pick Up. I brought this up as a concern, as customers wouldn’t be able
+                    to see what fulfillment option was selected before they chose to Add to Cart. The biggest risk was
+                    if they chose to use Apple Pay and place the order right away. </p>
+            </div>
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+            <div class="text-section">
+                <p>I had an assumption that this didn’t follow customers’ mental models, so I ran this specific
+                    experience through testing, asking customers about the Add to Cart, and if they knew how they would
+                    receive their items.
+                </p>
+            </div>
+
+            <div class="text-section quote">
+                <p>"It’s not what I’m used to. I can’t see associated costs with shipping or pick up, so I don't really
+                    know."</p>
+            </div>
+
+            <div class="text-section">
+                <p>From testing, most participants found it awkward, so I recommended to either place the Add to Cart
+                    below the fulfillment selection, or to dynamically update the Add to Cart based on the selection.
+                    Both suggestions weren’t desired so we proceeded with the existing solution.
+                </p>
+            </div>
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+            <div class="text-section">
+                <p>In addition to the radio buttons, I worked with our client to define every possible state that could
+                    appear, and then I designed out the component and it’s variants. This would help our development
+                    partners to ensure we’ve designed a scalable solution and accounted for all edge-cases.
+                </p>
+            </div>
+
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+
+
+            <div class="text-section">
+                <p class="heading">Finalizing the PDP</p>
+
+                <p>Throughout the process I facilitated design reviews with the client, and we reviewed designs again
+                    once the PDP was finalized to get their sign off. Once we got that, I worked with the developers to
+                    get this work started on their end. This entire process, from research to working with devs, only
+                    took 2 weeks!
+                </p>
+            </div>
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+
+            <div class="text-section">
+                <p>Though the PDP is what I focused on for this case study, I continued to work through other aspects of
+                    the experience, including taking on the entire checkout flow.
+                </p>
+            </div>
+
+
+
+
+            <div class="divider-lg">
+                <hr>
+            </div>
+
+
+            <div class="img-section">
+                <img src="img/Academy/placeholder.png" class="expand-image flow">
+            </div>
+
+            <div class="image-container">
+                <img src="img/Academy/placeholder.png" class="flow">
+                <img src="img/Academy/placeholder.png" class="flow">
+            </div>
+
+
+
+            <div class="divider-lg">
+                <hr>
+            </div>
+
+
+            <div class="text-section">
+                <p class="heading">The results</p>
+                <p>If you've read the TL;DR, you might already know this.
+                </p><br>
+                <p>Within the first week of launch on the App Store, we had a 4.8 rating from over 8,000 reviewers,
+                    today this sits at a 4.9 rating from over 85,000 reviews! And also in the first week, we saw a 25%
+                    increase in AOV over web orders. This was all achieved with $0 marketing spend for the launch.
+                </p>
+            </div>
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+
+            <div class="text-section">
+                <p class="heading">Project challenges and learnings</p>
+                <p>We had a lot of challenges throughout the engagement, no engagement is perfect.
+                </p><br>
+                <p>The tight timeline was probably the biggest challenge. 12 weeks is what we had to design the entire
+                    app from scratch. This cascaded to miscommunications, and it didn’t help that we had to go through
+                    rework since the client was redesigning their web experience.
+                </p><br>
+                <p>Collaboration with the dev team was a challenge because of timezone differences. As the dev team was
+                    located in India, design decisions were communicated asynchronously, and often led to
+                    miscommunications.
+                </p><br>
+                <p>Lastly, at the time, I had an Android phone, in Canada. I lacked access to many of the competitor iOS
+                    apps (Dick’s, Target) as they aren’t available in my device (though I was able to sideload the APK
+                    files). I also wasn’t able to test the QA test the Academy iOS app.
+                </p>
+            </div>
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+            <div class="text-section">
+                <p class="heading">What I learned and would’ve done differently</p>
+                <p>Baymard was a lifesaver in this project. It was helpful to quickly search for specific interactions,
+                    rather than always referring to a set of competitors to see what they did.
+                </p><br>
+                <p>But, looking back, there’s definitely ways I could’ve handled myself better and been more proactive.
+                </p><br>
+                <p>Using Figma would’ve saved our team a lot of headaches. We used Adobe XD because our client’s design
+                    files were in XD, but we didn’t need to use it. Component issues, connectivity, and collaboration
+                    were all things that affected the way we worked.
+                </p><br>
+                <p>I would have proactively held meetings with the Designer at Academy to better understand what they
+                    were designing, to avoid re-work. We started doing this a bit after the PDP debacle, but I still
+                    don’t think it was enough because I faced challenges when designing checkout.
+                </p><br>
+                <p>And lastly, I would’ve said “Yes” to my team offering to help with my workload. They were fantastic
+                    and super supportive, but I think I tried to take on too much at once and began to get burnt out.
+                </p><br>
+
+            </div>
+
+            <div class="divider-sm">
+                <hr>
+            </div>
+
+
+            <div class="text-section">
+                <a class="resume-heading" href="mailto:max.romanoff@hotmail.com" target="_blank">
+                    <p>Contact me for more details.</p>
+                </a>
+            </div>
+
+            <div>
+                <p>Last updated [02/14/24]</p>
+            </div>
+
+        </div>
+
+
+        <div class="right-column"></div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
