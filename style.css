@@ -292,7 +292,7 @@ svg {
 }
 
 .img-section img {
-    margin: 16px 0px;
+    margin-bottom: 12px;
 }
 
 #graph {
@@ -647,14 +647,14 @@ p {
     }
 
     .text-section {
-        margin: 32px 0;
+        margin: 80px 0;
     }
 
 
     .image-container {
         width: 100%;
         /* Set width to 100% for smaller screens */
-        margin-left: 0;
+        margin: 36px 0 0 0;
         /* Remove negative margin */
         flex-direction: column;
         /* Stack images on top of each other */
@@ -663,12 +663,11 @@ p {
     .image-container .section {
         width: 100%;
         /* Set image width to 100% for smaller screens */
-        margin-bottom: 24px;
         /* Add spacing between stacked images */
     }
 
     .img-section {
-        margin-bottom: 24px;
+        margin: 24px 0 40px 0;
     }
 
     .expand-image {
