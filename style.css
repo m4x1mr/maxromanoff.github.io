@@ -20,18 +20,26 @@ body {
 *
 */
 
-/*
+
 #tldr {
-    border: 0.5px solid #cdab71;
-    padding: 12px;
+    background-color: #eee;
+    border: 0.5px solid #aaa;
     border-radius: 4px;
-    background-color: #feffef;
-}*/
+    padding: 12px;
+}
 
 
 hr {
     border: 0.5px solid #9a9a9a;
 }
+
+svg {
+    color: #811e1e;
+    padding: 8px;
+    border: 1px solid #c4c4c4;
+    border-radius: 40px;
+}
+
 
 .topnav {
     display: flex;
@@ -78,7 +86,7 @@ hr {
 
 
 .topnav a {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     float: left;
     display: block;
     text-align: left;
@@ -174,7 +182,7 @@ hr {
 /* The navigation links inside the overlay */
 
 .overlay a {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
     font-size: 32px;
     color: #333;
@@ -213,7 +221,7 @@ hr {
     /* Adjust alignment as needed */
     overflow: hidden;
     /* Ensure the container doesn't overflow horizontally */
-    margin-left: -30%;
+    margin: 36px 0 48px -30%;
 }
 
 .marketing-image-container {
@@ -276,7 +284,7 @@ hr {
     margin-bottom: 40px;
 }
 
-.image-container img {
+.image-container .section {
     width: 48%;
     /* Adjust the width of each image as needed */
     height: auto;
@@ -287,39 +295,14 @@ hr {
     margin: 16px 0px;
 }
 
+#graph {
+    background-color: #eee;
+    padding: 12px;
 
-
-.card {
-    /*background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
-    padding: 16px 12px;
-    margin: 12px 0;
-    border-radius: 4px;
-    border: 0.5px solid #575757;
-    text-align: center;
-    width: 44%;
-}
-
-.card-small {
-    /*background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
-    padding: 16px 16px;
-    margin: 8px 0;
-    border-radius: 4px;
-    border: 0.5px solid #575757;
-    text-align: left;
-    width: 28%;
 }
 
 .card-container {
-    margin: 24px 0 40px 0;
-    width: 140%;
-    position: relative;
-    left: -20%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* Adjust alignment as needed */
+    margin: 48px 0 64px 0;
 }
 
 img {
@@ -439,7 +422,7 @@ img {
 
 p {
     /* Set font size to 24px */
-    font-weight: normal;
+    font-weight: 400;
     /* Set font weight to regular */
     margin: 0;
     /* Remove margin */
@@ -447,11 +430,20 @@ p {
     /* Remove padding */
 }
 
-.heading {
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    line-height: 1.6;
+.heading, .img-heading, .h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #000;
 }
+
+.sub-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #7a7a7a;
+}
+
 
 .highlight {
     background-color: yellow;
@@ -482,13 +474,17 @@ p {
     /* Adjust margin as needed */
 }
 
-.text-section {
+.title-section {
     margin: 32px 0 48px 0;
+    /* Add spacing between text-sections */
+}
+.text-section {
+    margin: 128px 0 48px 0;
     /* Add spacing between text-sections */
 }
 
 .img-section {
-    margin-bottom: 48px;
+    margin: 36px 0 48px 0;
     width: 100%;
     /* Add spacing between text-sections */
 }
@@ -559,16 +555,21 @@ p {
     }
 
     .heading {
-        font-size: 24px;
-        padding-bottom: 8px;
+        font-size: 22px;
+        padding-bottom: 12px;
+    }
+
+    .sub-heading, .img-heading, .h3 {
+        font-size: 18px;
+        padding-bottom: 12px;
     }
 
     .quote {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .title {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .sticky-section {
@@ -604,7 +605,7 @@ p {
 }*/
 
     body {
-        font-size: 20px;
+        font-size: 18px;
 
         /* Move the top border inside the body for desktop */
     }
@@ -646,7 +647,7 @@ p {
     }
 
     .text-section {
-        margin: 16px 0;
+        margin: 32px 0;
     }
 
 
@@ -659,18 +660,7 @@ p {
         /* Stack images on top of each other */
     }
 
-    .card,
-    .card-small {
-        width: 100%;
-    }
-
-    .card-container {
-        margin: 24px 0 40px 0;
-        width: 100%;
-        left: 0;
-    }
-
-    .image-container img {
+    .image-container .section {
         width: 100%;
         /* Set image width to 100% for smaller screens */
         margin-bottom: 24px;
@@ -723,9 +713,25 @@ p {
 
 
 
-    .quote, .heading {
+    .quote {
         font-size: 24px;
     }
+
+    .heading {
+        font-size: 20px;
+        padding-bottom: 8px;
+    }
+
+    .sub-heading, .img-heading, .h3 {
+        font-size: 18px;
+        padding-bottom: 12px;
+    }
+
+    .h3 {
+        font-weight: 600;
+    }
+
+
 
     .title {
         font-size: 30px;
