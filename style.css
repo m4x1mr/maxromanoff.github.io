@@ -12,6 +12,10 @@ body {
     font-weight: 600;
 }
 
+#temp {
+    margin-top: 0;
+}
+
 .button {
     border: 1px solid #858585;
     text-decoration: none;
@@ -472,7 +476,7 @@ p {
 .sticky-section {
     margin-top: 0;
     /* Remove top margin for the Resume section */
-    top: 40px;
+
     /* Offset by the height of the top border */
 }
 
