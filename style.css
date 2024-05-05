@@ -402,6 +402,21 @@ img {
 */
 
 
+
+@keyframes flash {
+    from {
+        opacity: 0;
+        /* Start with opacity 0 */
+    }
+
+    to {
+        opacity: 1;
+        /* End with opacity 1 */
+    }
+}
+
+
+
 .project-section {
     width: 100%;
     display: flex;
@@ -488,7 +503,7 @@ img {
 }
 
 
-.home-footer{
+.home-footer {
     width: 100%;
     padding: 36px 0;
 }
@@ -520,68 +535,6 @@ img {
 
 
 
-
-
-
-
-/*Gallery start*/
-.gallery-section {
-    position: relative;
-    max-width: 100%;
-    margin: 24px 0;
-}
-
-.slideshow-container {
-    display: flex;
-    transition: transform 0.8s ease-out;
-    margin-bottom: 24px;
-}
-
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-
-    margin-bottom: 16px;
-}
-
-.slide video {
-    height: 500px;
-    width: auto;
-    margin-left: 30%;
-
-}
-
-.arrow-container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin-top: 12px;
-}
-
-.arrow {
-    position: relative;
-    padding: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    color: #333;
-    background-color: transparent;
-    border: none;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-/*Gallery end*/
 
 
 
@@ -709,7 +662,17 @@ p {
         /* Adjust padding for desktop */
     }
 
-    .callout {
+    .dot {
+        width: 8px;
+        height: 8px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        animation: flash 0.5s infinite alternate;
+        /* Alternate the animation direction */
+    }
+
+
+    .callout-desktop {
         background-color: #1e1e1e;
         border-radius: 50px;
         color: white !important;
@@ -720,28 +683,12 @@ p {
         gap: 8px;
     }
 
-    .dot {
-        width: 8px;
-        height: 8px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 50%;
-        animation: flash 0.5s infinite alternate;
-        /* Alternate the animation direction */
+    a.callout-mobile {
+        display: none !important;
     }
 
-    @keyframes flash {
-        from {
-            opacity: 0;
-            /* Start with opacity 0 */
-        }
+    
 
-        to {
-            opacity: 1;
-            /* End with opacity 1 */
-        }
-    }
-
-    .project-section {}
 
     .project-card {
         width: 33%;
@@ -827,7 +774,31 @@ p {
         font-size: 18px;
     }
 
-    a.callout {
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        animation: flash 0.5s infinite alternate;
+        /* Alternate the animation direction */
+    }
+
+    .callout-mobile {
+        background-color: #1e1e1e;
+        border-radius: 50px;
+        color: white !important;
+        font-size: 14px;
+
+        padding: 4px 6px;
+        display: inline-flex !important;
+        align-items: center;
+        gap: 4px;
+        text-decoration: none;
+    }
+
+
+    a.callout-desktop {
         display: none !important;
     }
 
