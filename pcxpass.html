@@ -18,54 +18,6 @@
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            initializeGallery('.gallery-section1'); // Initialize the first gallery
-            initializeGallery('.gallery-section2'); // Initialize the second gallery
-            // Add more galleries as needed
-        });
-
-        function initializeGallery(gallerySelector) {
-            let slideIndex = 1;
-            showSlides(slideIndex, gallerySelector);
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n, gallerySelector);
-            }
-
-            function showSlides(n, gallerySelector) {
-                let slides = document.querySelectorAll(`${gallerySelector} .slide`);
-
-                if (n > slides.length) {
-                    slideIndex = 1;
-                } else if (n < 1) {
-                    slideIndex = slides.length;
-                }
-
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.transition = 'opacity 0.3s ease-in';
-                    slides[i].style.opacity = 0.25;
-                    slides[i].style.marginRight = '32px'; // Adjust the margin value
-                }
-
-                slides[slideIndex - 1].style.opacity = 1;
-
-                // Calculate the translation considering 100% + 16px for each slide
-                let translateXValue = `calc(-100% * ${slideIndex - 1} - 32px * ${slideIndex - 1})`; // 8px to center each image
-                document.querySelector(`${gallerySelector} .slideshow-container`).style.transform = `translateX(${translateXValue})`;
-
-                document.querySelector(`${gallerySelector} #currentSlideIndex`).innerText = slideIndex;
-            }
-
-            // Add event listeners to the buttons
-            document.querySelector(`${gallerySelector} .arrow.prev`).addEventListener('click', function () {
-                plusSlides(-1);
-            });
-
-            document.querySelector(`${gallerySelector} .arrow.next`).addEventListener('click', function () {
-                plusSlides(1);
-            });
-        }
-
         function toggleNav() {
             document.getElementById("myNav").classList.toggle("open");
             document.getElementById("ham").classList.toggle("open");
@@ -82,21 +34,21 @@
 <body>
 
     <div class="topnav" id="myTopnav">
-        <a href="#home" id="name">Max—R</a>
+        <a href="https://maxromanoff.com" id="name">Max—R</a>
         <div class="menu-links">
-            <a href="#">About</a>
+
             <a target="_blank"
                 href="https://drive.google.com/file/d/1FF5j0RmlDo6hD11dwtmB1FFg18skRUx9/view?usp=sharing">Resume</a>
-            <a href="About.html">Contact</a>
+                <a href="mailto:max.romanoff@hotmail.com">Contact</a>
         </div>
         <!-- The overlay -->
         <div id="myNav" class="overlay">
             <!-- Overlay content -->
             <div class="overlay-content">
-                <a href="#">About</a>
+
                 <a target="_blank"
                     href="https://drive.google.com/file/d/1FF5j0RmlDo6hD11dwtmB1FFg18skRUx9/view?usp=sharing">Resume</a>
-                <a href="About.html">Contact</a>
+                <a href="mailto:max.romanoff@hotmail.com">Contact</a>
             </div>
 
             <div class="footer caption">
@@ -135,7 +87,7 @@
                 </div>
 
                 <div class="img-section">
-                    <img src="img/Pass/red_phone-mock.webp" class="marketing-image flow">
+                    <img src="img/Pass/red_phone-mock.webp" class="marketing-image">
                     <p class="caption">Marketing image for PC Express Pass, designed by our amazing marketing design
                         team.
                     </p>
@@ -153,7 +105,8 @@
                     32% said their reason for leaving was due to high fees.
                 </p><br>
                 <p>To combat this problem, we launched PC Express Pass: a subscription service for customers to receive
-                    $0 fees on grocery pickup and delivery orders. My contributions on this project were the design of the
+                    $0 fees on grocery pickup and delivery orders. My contributions on this project were the design of
+                    the
                     end-to-end flows across both web and app.
                 </p><br>
                 <p>
@@ -209,12 +162,12 @@
                     <div class="section">
                         <p class="caption">Existing customers</p>
                         <p class="img-heading">Areas of Improvement</p>
-                        <img id="graph" src="img/Pass/area-of-improvement.webp" class="flow">
+                        <img id="graph" src="img/Pass/area-of-improvement.webp">
                     </div>
                     <div class="section">
                         <p class="caption">Past customers</p>
                         <p class="img-heading">Reasons for Churn</p>
-                        <img id="graph" src="img/Pass/reason-for-churn.webp" class="flow">
+                        <img id="graph" src="img/Pass/reason-for-churn.webp">
                     </div>
                 </div>
 
@@ -230,7 +183,7 @@
 
 
                 <div class="img-section">
-                    <img src="img/Pass/beforepass-timeslot.webp" class="flow">
+                    <img src="img/Pass/beforepass-timeslot.webp">
                     <p class="caption">Delivery customers would need to pay $13.99 in fees for orders within 3 hours,
                         and
                         $9.99 for all other orders within the same day.</p>
@@ -279,7 +232,7 @@
                     switch to the newer subscription service. (More details on challenges faced with this later).</p>
 
                 <div class="img-section">
-                    <img src="img/Pass/pcoi-benefits.webp" class="flow">
+                    <img src="img/Pass/pcoi-benefits.webp">
                     <p class="caption">PCOI subscribers get benefits across all Loblaws-owned businesses, not just PC
                         Express.</p>
                 </div>
@@ -307,7 +260,7 @@
                 </p>
 
                 <div class="img-section">
-                    <img src="img/Pass/uber-competitor.webp" class="flow">
+                    <img src="img/Pass/uber-competitor.webp">
                 </div>
             </div>
 
@@ -393,7 +346,7 @@
                 </p>
 
                 <div class="img-section">
-                    <img src="img/Pass/ad-placement.webp" class="flow">
+                    <img src="img/Pass/ad-placement.webp">
                 </div>
             </div>
 
@@ -416,7 +369,7 @@
 
 
                 <div class="img-section">
-                    <img src="img/Pass/wire-signup-init.webp" class="flow">
+                    <img src="img/Pass/wire-signup-init.webp">
                     <p class="caption">An approach focused on converting fast, but it lacked details about the program
                         and
                         the ability to switch plans.</p>
@@ -435,7 +388,7 @@
 
 
                 <div class="img-section">
-                    <img src="img/Pass/wire-signup-iteration.webp" class="flow">
+                    <img src="img/Pass/wire-signup-iteration.webp">
                 </div>
 
             </div>
@@ -455,7 +408,7 @@
                 </p>
 
                 <div class="img-section">
-                    <img src="img/Pass/wire-cancellation.webp" class="flow">
+                    <img src="img/Pass/wire-cancellation.webp">
                 </div>
             </div>
 
@@ -476,7 +429,7 @@
                 </p>
 
                 <div class="img-section">
-                    <img src="img/Pass/yellow-branding.webp" class="flow">
+                    <img src="img/Pass/yellow-branding.webp">
                 </div>
 
                 <p class="sub-heading">We proceeded with a deep red to capture more attention</p>
@@ -488,7 +441,7 @@
                 </p>
 
                 <div class="img-section">
-                    <img src="img/Pass/red-branding.webp" class="flow">
+                    <img src="img/Pass/red-branding.webp">
                 </div>
 
             </div>
@@ -526,7 +479,7 @@
                 </p>
 
                 <div class="img-section">
-                    <img src="img/Pass/thirdparty-iteration.webp" class="flow">
+                    <img src="img/Pass/thirdparty-iteration.webp">
                     <p class="caption">My proposal for simplifying the shipping address step, which was ultimately
                         rejected.
                     </p>
@@ -559,7 +512,7 @@
 
 
                 <div class="img-section">
-                    <img src="img/Pass/thirdparty-manage.webp" class="flow">
+                    <img src="img/Pass/thirdparty-manage.webp">
                     <p class="caption">We had to cut scope to make room for other functionality on the manage screen.
                     </p>
                 </div>
@@ -584,7 +537,7 @@
                 </p>
 
                 <div class="img-section">
-                    <img src="img/Pass/PCOI-sign-up.webp" class="flow">
+                    <img src="img/Pass/PCOI-sign-up.webp">
                     <p class="caption">PCOI customers would see this flow upon sign up.
                     </p>
                 </div>
@@ -619,15 +572,15 @@
                 </p>
 
                 <div class="img-section">
-                    <img src="img/Pass/pass-iphone.webp" class="expand-image flow">
+                    <img src="img/Pass/pass-iphone.webp" class="expand-image">
                 </div>
 
                 <div class="image-container">
                     <div class="section">
-                        <img src="img/Pass/pass-macbook.webp" class="flow">
+                        <img src="img/Pass/pass-macbook.webp">
                     </div>
                     <div class="section">
-                        <img src="img/Pass/bag-stuffer.webp" class="flow">
+                        <img src="img/Pass/bag-stuffer.webp">
                     </div>
                 </div>
             </div>

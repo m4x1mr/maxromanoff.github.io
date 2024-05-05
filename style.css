@@ -8,28 +8,6 @@ body {
     color: #333;
 }
 
-.h3 {
-    font-weight: 600;
-}
-
-#temp {
-    margin-top: 0;
-}
-
-.button {
-    border: 1px solid #858585;
-    text-decoration: none;
-    color: #444444;
-    padding: 8px;
-    border-radius: 4px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.button:hover{
-    background-color: #e6e6e6;
-}
 
 /*
 *
@@ -40,28 +18,6 @@ body {
 *
 *
 */
-
-
-#tldr {
-    background-color: #eee;
-    border: 0.5px solid #aaa;
-    border-radius: 4px;
-    padding: 12px;
-}
-
-
-hr {
-    border: 0.5px solid #9a9a9a;
-}
-
-svg {
-    color: #811e1e;
-    padding: 8px;
-    border: 1px solid #c4c4c4;
-    border-radius: 40px;
-}
-
-
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -76,6 +32,12 @@ svg {
 
 }
 
+
+
+.home-nav {
+    border-bottom: none;
+}
+
 .topnav .icon {
     display: none;
 }
@@ -85,16 +47,17 @@ svg {
 }
 
 
-
 .fade {
     background-color: #413547;
 }
 
-.fade a, .fade .caption{
+.fade a,
+.fade .caption {
     color: #fff !important;
 }
 
-.fade .bar1, .fade .bar3 {
+.fade .bar1,
+.fade .bar3 {
     background-color: #fff;
 }
 
@@ -102,9 +65,6 @@ svg {
 
     border: none;
 }
-
-
-
 
 .topnav a {
     font-family: 'Inter', sans-serif;
@@ -125,11 +85,6 @@ svg {
     /*color: #333333;*/
     text-decoration: underline;
 }
-
-
-/*
-**
-*/
 
 /* The Overlay (background) */
 
@@ -153,14 +108,6 @@ svg {
     /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-.footer {
-    padding: 24px 16px;
-    width: 100%;
-    box-sizing: border-box;
-    bottom: 48px;
-    position: absolute;
-    border-top: 1px solid #d4d4d4;
-}
 
 .open {
     margin-top: 0;
@@ -231,9 +178,108 @@ svg {
 }
 
 
+/*-----*/
 
 
 
+
+#temp {
+    margin-top: 0;
+}
+
+
+
+
+
+
+/*
+*
+*
+*
+*
+*** Project styles
+*
+*
+*/
+
+
+#tldr {
+    background-color: #eee;
+    border: 0.5px solid #aaa;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+
+hr {
+    border: 0.5px solid #9a9a9a;
+}
+
+svg {
+    color: #811e1e;
+    padding: 8px;
+    border: 1px solid #c4c4c4;
+    border-radius: 40px;
+}
+
+.card-container img {
+    width: 48px;
+    height: auto;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow columns to wrap to the next row on smaller screens */
+    justify-content: space-between;
+    padding: 0;
+    overflow-x: hidden;
+    /* Set padding to zero for mobile */
+}
+
+.middle-column {
+    width: 100%;
+    /* Full width on mobile */
+    margin-bottom: 64px;
+    /* Add spacing between divs */
+    position: relative;
+}
+
+.right-column {
+    width: 100%;
+    /* Full width on mobile */
+}
+
+.left-column {
+    width: 100%;
+    /* Full width on mobile */
+}
+
+.right-column-item {
+    margin-bottom: 24px;
+    /* Add 24px spacing between items in the right column */
+}
+
+.left-column-item {
+    margin-bottom: 24px;
+    position: sticky;
+    /* Add 24px spacing between items in the right column */
+}
+
+.button {
+    border: 1px solid #858585;
+    text-decoration: none;
+    color: #1b1b1b;
+    padding: 8px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #e6e6e6;
+}
 
 .image-container {
     width: 160%;
@@ -258,19 +304,6 @@ svg {
 .divider-sm {
     margin: 40px 0px 64px 0px;
     /* Add spacing between text-sections */
-}
-
-.divider-lg {
-    margin: 64px 0px;
-    width: 160%;
-    left: -30%;
-    /* Adjust the position to slightly overlap into the left column */
-    margin-right: -30%;
-    /* Adjust the position to slightly overlap into the right column */
-    height: auto;
-    /* Maintain aspect ratio */
-    position: relative;
-    /* Set positioning to relative to allow for overlap */
 }
 
 .small-image {
@@ -330,8 +363,166 @@ img {
     width: 100%;
     height: auto;
     border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
+
+.img-section {
+    margin: 36px 0 48px 0;
+    width: 100%;
+    /* Add spacing between text-sections */
+}
+
+.expand-image {
+    width: 160%;
+    /* Expand the image to 130% of the width of its containing block */
+    height: auto;
+    /* Maintain aspect ratio */
+    position: relative;
+    /* Set positioning to relative to allow for overlap */
+    left: -30%;
+    /* Adjust the position to slightly overlap into the left column */
+    margin-right: -30%;
+    /* Adjust the position to slightly overlap into the right column */
+    z-index: 1;
+    /* Ensure the image appears above other content */
+}
+
+/*-----*/
+
+
+
+
+/*
+*
+*
+*
+*
+*** Homepage cards
+*
+*
+*/
+
+
+.project-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+.project-card {
+    border-radius: 4px;
+    overflow: hidden;
+    width: 33%;
+    /* Adjust as needed */
+    height: 500px;
+    /* Adjust as needed */
+    position: relative;
+    /* Required for positioning absolute elements */
+}
+
+.project-card-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* Zoom and crop the image */
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s ease-in-out;
+    /* Add transition for smooth effect */
+
+}
+
+.project-card:hover .project-card-image {
+    width: 105%;
+    /* Zoom in effect on hover */
+    height: 105%;
+}
+
+.project-card-text-top,
+.project-card-text-bottom {
+    font-family: 'Inter';
+    font-weight: 300;
+
+    left: 12px;
+    right: 12px;
+    position: absolute;
+    width: auto;
+    text-align: left;
+    color: white;
+    /* Adjust text color as needed */
+    z-index: 1;
+    /* Ensure text appears above the image */
+}
+
+#light-card {
+    color: #000000;
+}
+
+.project-card-text-top {
+    top: 16px;
+    font-size: 16px;
+    /* Adjust as needed for background color and opacity */
+}
+
+.project-card-text-bottom {
+    bottom: 16px;
+    font-size: 20px;
+    /* Adjust as needed for background color and opacity */
+}
+
+
+.chip {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-weight: 400;
+    background-color: #e3e3e3;
+    font-size: 16px;
+    color: #444444;
+}
+
+
+.home-footer{
+    width: 100%;
+    padding: 36px 0;
+}
+
+/*-------*/
+
+
+
+/*
+*
+*
+*
+*
+*** Footer
+*
+*
+*/
+
+.footer {
+    padding: 24px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 48px;
+    position: absolute;
+    border-top: 1px solid #d4d4d4;
+}
+
+
+
+
+
+
+
+
 
 /*Gallery start*/
 .gallery-section {
@@ -396,49 +587,20 @@ img {
 
 
 
-/* 
-.container {
-    margin: 0 auto;
-    padding: 0 16px;
-}*/
 
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow columns to wrap to the next row on smaller screens */
-    justify-content: space-between;
-    padding: 0;
-    overflow-x: hidden;
-    /* Set padding to zero for mobile */
-}
 
-.middle-column {
-    width: 100%;
-    /* Full width on mobile */
-    margin-bottom: 64px;
-    /* Add spacing between divs */
-    position: relative;
-}
+/*
+*
+*
+*
+*
+*** Text
+*
+*
+*/
 
-.right-column {
-    width: 100%;
-    /* Full width on mobile */
-}
-
-.left-column {
-    width: 100%;
-    /* Full width on mobile */
-}
-
-.right-column-item {
-    margin-bottom: 24px;
-    /* Add 24px spacing between items in the right column */
-}
-
-.left-column-item {
-    margin-bottom: 24px;
-    position: sticky;
-    /* Add 24px spacing between items in the right column */
+.h3 {
+    font-weight: 600;
 }
 
 p {
@@ -451,7 +613,18 @@ p {
     /* Remove padding */
 }
 
-.heading, .img-heading, .h3 {
+.homepage-header,
+.homepage-h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #000;
+    width: 100%;
+}
+
+.heading,
+.img-heading,
+.h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     line-height: 1.4;
@@ -465,6 +638,16 @@ p {
     color: #666;
 }
 
+.title-section {
+    margin: 32px 0 48px 0;
+    /* Add spacing between text-sections */
+}
+
+.text-section {
+    margin: 128px 0 48px 0;
+    /* Add spacing between text-sections */
+}
+
 
 .highlight {
     background-color: yellow;
@@ -473,12 +656,6 @@ p {
     /* Adjust padding as needed */
 }
 
-.sticky-section {
-    margin-top: 0;
-    /* Remove top margin for the Resume section */
-
-    /* Offset by the height of the top border */
-}
 
 .resume-heading {
     display: flex;
@@ -495,50 +672,7 @@ p {
     /* Adjust margin as needed */
 }
 
-.title-section {
-    margin: 32px 0 48px 0;
-    /* Add spacing between text-sections */
-}
-.text-section {
-    margin: 128px 0 48px 0;
-    /* Add spacing between text-sections */
-}
 
-.img-section {
-    margin: 36px 0 48px 0;
-    width: 100%;
-    /* Add spacing between text-sections */
-}
-
-.expand-image {
-    width: 160%;
-    /* Expand the image to 130% of the width of its containing block */
-    height: auto;
-    /* Maintain aspect ratio */
-    position: relative;
-    /* Set positioning to relative to allow for overlap */
-    left: -30%;
-    /* Adjust the position to slightly overlap into the left column */
-    margin-right: -30%;
-    /* Adjust the position to slightly overlap into the right column */
-    z-index: 1;
-    /* Ensure the image appears above other content */
-}
-
-.flow {
-    box-shadow: none;
-}
-
-.job-experience {
-    margin-bottom: 48px;
-    /* Add spacing between job experiences */
-}
-
-.job-title {
-    text-decoration: underline;
-    /* Underline job titles */
-    position: relative;
-}
 
 /* Ellipsis animation */
 .ellipsis {
@@ -575,6 +709,55 @@ p {
         /* Adjust padding for desktop */
     }
 
+    .callout {
+        background-color: #1e1e1e;
+        border-radius: 50px;
+        color: white !important;
+        font-size: 18px;
+        padding: 4px 12px;
+        display: inline-flex !important;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        animation: flash 0.5s infinite alternate;
+        /* Alternate the animation direction */
+    }
+
+    @keyframes flash {
+        from {
+            opacity: 0;
+            /* Start with opacity 0 */
+        }
+
+        to {
+            opacity: 1;
+            /* End with opacity 1 */
+        }
+    }
+
+    .project-section {}
+
+    .project-card {
+        width: 33%;
+        /* Adjust as needed */
+        height: 500px;
+    }
+
+    .homepage-header {
+        font-size: 48px;
+    }
+
+    .homepage-h2 {
+        font-size: 32px;
+        padding: 24px 0;
+    }
+
     .heading {
         font-size: 22px;
         padding-bottom: 12px;
@@ -585,7 +768,8 @@ p {
         padding: 4px 0;
     }
 
-    .sub-heading, .img-heading {
+    .sub-heading,
+    .img-heading {
         font-size: 20px;
         padding-bottom: 16px;
     }
@@ -641,6 +825,19 @@ p {
 @media (max-width: 967px) {
     body {
         font-size: 18px;
+    }
+
+    a.callout {
+        display: none !important;
+    }
+
+    .project-section {
+        flex-direction: column;
+    }
+
+
+    .project-card {
+        width: 100%;
     }
 
 
@@ -727,7 +924,6 @@ p {
         margin-right: 0;
     }
 
-    .divider-lg,
     .divider-sm {
         width: 100%;
         /* Reset width to 100% for mobile screens */
@@ -742,12 +938,24 @@ p {
         font-size: 24px;
     }
 
+
+    .homepage-header {
+        font-size: 32px;
+    }
+
+    .homepage-h2 {
+        font-size: 20px;
+        padding: 24px 0;
+
+    }
+
     .heading {
         font-size: 20px;
         padding-bottom: 8px;
     }
 
-    .sub-heading, .img-heading {
+    .sub-heading,
+    .img-heading {
         font-size: 18px;
         padding: 8px 0 12px 0;
     }
@@ -763,14 +971,7 @@ p {
         font-size: 30px;
     }
 
-    /*
-    .container {
-        overflow-x: hidden;
-
-    }*/
-
     .main {
-        flex-direction: column-reverse;
         margin: 0 16px;
         padding-top: 96px;
         /* Reverse the order of columns for mobile */
