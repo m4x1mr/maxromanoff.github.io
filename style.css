@@ -715,10 +715,14 @@ p {
         padding: 4px 0;
     }
 
-    .sub-heading,
+
     .img-heading {
         font-size: 20px;
         padding-bottom: 16px;
+    }
+    .sub-heading {
+        font-size: 20px;
+        padding: 12px 0;
     }
 
     .quote {
