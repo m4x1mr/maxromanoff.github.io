@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Inter';
     font-weight: 400;
     background-color: #f5f5f5;
     /* Set your preferred background color */
     /* Add a 40px top border with transparent color */
-    color: #333;
+    color: #3b3b3b;
 }
 
 
@@ -204,11 +204,34 @@ body {
 
 
 #tldr {
-    background-color: #eee;
-    border: 0.5px solid #aaa;
+    border: 1px solid #000000;
     border-radius: 4px;
     padding: 12px;
 }
+
+#testing-chart {
+    margin: 24px 0;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    
+    gap: 4px;
+}
+
+.column {
+    grid-column: span 1;
+    text-align: center;
+}
+
+.double-column{
+    grid-column: span 2;
+}
+
+.large-column {
+    grid-column: span 4;
+}
+
 
 
 hr {
@@ -588,7 +611,7 @@ p {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     line-height: 1.3;
-    color: #666;
+    color: #000000;
 }
 
 .title-section {
@@ -705,9 +728,12 @@ p {
         padding: 24px 0;
     }
 
-    .heading {
-        font-size: 22px;
+    .header-container {
         padding-bottom: 12px;
+    }
+
+    .heading {
+        font-size: 28px;
     }
 
     .h3 {
@@ -718,11 +744,10 @@ p {
 
     .img-heading {
         font-size: 20px;
-        padding-bottom: 16px;
     }
     .sub-heading {
-        font-size: 20px;
-        padding: 12px 0;
+        font-size: 18px;
+        padding-top: 8px;
     }
 
     .quote {
@@ -731,6 +756,7 @@ p {
 
     .title {
         font-size: 40px;
+        font-weight: 500;
     }
 
     .sticky-section {
@@ -760,13 +786,8 @@ p {
         color: #696969;
     }
 
-    /*
-.container {
-    overflow-x: hidden;
-}*/
-
     body {
-        font-size: 18px;
+        font-size: 16px;
 
         /* Move the top border inside the body for desktop */
     }
@@ -775,9 +796,11 @@ p {
 
 @media (max-width: 967px) {
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
-
+    .header-container {
+        padding-bottom: 12px;
+    }
 
     .dot {
         width: 6px;
@@ -925,25 +948,24 @@ p {
     }
 
     .heading {
-        font-size: 20px;
-        padding-bottom: 8px;
+        font-size: 24px;
     }
 
     .sub-heading,
     .img-heading {
         font-size: 18px;
-        padding: 8px 0 12px 0;
+        padding-top: 8px;
     }
 
     .h3 {
         font-size: 18px;
-        padding: 4px 0;
     }
 
 
 
     .title {
         font-size: 30px;
+        font-weight: 500;
     }
 
     .main {
@@ -953,7 +975,7 @@ p {
     }
 
     .caption {
-        font-size: 14px;
+        font-size: 16px;
         color: #696969;
     }
 
