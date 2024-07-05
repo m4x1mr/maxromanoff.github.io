@@ -376,14 +376,17 @@ svg {
     height: auto;
     display: block;
 }
+
 .header-img-section img {
     box-sizing: border-box;
     width: 100%;
     height: auto;
     display: block;
 }
+
 .header-img-section {
     position: relative;
+    overflow: hidden;
 }
 
 .styled-bg {
@@ -786,15 +789,25 @@ p {
     .img-section {
         width: 100%;
     }
+
     .header-img-section {
         width: 100%;
         top: 48px;
+        height: 550px;
     }
+
+    .header-img-section img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 
     .two-up {
         width: 44%;
     }
-    
+
     .three-up {
         width: 28%;
     }
@@ -926,11 +939,11 @@ p {
 
 @media (max-width: 967px) {
 
-    .info-card-container   {
+    .info-card-container {
         flex-direction: column;
     }
 
-    .info-card{
+    .info-card {
         margin: 8px 0;
     }
 
@@ -1030,6 +1043,7 @@ p {
     .img-section {
         margin: 24px 0 40px 0;
     }
+
     .header-img-section {
         top: 40px;
     }
@@ -1079,7 +1093,7 @@ p {
         font-size: 32px;
     }
 
-    .info-card .quote{
+    .info-card .quote {
         font-size: 24px;
     }
 
@@ -1120,7 +1134,7 @@ p {
 
     .main {
         margin: 0 16px;
-        padding-top: 96px;
+        padding-top: 64px;
         /* Reverse the order of columns for mobile */
     }
 
