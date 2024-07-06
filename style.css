@@ -494,12 +494,20 @@ img {
     background-color: #EFEFEF;
 }
 
+.blue {
+    background-color: #DFE5EF;
+}
+
 .card-1 {
-    background-color: #E2F8A3;
+    background-color: #f6b3b9;
 }
 
 .card-2 {
-    background-color: #BEF7D1;
+    background-color: #f39898;
+}
+
+.card-3 {
+    background-color: #ef808d;
 }
 
 #img-bottom-cutoff {
@@ -514,9 +522,6 @@ img {
     padding: 12px 12px 12px 12px;
 }
 
-.card-3 {
-    background-color: #9DF8ED;
-}
 
 
 
