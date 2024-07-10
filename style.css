@@ -8,6 +8,10 @@ body {
     color: #1b1b1b;
 }
 
+a{
+    color: #000;
+}
+
 
 /*
 *
@@ -851,7 +855,7 @@ p {
     }
 
     .homepage-h2 {
-        font-size: 32px;
+        font-size: 30px;
         padding: 24px 0;
     }
 
