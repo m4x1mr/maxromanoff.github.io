@@ -529,15 +529,15 @@ img {
 .project-section {
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 12px;
+    justify-content: left;
+    gap: 17px;
+    flex-wrap: wrap;
 }
 
 
 .project-card {
     border-radius: 4px;
     overflow: hidden;
-    width: 33%;
     /* Adjust as needed */
     height: 500px;
     /* Adjust as needed */
@@ -852,7 +852,7 @@ p {
 
 
     .project-card {
-        width: 33%;
+        width: 32%;
         /* Adjust as needed */
         height: 500px;
     }
