@@ -245,8 +245,23 @@ svg {
     border-radius: 40px;
 }
 
-.card-container img {
-    width: 48px;
+.card-container {
+    margin: 48px 0 64px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card-container img{
+    border: 1px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-container .item {
+    width: 46%;
     height: auto;
 }
 
@@ -305,24 +320,13 @@ svg {
 }
 
 .image-container {
-    width: 160%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    /* Adjust alignment as needed */
-    overflow: hidden;
-    /* Ensure the container doesn't overflow horizontally */
-    margin: 36px 0 48px -30%;
+    gap: 17px;
+    flex-wrap: wrap;
 }
 
-.marketing-image-container {
-    width: 160%;
-    display: flex;
-    justify-content: space-between;
-    /* Adjust alignment as needed */
-    overflow: hidden;
-    /* Ensure the container doesn't overflow horizontally */
-    margin-left: -30%;
-}
 
 .divider-sm {
     margin: 40px 0px 64px 0px;
@@ -352,20 +356,6 @@ svg {
     margin-right: -30%;
     /* Adjust the position to slightly overlap into the right column */
     z-index: 1;
-}
-
-.marketing-image-container img {
-    width: 48%;
-    /* Adjust the width of each image as needed */
-    height: auto;
-    margin-bottom: 40px;
-}
-
-.image-container .section {
-    width: 48%;
-    /* Adjust the width of each image as needed */
-    height: auto;
-    margin-bottom: 40px;
 }
 
 
@@ -398,10 +388,6 @@ svg {
     background-color: #eee;
     padding: 12px;
 
-}
-
-.card-container {
-    margin: 48px 0 64px 0;
 }
 
 img {
@@ -848,7 +834,10 @@ p {
         display: none !important;
     }
 
-
+    .image-container img{
+        width: 31%; 
+        height: auto;
+    }
 
 
     .project-card {
@@ -944,6 +933,16 @@ p {
 
 @media (max-width: 967px) {
 
+    .image-container img{
+        width: 100%; 
+        height: auto;
+    }
+
+    .card-container .item {
+        width: 100%;
+        height: auto;
+    }
+
     .info-card-container {
         flex-direction: column;
     }
@@ -1033,16 +1032,10 @@ p {
     .image-container {
         width: 100%;
         /* Set width to 100% for smaller screens */
-        margin: 36px 0 0 0;
+        margin: 12px 0 0 0;
         /* Remove negative margin */
         flex-direction: column;
         /* Stack images on top of each other */
-    }
-
-    .image-container .section {
-        width: 100%;
-        /* Set image width to 100% for smaller screens */
-        /* Add spacing between stacked images */
     }
 
     .img-section {
@@ -1062,27 +1055,6 @@ p {
         /* Reset right margin */
     }
 
-    .marketing-image-container {
-        width: 100%;
-        /* Set width to 100% for smaller screens */
-        margin-left: 0;
-        /* Remove negative margin */
-        flex-direction: column;
-    }
-
-    .marketing-image-container img {
-        width: 100%;
-        /* Set image width to 100% for smaller screens */
-        margin-bottom: 24px;
-    }
-
-    .marketing-image {
-        width: 100%;
-        /* Reset width to 100% for mobile screens */
-        left: 0;
-        /* Reset left position */
-        margin-right: 0;
-    }
 
     .divider-sm {
         width: 100%;
