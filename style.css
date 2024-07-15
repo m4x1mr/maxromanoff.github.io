@@ -450,6 +450,7 @@ img {
 }
 
 
+
 .grey {
     background-color: #333333;
 }
@@ -477,7 +478,7 @@ img {
 .project-section {
     width: 100%;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     gap: 17px;
     flex-wrap: wrap;
     margin-top: 48px;
@@ -882,6 +883,10 @@ p {
 }
 
 @media (max-width: 967px) {
+
+    #empty-spot{
+        display: none;
+    }
 
     .image-container img{
         width: 100%; 
