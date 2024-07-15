@@ -2,14 +2,15 @@ body {
     margin: 0;
     font-family: 'Inter';
     font-weight: 400;
-    background-color: #f5f5f5;
+    background-color: #131313;
+    background-image: linear-gradient(90deg, #0c0c0c, #161616);
     /* Set your preferred background color */
     /* Add a 40px top border with transparent color */
-    color: #1b1b1b;
+    color: #efefef;
 }
 
 a{
-    color: #000;
+    color: #fff;
 }
 
 
@@ -28,8 +29,7 @@ a{
     width: 100%;
     position: fixed;
     z-index: 2000;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #d4d4d4;
+    background-color: #131313;
     box-sizing: border-box;
     align-items: center;
     padding: 8px 16px;
@@ -77,7 +77,7 @@ a{
     text-align: left;
     text-decoration: none;
     line-height: 1;
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -122,7 +122,7 @@ a{
 .bar3 {
     width: 28px;
     height: 3px;
-    background-color: #333;
+    background-color: #fff;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -157,7 +157,7 @@ a{
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     font-size: 32px;
-    color: #333;
+    color: #1b1b1b;
     display: block;
     /* Display block instead of inline */
     transition: 0.3s;
@@ -242,13 +242,6 @@ hr {
     border: 0.5px solid #9a9a9a;
 }
 
-svg {
-    color: #811e1e;
-    padding: 8px;
-    border: 1px solid #c4c4c4;
-    border-radius: 40px;
-}
-
 .card-container {
     margin: 48px 0 64px 0;
     width: 100%;
@@ -306,21 +299,6 @@ svg {
     margin-bottom: 24px;
     position: sticky;
     /* Add 24px spacing between items in the right column */
-}
-
-.button {
-    border: 1px solid #858585;
-    text-decoration: none;
-    color: #1b1b1b;
-    padding: 8px;
-    border-radius: 4px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.button:hover {
-    background-color: #e6e6e6;
 }
 
 .image-container {
@@ -401,7 +379,6 @@ img {
 
 .img-section {
     margin: 36px 0 48px 0;
-    border: 1px solid #000;
     border-radius: 5px;
     overflow: hidden;
     /* Add spacing between text-sections */
@@ -460,7 +437,7 @@ img {
 }
 
 .info-card-container .info-card {
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 5px;
 }
 
@@ -472,33 +449,11 @@ img {
     padding: 12px 16px 24px 16px;
 }
 
-.red {
-    background-color: #FF7F7F;
-}
-
-.green {
-    background-color: #7FFF8C;
-}
 
 .grey {
-    background-color: #EFEFEF;
+    background-color: #333333;
 }
 
-.blue {
-    background-color: #DFE5EF;
-}
-
-.card-1 {
-    background-color: #f6b3b9;
-}
-
-.card-2 {
-    background-color: #f39898;
-}
-
-.card-3 {
-    background-color: #ef808d;
-}
 
 #img-bottom-cutoff {
     padding: 12px 12px 0 12px;
@@ -512,6 +467,9 @@ img {
     padding: 12px 12px 12px 12px;
 }
 
+.border {
+    border: 1px solid #fff;
+}
 
 
 
@@ -522,6 +480,7 @@ img {
     justify-content: left;
     gap: 17px;
     flex-wrap: wrap;
+    margin-top: 48px;
 }
 
 
@@ -591,7 +550,7 @@ img {
 
 
 #light-card {
-    color: #000000;
+    color: #1b1b1b;
 }
 
 .project-card-text-top {
@@ -604,18 +563,6 @@ img {
     bottom: 16px;
     font-size: 20px;
     /* Adjust as needed for background color and opacity */
-}
-
-
-.chip {
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-family: 'Inter';
-    font-weight: 400;
-    background-color: #e3e3e3;
-    font-size: 16px;
-    color: #444444;
 }
 
 
@@ -672,7 +619,6 @@ img {
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    color: #000;
     text-transform: uppercase;
 }
 
@@ -690,12 +636,19 @@ p {
     /* Remove padding */
 }
 
-.homepage-header,
+
+.homepage-header{
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    line-height: 1.4;
+    width: 100%;
+}
+
+
 .homepage-h2 {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 1.4;
-    color: #000;
     width: 100%;
 }
 
@@ -705,14 +658,12 @@ p {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     line-height: 1.4;
-    color: #000;
 }
 
 .sub-heading {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     line-height: 1.3;
-    color: #000000;
 }
 
 .title-section {
@@ -737,7 +688,6 @@ p {
 .resume-heading {
     display: flex;
     align-items: center;
-    color: #333;
 }
 
 .tab-svg {
@@ -783,6 +733,7 @@ p {
 
     .img-section {
         width: 100%;
+        box-sizing: border-box;
     }
 
     .header-img-section {
@@ -851,12 +802,12 @@ p {
     }
 
     .homepage-header {
-        font-size: 48px;
+        font-size: 52px;
     }
 
     .homepage-h2 {
-        font-size: 30px;
-        padding: 24px 0;
+        font-size: 28px;
+        padding: 24px 0 12px 0;
     }
 
     .header-container {
@@ -920,11 +871,6 @@ p {
     .right-column {
         width: calc(17% - 64px);
         /* Adjust width and consider padding */
-    }
-
-    .caption {
-        font-size: 16px;
-        color: #696969;
     }
 
     body {
@@ -1044,6 +990,7 @@ p {
 
     .img-section {
         margin: 24px 0 40px 0;
+        box-sizing: border-box;
     }
 
     .header-img-section {
@@ -1117,11 +1064,6 @@ p {
         margin: 0 16px;
         padding-top: 64px;
         /* Reverse the order of columns for mobile */
-    }
-
-    .caption {
-        font-size: 16px;
-        color: #696969;
     }
 
     .left-column {
