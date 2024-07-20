@@ -328,7 +328,7 @@ hr {
 }
 
 .marketing-image {
-    margin: 24px 0px;
+    margin: 48px 0px;
     width: 160%;
     /* Expand the image to 130% of the width of its containing block */
     height: auto;
@@ -885,6 +885,13 @@ p {
 }
 
 @media (max-width: 967px) {
+
+
+    .marketing-image{
+        width: 100%;
+        left: 0;
+
+    }
 
     #empty-spot{
         display: none;
