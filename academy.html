@@ -25,6 +25,24 @@
             document.getElementById("ham").classList.toggle("open");
             document.getElementById("myTopnav").classList.toggle("fade");
         }
+
+        let scrollTimeout;
+        document.addEventListener("scroll", () => {
+            if (scrollTimeout) return;
+
+            scrollTimeout = setTimeout(() => {
+                const sections = document.querySelectorAll(".text-section");
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+                    if (isVisible) {
+                        section.classList.add("visible");
+                    }
+                });
+                scrollTimeout = null;
+            }, 100); // Throttle to 100ms
+        });
     </script>
 
 </head>
@@ -41,7 +59,7 @@
             <a href="https://maxromanoff.com/about-me">About Me</a>
             <a target="_blank" href="https://drive.google.com/file/d/14QaIUdzfQjqi2vJGzjqfsw1WlJp79V9D/view">Resume</a>
             <a href="mailto:max.romanoff@hotmail.com">Contact</a>
-            
+
         </div>
         <!-- The overlay -->
         <div id="myNav" class="overlay">
@@ -51,7 +69,7 @@
                 <a target="_blank"
                     href="https://drive.google.com/file/d/14QaIUdzfQjqi2vJGzjqfsw1WlJp79V9D/view">Resume</a>
                 <a href="mailto:max.romanoff@hotmail.com">Contact</a>
-                
+
             </div>
 
             <div class="footer caption">

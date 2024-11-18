@@ -25,6 +25,24 @@
             document.getElementById("ham").classList.toggle("open");
             document.getElementById("myTopnav").classList.toggle("fade");
         }
+
+        let scrollTimeout;
+        document.addEventListener("scroll", () => {
+            if (scrollTimeout) return;
+
+            scrollTimeout = setTimeout(() => {
+                const sections = document.querySelectorAll(".text-section");
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+                    if (isVisible) {
+                        section.classList.add("visible");
+                    }
+                });
+                scrollTimeout = null;
+            }, 100); // Throttle to 100ms
+        });
     </script>
 
 </head>
