@@ -676,7 +676,7 @@ p {
 }
 
 .text-section {
-    margin: 128px 0 64px 0;
+    margin: 128px 0 80px 0;
     /* Add spacing between text-sections */
     opacity: 0;
     transform: translateY(20px);
@@ -998,7 +998,7 @@ p {
     }
 
     .text-section {
-        margin: 64px 0 48px 0;
+        margin: 64px 0;
     }
 
 
