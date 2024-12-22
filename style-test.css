@@ -1,0 +1,77 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+
+body {
+    font-family: sans-serif;
+    color: rgb(0, 0, 135); /* Updated text color */
+    background-color: #fbf8ed; /* Updated background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+/* Title styling */
+h1 {
+    font-family: "Antic Didone", serif;
+    font-weight: 400;
+    font-style: normal;    
+    font-size: 124px;
+    margin-bottom: 40px;
+    line-height: 1.0;
+
+}
+
+/* Body text styling */
+p {
+    font-size: 14px;
+    max-width: 600px;
+    margin: 10px auto 24px; /* Increased bottom margin for more space */
+    text-transform: uppercase;
+    line-height: 1.6;
+
+}
+
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 135);
+    margin-top: 20px; /* Adds space above the link to push it lower */
+    display: inline-block; /* Make links appear side by side */
+    margin-right: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 64px;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 12px;
+        padding: 0 20px;
+    }
+}
