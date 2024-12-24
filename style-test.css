@@ -18,6 +18,7 @@ body {
     overflow: hidden; /* Prevent scrolling */
 }
 
+
 /* Title styling */
 h1 {
     font-family: "Antic Didone", serif;
@@ -37,18 +38,49 @@ p {
     line-height: 1.6;
 }
 
-/* Link styling */
-a {
-    text-decoration: none;
-    color: rgb(0, 0, 135);
-    margin-top: 12px; /* Adds space above the link to push it lower */
-    display: inline-block; /* Make links appear side by side */
-    margin-right: 20px;
+/* Button styling */
+button {
+    padding: 8px 12px 8px 12px;
+    margin: 24px 0; /* Margin above and below */
+    border: 1px solid rgba(0, 0, 135, 0.1); /* Border with reduced opacity */
+    background-color: transparent; /* Remove background color */
+    color: rgb(0, 0, 135); /* Blue text color */
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+
 }
 
-a:hover {
+button:hover {
+    border-color: rgba(0, 0, 135); /* Darken border on hover */
+}
+
+
+/* footer styling */
+footer {
+    
+    width: 100%;
+    background-color: #fbf8ed;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid rgba(0, 0, 135, 0.1); /* Border with reduced opacity */
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    font-size: 14px;
+
+}
+
+footer a:hover {
     text-decoration: underline;
 }
+
 
 /* Responsive styles for tablets */
 @media (max-width: 768px) {
