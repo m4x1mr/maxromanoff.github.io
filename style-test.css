@@ -58,7 +58,6 @@ button:hover {
 
 /* footer styling */
 footer {
-    
     width: 100%;
     background-color: #fbf8ed;
     padding: 16px 0;
@@ -104,4 +103,13 @@ footer a:hover {
         font-size: 12px;
         padding: 0 20px;
     }
+
+    footer a{
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
 }
