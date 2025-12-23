@@ -1,23 +1,31 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const menuOverlay = document.getElementById('site-menu');
 const dialog = document.getElementById('lightbox');
-const dialogImg = dialog.querySelector('.lightbox__img');
-const closeBtn = dialog.querySelector('.lightbox__close');
+let dialogImg = null;
+let closeBtn = null;
+if (dialog) {
+  dialogImg = dialog.querySelector('.lightbox__img');
+  closeBtn = dialog.querySelector('.lightbox__close');
+}
 
 document.addEventListener('click', (e) => {
   const img = e.target.closest('img.zoomable');
-  if (!img) return;
+  if (!img || !dialog || !dialogImg) return;
 
   dialogImg.src = img.src;
   dialogImg.alt = img.alt || '';
   dialog.showModal();
 });
 
-closeBtn.addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', (e) => {
-  // click backdrop closes
-  if (e.target === dialog) dialog.close();
-});
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => dialog.close());
+}
+if (dialog) {
+  dialog.addEventListener('click', (e) => {
+    // click backdrop closes
+    if (e.target === dialog) dialog.close();
+  });
+}
 
 // Close dialog with Escape key for accessibility
 document.addEventListener('keydown', (e) => {
