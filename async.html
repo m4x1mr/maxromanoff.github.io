@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Async Subs — Max Romanoff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts: adjust to your real font hosting later -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!-- Mobile header (only visible on mobile) -->
+    <header class="mobile-header">
+        <div class="mobile-header__logo special-logo">
+            <a href="index.html" aria-label="Back to home">max romanoff.</a>
+        </div>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="visually-hidden">Open navigation</span>
+        </button>
+    </header>
+
+    <!-- Mobile full-screen menu overlay -->
+    <nav id="site-menu" class="menu-overlay" hidden>
+        <div class="menu-overlay__inner">
+            <ul class="menu-overlay__nav">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1zqNqpXfdFD_6gZ9Nz7KLWx7RIUKv0uzE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+
+            <section class="menu-overlay__extra" id="contact">
+                <h2 class="heading special-heading">Interested in collaborating?</h2>
+                <p>
+                    <a href="mailto:max.romanoff@hotmail.com">Reach out</a> for design consulting, critiques, or just coffee.
+                </p>
+            </section>
+        </div>
+    </nav>
+
+    <!-- PAGE GRID -->
+    <div class="page__project">
+
+        <!-- Left column / desktop nav -->
+        <aside class="page__nav">
+            <div class="logo special-logo">
+                <a href="index.html" aria-label="Back to home">max romanoff.</a>
+            </div>
+
+            <nav class="side-nav">
+                <ul>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="https://drive.google.com/file/d/1zqNqpXfdFD_6gZ9Nz7KLWx7RIUKv0uzE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                    <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Middle column / main content -->
+        <main class="page__main">
+
+
+
+
+
+
+            <!-- TITLE SECTION -->
+            <header class="project-hero copy--wide">
+                <h3 class="project__title">
+                    Increasing efficiency by optimizing item substitutions
+                </h3>
+                <div class="project-card__meta">
+                    <span class="tag">Lead product designer</span>
+                    <span class="tag">September 2022 — August 2023</span>
+                </div>
+            </header>
+
+
+
+
+
+            <!-- HERO IMAGE -->
+            <section class="gallery">
+                <div class="gallery__item" aria-label="Hero image">
+                    <img src="assets/async/hero-1.png" loading="lazy" alt="Async Subs hero image" />
+                </div>
+            </section>
+
+
+
+
+
+
+            <!-- TL;DR (slightly larger body copy) -->
+            <section class="tldr">
+                <p class="tldr__copy copy--wide">
+                    "Async Subs" enabled customers to review grocery substitutions asynchronously instead of by phone,
+                    improving customer satisfaction and saving 60,000 hours and $3M+ in labour costs in just 2 months.
+
+                </p>
+            </section>
+
+
+            <!-- CONTEXT + APPROACH (text blocks) -->
+            <section class="content-block copy">
+                <h2 class="heading">Context</h2>
+                <p>
+                    Substitutions are crucial for both customers and the business. When an item is unavailable, offering
+                    a comparable alternative allows customers to complete their order while helping the business
+                    preserve revenue. As a result, order fill-rate is a core KPI, with the target being as close to 100%
+                    as possible.
+                </p>
+                <p>
+                    However, substitutions are also a major source of frustration. “Too many substitutions” is a leading
+                    driver of churn on PC Express, accounting for roughly 20% of lost customers. Expensive or inaccurate
+                    replacements further erode trust and satisfaction.
+                </p>
+            </section>
+
+
+            <section class="gallery">
+                <div class="gallery__item">
+                    <img src="assets/async/picking.png" class="zoomable" loading="lazy" alt="Me picking groceries" />
+                </div>
+            </section>
+
+
+
+
+            <section class="content-block copy">
+                <h2 class="heading">Problem</h2>
+                <p>
+                    To mitigate these issues, stores rely on a manual process. Customers receive a read-only email
+                    showing substitutions and out-of-stock items, followed by a phone call shortly before pickup to
+                    approve or reject changes. Customers value the personal touch of the call, but from an operational
+                    standpoint it is inefficient, time-consuming, and difficult to scale across hundreds of stores.
+                </p>
+                <p>
+                    The existing digital experience offers visibility, but no control. Customers are dependent on the
+                    phone call to make changes, and store employees spend several minutes per order coordinating
+                    substitutions.
+                </p>
+                <p>
+                    Operations proposed removing phone calls altogether and enabling customers to manage substitutions
+                    online, framing it as an opportunity to save millions in labour costs annually. Before committing to
+                    that direction, we needed to align cross-functional teams on what the right problem to solve
+                    actually was—balancing customer trust, operational efficiency, and business impact—before defining a
+                    solution.
+                </p>
+            </section>
+            <section class="content-block copy">
+                <h2 class="heading">Approach</h2>
+                <p>
+                    I led the design of an asynchronous substitution management experience that allowed customers to
+                    review, approve, or reject substitutions digitally within a time-sensitive window.
+                </p>
+                <p>
+                    I started with designing and facilitating workshops to align teams on the real problem and define
+                    success metrics before jumping into solutions—Async Subs was aligned as the one with the highest
+                    impact. From there, I started to iterate through designs, mainly building on the existing
+                    experience. I tested an autosave option, but found from customers that they preferred to explicitly
+                    save their selections.
+                </p>
+            </section>
+
+            <!-- IMAGE GALLERY (stacked) -->
+            <section class="gallery">
+                <div class="gallery__item" aria-label="Gallery image 1">
+                    <img src="assets/async/workshop-1.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 1" />
+                </div>
+                <div class="gallery__item" aria-label="Gallery image 2">
+                    <img src="assets/async/workshop-2.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 2" />
+                </div>
+                <div class="gallery__item" aria-label="Gallery image 3">
+                    <img src="assets/async/workshop-3.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 3" />
+                </div>
+
+                <div class="gallery__item" aria-label="Gallery image 4">
+                    <img src="assets/async/service-blueprint.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 4" />
+                </div>
+                <div class="gallery__item" aria-label="Gallery image 5">
+                    <img src="assets/async/review-flow.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 5" />
+                </div>
+                <div class="gallery__item" aria-label="Gallery image 5">
+                    <img src="assets/async/init-designs.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 5" />
+                </div>
+                <div class="gallery__item" aria-label="Gallery image 5">
+                    <img src="assets/async/testing.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 5" />
+                </div>
+
+                <!-- IMAGE GALLERY (2-up on desktop, 1-col on mobile via CSS) 
+                <div class="gallery--two">
+                    <div class="gallery__item project-image-placeholder" aria-label="Two-up image placeholder"></div>
+                    <div class="gallery__item project-image-placeholder" aria-label="Two-up image placeholder"></div>
+                </div>-->
+            </section>
+
+
+
+
+
+            <!-- CHALLENGES -->
+            <section class="content-block copy">
+                <h2 class="heading">Challenges</h2>
+                <p>
+                    Though operational efficiency was a key goal, we didn't want to skimp on the customer experience.
+                    Research told us customers loved the call, due to its personal touch and immediacy, so my PM and I
+                    wanted to test if this async experience could truly deliver the same level of trust and
+                    satisfaction. The idea was to have a toggle allowing customers to opt into a phone call if they
+                    preferred.
+                </p>
+                <p>
+                    Though the Ops team agreed, our leadership team said that since our goal was to get rid of the call
+                    entirely, it didn't make sense to offer it as an option. Ultimately, we had to prioritize
+                    operational goals
+                    over customer preferences in this case, which was a tough but necessary trade-off.
+                </p>
+
+            </section>
+
+
+
+
+            <!-- IMAGE GALLERY (stacked) -->
+            <section class="gallery">
+                <div class="gallery__item" aria-label="Gallery image 5">
+                    <img src="assets/async/call-toggle.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 5" />
+                </div>
+            </section>
+
+
+
+
+            <!-- OUTCOMES + STATS (pills) -->
+            <section class="content-block copy">
+                <h2 class="heading">Outcomes</h2>
+
+                <div class="pill-list">
+                    <div class="pill">
+                        <span class="tldr__copy">60,000 hours</span>
+                        <p>in 2 months</p>
+                    </div>
+                    <div class="pill">
+                        <span class="tldr__copy">$3M+ saved</span>
+                        <p>in 2 months</p>
+                    </div>
+                </div>
+
+                <p>
+                    The solution had incredible results. Within 2 months, customer adoption reached over 60%, with
+                    measurable reductions in store labour. In the same period, the program contributed to
+                    60,000 hours saved and over $3M in projected annual cost savings.
+                </p>
+                <p>
+                    While broader customer metrics like retention were planned for longer-term evaluation, early signals
+                    showed improved clarity and confidence in managing substitutions.
+                </p>
+
+            </section>
+
+
+            <section class="gallery">
+                <div class="gallery__item" aria-label="Gallery image 5">
+                    <img src="assets/async/mvp-scope.png" class="zoomable" loading="lazy"
+                        alt="Async Subs gallery image 5" />
+                </div>
+            </section>
+
+            <section class="content-block copy">
+                <h2 class="heading">Learnings</h2>
+                <p>
+                    Balancing business needs with customer wants was a constant theme throughout this project. The
+                    Operations team was initially hesitant about the workshops, as they felt confident in their proposed
+                    solution, but ultimately found value in the process as the outcomes helped inform the roadmap. One
+                    of the biggest challenges we faced came from consistently shifting business priorities, where
+                    decisions were occasionally retracted and led to redesigns—most notably around the phone call
+                    toggle.
+
+                </p>
+                <p>
+                    Despite the contextual complexity of the problem, the solution itself remained intentionally simple.
+                    I felt like I was learning something new from the Operations team every week, and I enjoyed owning
+                    this project end to end—from discovery and solution definition through detailed design and launch.
+                    It was a rewarding challenge and an opportunity to design something that made a meaningful impact
+                    for both store employees and customers.
+                </p>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Footer (same pattern as index) -->
+            <footer class="site-footer">
+                <p>Product designer.</p>
+                <p>Designed and built in 2025.</p>
+            </footer>
+
+        </main>
+
+        <!-- Right column (empty, reserved for future contextual nav) -->
+        <aside class="page__side"></aside>
+
+    </div>
+
+    <dialog class="lightbox" id="lightbox">
+        <button class="lightbox__close" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 6 L18 18 M6 18 L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    fill="none" />
+            </svg>
+        </button>
+        <img class="lightbox__img" alt="">
+    </dialog>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

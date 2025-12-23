@@ -2,39 +2,205 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Romanoff — Portfolio</title>
-    <link rel="stylesheet" href="style-test.css">
+
+    <meta charset="UTF-8" />
+    <title>Max Romanoff – Product Designer</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts: adjust to your real font hosting later -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+    <!-- Source Serif Pro + Instrument Serif. Helvetica Neue will use system fallbacks -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
+    <!-- Mobile header (only visible on mobile) -->
+    <header class="mobile-header">
+        <div class="mobile-header__logo special-logo">
+            max romanoff.
+        </div>
 
-    <main>
-        <section>
-            <img src="img/About/me-ai.svg" alt="A descriptive alt text" style="max-width: 150px; max-height: 125px;" />
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="visually-hidden">Open navigation</span>
+        </button>
+    </header>
 
-            <h1>Max Romanoff</h1>
-            <p>
-                I'm a product designer in Toronto with a background in Industrial Engineering.
-                Currently redesigning the site.
-            </p>
+    <!-- Mobile full-screen menu overlay -->
+    <nav id="site-menu" class="menu-overlay" hidden>
+        <div class="menu-overlay__inner">
 
-            <a href="https://www.papermark.io/view/cm532z6zo0001x1igck7j7oob" target="_blank" rel="noopener noreferrer">
-                <button>View portfolio deck </button>
-            </a>
-        </section>
 
-    </main>
-    <footer>
-        <a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank" rel="noopener noreferrer">LinkedIn</a>        
-        <a href="https://drive.google.com/file/d/14QaIUdzfQjqi2vJGzjqfsw1WlJp79V9D/view" target="_blank" rel="noopener noreferrer">Resume</a>        
-        <a href="mailto:max.romanoff@hotmail.com">max.romanoff@hotmail.com</a>
-    </footer>
+            <ul class="menu-overlay__nav">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1zqNqpXfdFD_6gZ9Nz7KLWx7RIUKv0uzE/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+
+            <section class="menu-overlay__extra" id="contact">
+                <h2 class="project-card__title">Interested in collaborating?</h2>
+                <p>
+                    <a href="mailto:max.romanoff@hotmail.com">Reach out</a> for design consulting, critiques, or just
+                    coffee.
+                </p>
+            </section>
+        </div>
+    </nav>
+
+    <!-- PAGE GRID -->
+    <div class="page">
+        <!-- Left column / desktop nav -->
+        <aside class="page__nav">
+            <div class="logo special-logo">
+                max romanoff.
+            </div>
+
+            <nav class="side-nav">
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="https://drive.google.com/file/d/1zqNqpXfdFD_6gZ9Nz7KLWx7RIUKv0uzE/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">Resume</a></li>
+                    <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Middle column / main content -->
+        <main class="page__main">
+            <!-- Intro / hero -->
+            <section class="intro" id="about">
+                <p>
+                    I’m a product designer in Toronto, Canada with 6 years of experience and a background in Industrial
+                    Engineering. I currently strategize and design AI agent frameworks at scale inside Microsoft Teams.
+                    Before Microsoft, I worked in grocery e-commerce, designing growth experiences that shipped and
+                    drove real outcomes. When I’m not designing systems, I’m on my road bike, dry heaving on a climb and
+                    pretending it’s fun.
+                </p>
+            </section>
+
+            <!-- Selected work -->
+            <section class="section" id="projects">
+                <h2 class="heading">Recent work</h2>
+
+                <!-- Placeholder project card -->
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/msft/hero-1.png" loading="lazy" alt="MSFT hero image" />
+                    </div>
+
+                    <header class="project-card__header">
+                        <h3 class="project-card__title">
+                            Agent discovery & trust in Microsoft Teams
+                        </h3>
+                        <div class="project-card__meta">
+                            <span class="tag tag--locked" role="img" aria-label="Project locked" title="Project locked">
+                                <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
+                                    <rect x="4" y="12" width="16" height="9" rx="2" ry="2" fill="none"
+                                        stroke="currentColor" stroke-width="1.6" />
+                                    <path d="M7 11V8a5 5 0 0110 0v3" fill="none" stroke="currentColor"
+                                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span class="tag">Product designer</span>
+                            <span class="tag">January 2025 — Present</span>
+                        </div>
+                    </header>
+                </article>
+
+
+
+
+
+                <a class="project-card" href="subscribe-and-earn.html">
+                    <div class="project-card__image">
+                        <img src="assets/s&e/hero-1.png" loading="lazy" alt="S&E hero image" />
+                    </div>
+
+                    <header class="project-card__header">
+                        <h3 class="project-card__title">
+                            Creating a subscribe and save program — from scratch
+                        </h3>
+                        <div class="project-card__meta">
+                            <span class="tag">Lead product designer</span>
+                            <span class="tag">July 2023 — January 2024</span>
+                        </div>
+                    </header>
+                </a>
+
+
+
+                <a class="project-card" href="async.html">
+                    <div class="project-card__image">
+                        <img src="assets/async/hero-1.png" loading="lazy" alt="Async Subs hero image" />
+                    </div>
+                    <header class="project-card__header">
+                        <h3 class="project-card__title">
+                            Increasing efficiency by optimizing item substitutions
+                        </h3>
+                        <div class="project-card__meta">
+                            <span class="tag">Lead product designer</span>
+                            <span class="tag">September 2022 — August 2023</span>
+                        </div>
+                    </header>
+                </a>
+
+
+                <!-- Add more project-card blocks later -->
+            </section>
+
+            <!-- Reflections placeholder
+            <section class="section">
+                <h2 class="heading">Reflections</h2>
+                <p>
+                    Key learnings from recent work that have shaped how I approach product design.
+                </p>
+                <div class="project-card__image project-image-placeholder"></div>
+
+            </section>
+
+
+            <section class="section">
+                <h2 class="heading">How I work</h2>
+                <p>
+                    A concise overview of my process and how I collaborate with teams.
+                </p>
+                <div class="project-card__image project-image-placeholder"></div>
+
+            </section>-->
+
+            <!-- Contact / footer copy (desktop) -->
+            <section class="section section--contact" id="contact-desktop">
+                <h2 class="project-card__title">Interested in collaborating?</h2>
+                <p>
+                    <a href="mailto:max.romanoff@hotmail.com">Reach out</a> for design consulting, critiques, or just
+                    coffee.
+                </p>
+            </section>
+
+            <footer class="site-footer">
+                <p>Product designer.</p>
+                <p>Designed and built in 2025.</p>
+            </footer>
+        </main>
+
+        <!-- Right column / currently empty but padded -->
+        <aside class="page__side">
+            <!-- intentionally blank for now -->
+        </aside>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

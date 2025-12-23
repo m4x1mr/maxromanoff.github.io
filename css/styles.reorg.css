@@ -1,0 +1,248 @@
+/* =========================================
+   STYLES (REORGANIZED)
+   - Single-file reorganization of existing rules
+   - Preserves behavior; only grouping/formatting repositioning
+   - File created as a safe copy: `styles.reorg.css`
+   ========================================= */
+
+/* -----------------------------------------
+   0. RESET / BASE
+   ----------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+/* -----------------------------------------
+   1. DESIGN TOKENS
+   ----------------------------------------- */
+:root {
+  --color-bg: #11131D;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-text: #FFF8E6;
+  --color-text-subtle: #FFF8E6;
+  --color-border-subtle: #fff8e610;
+  --color-accent: #FFF8E6;
+
+  --font-size-body: 14px;
+  --font-size-small: 14px;
+  --font-size-heading: 12px;
+  --font-size-tldr: 24px;
+  --font-size-logo: 24px;
+  --font-size-menu-overlay: 24px;
+  --font-size-project-title: 36px;
+
+  --line-height-body: 1.5;
+
+  --page-max-width: 1300px;
+  --page-padding-x: 1rem;
+  --page-padding-y: 4rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+}
+
+/* -----------------------------------------
+   2. GLOBAL ELEMENT STYLES
+   ----------------------------------------- */
+body {
+  font-family: "Source Serif Pro", Georgia, "Times New Roman", serif;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+p { margin: 0 0 var(--space-4); max-width: 80ch; }
+
+/* Utility */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+/* -----------------------------------------
+   3. TYPOGRAPHY HELPERS
+   ----------------------------------------- */
+.heading {
+  font-family: "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: var(--font-size-heading);
+  font-weight: 700; text-transform: uppercase; margin-bottom: var(--space-4);
+}
+
+.tldr__copy {
+  font-family: "Source Serif Pro", Georgia, "Times New Roman", serif;
+  font-size: var(--font-size-tldr); line-height: var(--line-height-body);
+  color: var(--color-text); background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.special-heading { font-family: "Instrument Serif", "Source Serif Pro", serif; }
+.special-logo { font-family: "Instrument Serif", "Source Serif Pro", serif; font-size: var(--font-size-logo); line-height: 1; }
+
+/* -----------------------------------------
+   4. LAYOUT (PAGE / GRID)
+   ----------------------------------------- */
+.page {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--page-padding-y) var(--page-padding-x);
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 2.7fr) minmax(0, 0.5fr);
+  grid-template-areas: "nav main side";
+  column-gap: var(--space-12);
+}
+
+.page__project {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--page-padding-y) var(--page-padding-x);
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 3.1fr) minmax(0, 0.1fr);
+  grid-template-areas: "nav main side";
+  column-gap: var(--space-12);
+}
+
+/* Left column */
+.page__nav { grid-area: nav; display: flex; flex-direction: column; gap: var(--space-8); position: sticky; top: var(--page-padding-y); align-self: flex-start; }
+.logo { /* styled via .special-logo */ }
+.side-nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.side-nav a { font-size: var(--font-size-body); color: var(--color-text-subtle); }
+.side-nav a:hover { color: var(--color-text); }
+
+.page__main { grid-area: main; }
+.page__side { grid-area: side; padding-top: var(--space-8); }
+
+/* -----------------------------------------
+   5. COMPONENTS & SECTIONS
+   - Grouped by component for easier scanning
+   ----------------------------------------- */
+
+/* Lightbox */
+.lightbox {
+  border: none; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh;
+}
+.lightbox::backdrop { background: #11131d9c; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(8px); }
+.lightbox__img {
+  display: block; max-width: 92vw; max-height: 88vh; margin: 6vh auto; background: rgba(255,255,255,0.03);
+  border-radius: 4px; padding: 0.35rem; border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05); box-sizing: border-box;
+}
+.lightbox__close {
+  position: fixed; top: 20px; right: 20px; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); color: var(--color-text); border-radius: 50%;
+  cursor: pointer; box-shadow: 0 10px 24px rgba(0,0,0,0.45); transition: transform 120ms ease, background 120ms ease;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.lightbox__close:hover { transform: translateY(-1px) scale(1.02); background: rgba(255,255,255,0.06); }
+.lightbox__close:focus { outline: 3px solid rgba(255,255,255,0.08); outline-offset: 2px; }
+.lightbox__close svg { display: block; }
+
+/* Core sections */
+.intro { margin-bottom: calc(var(--space-12) * 2); }
+.section { margin-top: calc(var(--space-12) * 5); }
+.section__note { color: var(--color-text-subtle); }
+.project-card { margin-top: var(--space-12); }
+.project-card__image { margin-bottom: var(--space-4); }
+
+/* Generic placeholder used on index and elsewhere when real images are absent */
+.project-image-placeholder {
+  background-color: var(--color-surface);
+  /* subtle diagonal pattern to indicate a placeholder image */
+  background-image: linear-gradient(135deg,
+    rgba(255,255,255,0.015) 25%, transparent 25%, transparent 50%,
+    rgba(255,255,255,0.015) 50%, rgba(255,255,255,0.015) 75%, transparent 75%, transparent);
+  background-size: 12px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-subtle);
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* Project titles */
+.project-card__title { font-family: "Instrument Serif", "Source Serif Pro", serif; font-size: var(--font-size-logo); font-weight: 400; margin: 0 0 var(--space-2); }
+.project__title { font-family: "Instrument Serif", "Source Serif Pro", serif; font-size: var(--font-size-project-title); font-weight: 400; text-transform: uppercase; margin: 0 0 var(--space-2); }
+.project-card__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.tag { font-size: var(--font-size-small); border: 1px solid var(--color-border-subtle); border-radius: 999px; padding: 0.15rem 0.75rem; color: var(--color-text-subtle); }
+
+/* Gallery */
+.page__project .gallery { display: flex; flex-direction: column; gap: var(--space-8); }
+.page__project .gallery--two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); margin: 0; width: 100%; }
+.page__project .gallery__item {
+  position: relative; width: 100%; background: rgba(255,255,255,0.02); border-radius: 4px; border: 1px solid rgba(255,255,255,0.04); overflow: hidden;
+}
+.page__project .gallery__item img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.page__project .gallery__item .project-image-placeholder { width: 100%; aspect-ratio: 16 / 9; border-radius: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.04); }
+
+/* Zoom indicator */
+.gallery__item .zoom-icon { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; pointer-events: none; z-index: 20; opacity: 0.5; }
+.gallery__item .zoom-icon svg { width: 14px; height: 14px; display: block; fill: none; stroke: var(--color-text); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Content helpers */
+.page__project .copy { max-width: 70ch; margin-inline: auto; }
+.page__project .copy--wide { max-width: 70ch; margin-inline: auto; }
+.page__project .section, .content-block, .gallery, .tldr { margin-top: calc(var(--space-12) * 3); }
+.project-hero { margin-bottom: calc(var(--space-12) * 2); }
+.project-hero + .gallery { margin-top: 0; }
+
+/* Outcomes / pills */
+.pill-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 36px 0; }
+.pill { border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 20px 10px; display: flex; flex-direction: column; gap: 4px; text-align: center; }
+.pill p { margin: 0; font-size: 14px; opacity: 0.85; }
+
+/* Footer */
+.section--contact { margin-top: calc(var(--space-12) * 3); }
+.site-footer { margin-top: calc(var(--space-12) * 5); font-size: var(--font-size-small); color: var(--color-text-subtle); display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: var(--space-4); width: 100%; }
+
+/* -----------------------------------------
+   6. MOBILE HEADER & MENU OVERLAY
+   ----------------------------------------- */
+.mobile-header { display: none; }
+.menu-toggle { border: none; background: none; padding: var(--space-4); cursor: pointer; display: flex; flex-direction: column; justify-content: center; gap: 6px; }
+.menu-toggle__line { display: block; width: 19px; height: 1px; background-color: var(--color-text); transition: transform 0.2s ease, opacity 0.2s ease; }
+.menu-toggle.is-open .menu-toggle__line:nth-child(1) { transform: translateY(3px) rotate(45deg); }
+.menu-toggle.is-open .menu-toggle__line:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+
+.menu-overlay { position: fixed; inset: 0; background-color: var(--color-bg); color: var(--color-text); z-index: 150; display: flex; justify-content: center; align-items: center; }
+.menu-overlay__inner { width: 100%; height: 100%; padding: var(--page-padding-y) var(--page-padding-x); display: flex; flex-direction: column; justify-content: space-between; }
+.menu-overlay__nav { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-6); }
+.menu-overlay__nav a { font-family: "Source Serif Pro", Georgia, "Times New Roman", serif; font-size: var(--font-size-menu-overlay); }
+.menu-overlay__extra p { max-width: 30ch; }
+.menu-overlay[hidden] { display: none; }
+
+/* -----------------------------------------
+   7. RESPONSIVE (consolidated)
+   ----------------------------------------- */
+/* Tablet (2-column) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .page { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); grid-template-areas: "nav main"; }
+  .page__side { display: none; }
+  :root { --page-padding-x: 2rem; }
+}
+
+/* Mobile (1-column) */
+@media (max-width: 767px) {
+  :root {
+    --font-size-body: 14px; --font-size-small: 12px; --font-size-heading: 14px; --font-size-logo: 20px; --font-size-menu-overlay: 24px; --font-size-project-title: 20px; --page-padding-x: 1.5rem; --page-padding-y: 2rem;
+  }
+
+  body { font-size: var(--font-size-body); }
+
+  .page, .page__project { grid-template-columns: 1fr; grid-template-areas: "main"; padding-top: calc(var(--page-padding-y) + 2.5rem); }
+  .page__nav, .page__side { display: none; }
+
+  .mobile-header { display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; padding: 0 var(--page-padding-x); min-height: 64px; background: linear-gradient(to bottom, rgba(17, 19, 29, 1) 0%, rgba(17, 19, 29, 0.5) 40%, rgba(17, 19, 29, 0) 100%); }
+
+  .site-footer { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+  .menu-overlay__inner { padding-top: calc(64px + var(--space-8)); }
+  .mobile-header__logo { font-size: var(--font-size-logo); }
+
+  /* Mobile-only overrides consolidated */
+  .pill-list { grid-template-columns: 1fr; }
+  .page__project .gallery--two { grid-template-columns: 1fr; }
+}
