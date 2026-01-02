@@ -37,14 +37,16 @@
         <div class="menu-overlay__inner">
             <ul class="menu-overlay__nav">
                 <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="https://drive.google.com/file/d/1zqNqpXfdFD_6gZ9Nz7KLWx7RIUKv0uzE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
-                <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="index.html#selected-outcomes">About</a></li>
+                <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
 
             <section class="menu-overlay__extra" id="contact">
                 <h2 class="heading special-heading">Interested in collaborating?</h2>
                 <p>
-                    <a href="mailto:max.romanoff@hotmail.com">Reach out</a> for design consulting, critiques, or just coffee.
+                    <a href="mailto:max.romanoff@hotmail.com">Reach out</a> for design consulting, critiques, or just
+                    coffee.
                 </p>
             </section>
         </div>
@@ -61,8 +63,7 @@
             <nav class="side-nav">
                 <ul>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="https://drive.google.com/file/d/1zqNqpXfdFD_6gZ9Nz7KLWx7RIUKv0uzE/view?usp=sharing"
-                            target="_blank" rel="noopener noreferrer">Resume</a></li>
+                    <li><a href="#selected-outcomes">About</a></li>
                     <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank"
                             rel="noopener noreferrer">LinkedIn</a></li>
                 </ul>
@@ -71,15 +72,11 @@
 
         <!-- Middle column / main content -->
         <main class="page__main">
-            <!-- Intro / hero -->
-            <section class="intro" id="about">
-                <p>
-                    I’m a product designer in Toronto, Canada with 6 years of experience and a background in Industrial
-                    Engineering. I currently strategize and design AI agent frameworks at scale inside Microsoft Teams.
-                    Before Microsoft, I worked in grocery e-commerce, designing growth experiences that shipped and
-                    drove real outcomes. When I’m not designing systems, I’m on my road bike, dry heaving on a climb and
-                    pretending it’s fun.
-                </p>
+            <!-- Intro / hero (TLDR styling) -->
+            <section class="tldr intro tldr--compact" id="about">
+                <p class="tldr__copy">Product designer with a background in Industrial Engineering. Currently
+                    designing for AI @ Microsoft.</p>
+                <p>Previously at Loblaw Digital, RBC, Publicis Sapient</p>
             </section>
 
             <!-- Selected work -->
@@ -152,6 +149,12 @@
                 <!-- Add more project-card blocks later -->
             </section>
 
+            <div class="section-separator" aria-hidden="true"></div>
+
+
+
+
+
             <!-- Reflections placeholder
             <section class="section">
                 <h2 class="heading">Reflections</h2>
@@ -172,14 +175,169 @@
 
             </section>-->
 
-            <!-- Contact / footer copy (desktop) -->
+            <!-- Selected product outcomes (three-card grid) -->
+            <section class="section" id="selected-outcomes">
+                <h2 class="heading">Notable impact</h2>
+
+                <p class="project-outcomes__intro">Beyond usability, my work is focused on driving real business
+                    outcomes. I’ve shipped products with organizations like UPS, Academy Sports, Loblaw Digital, and
+                    Microsoft—many of which are live today. Here are a few notable impacts.</p>
+
+                <div class="project-grid-wrapper">
+                    <div class="project-grid">
+
+                        <a class="project-card" href="async.html"aria-label="$3M+ saved in costs — details">
+                            <div class="project-card__header">
+                                <div class="project-card__meta-top">
+                                    <div class="muted">Async Subs</div>
+                                    <div class="meta-right">
+                                        <div class="muted">Loblaw Digital—2024</div>
+                                        <span class="zoom-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true" focusable="false">
+                                                <path d="M14 3h7v7" fill="none" stroke="currentColor" stroke-width="1.6"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10 14L21 3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M21 21H3V3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <p class="tldr__copy">$3M+ saved in costs</p>
+                                <p>+ 60% adoption rate amongst customers</p>
+                            </div>
+                        </a>
+                        <a class="project-card" href="https://www.pcexpress.ca/pass" aria-label="21% conversion — details">
+                            <div class="project-card__header">
+                                <div class="project-card__meta-top">
+                                    <div class="muted">PC Express Pass</div>
+                                    <div class="meta-right">
+                                        <div class="muted">Loblaw Digital—2023</div>
+                                        <span class="zoom-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true" focusable="false">
+                                                <path d="M14 3h7v7" fill="none" stroke="currentColor" stroke-width="1.6"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10 14L21 3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M21 21H3V3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <p class="tldr__copy">21% conversion</p>
+                                <p>+ 10% increase in retention, year-over-year</p>
+                            </div>
+                        </a>
+                        <a class="project-card" href="https://apps.apple.com/us/app/academy-sports-outdoors/id1572699554" aria-label="25% higher AOV — details">
+                            <div class="project-card__header">
+                                <div class="project-card__meta-top">
+                                    <div class="muted">Academy Sports</div>
+                                    <div class="meta-right">
+                                        <div class="muted">Publicis Sapient—2021</div>
+                                        <span class="zoom-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true" focusable="false">
+                                                <path d="M14 3h7v7" fill="none" stroke="currentColor" stroke-width="1.6"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10 14L21 3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M21 21H3V3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <p class="tldr__copy">25% higher AOV</p>
+                                <p>+ 4.9/5.0 rating from 80,000+ reviews</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="resume-callout">
+                    <a href="https://drive.google.com/file/d/1zqNqpXfdFD_6gZ9Nz7KLWx7RIUKv0uzE/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" style="font-style: italic;">Read my resume</a>
+                    for more details.
+                </p>
+            </section>
+
+            <!-- Latest thinking (three text-only cards) -->
+            <section class="section" id="latest-thinking">
+                <h2 class="heading">Latest thinking</h2>
+                <p>My approach to design iterates as I learn. Rather than following a fixed process, I adapt based on
+                    the industry, scale, and urgency. Here are some principles that have been shaping how I approach
+                    problems recently.</p>
+
+                <div class="thinking-grid">
+                    <article class="thinking-card">
+                        <h2 class="heading">Designing for root causes</h2>
+                        <p>Unless the problem is well understood, it’s easy to ship solutions that mask deeper issues. I
+                            spend time questioning early on whether we’re addressing a surface-level symptom or a
+                            systemic constraint.</p>
+                    </article>
+
+                    <article class="thinking-card">
+                        <h2 class="heading">Rigour scales with impact</h2>
+                        <p>The level of detail I apply depends on urgency and reach. For high-impact systems, defining
+                            edge cases early and measuring changes against previous implementations helps avoid costly
+                            redesigns and unintended regressions.</p>
+                    </article>
+
+                    <article class="thinking-card">                        
+                        <h2 class="heading">Progress with subtraction</h2>
+                        <p>Design isn’t just about introducing new features. Consolidation, removal, and simplification
+                            are often more powerful—especially in mature systems where every addition carries long-term
+                            cost.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- After work ends (three images with captions) -->
+            <section class="section" id="after-work">
+                <h2 class="heading">After work ends</h2>
+                <p>Outside of work, you can catch me on my bike, gaslighting myself into thinking long climbs are "fun".</p>
+
+                <div class="after-work-grid">
+                    <figure class="after-work-card">
+                        <div class="after-work-card__image">
+                            <img src="assets/after-work/italy.jpeg" alt="Cyclist riding toward mountains in Italy" loading="lazy">
+                        </div>
+                        <figcaption>Passo Gardena, Italy</figcaption>
+                    </figure>
+
+                    <figure class="after-work-card">
+                        <div class="after-work-card__image">
+                            <img src="assets/after-work/switzerland.jpeg" alt="Group ride climbing a Swiss mountain pass" loading="lazy">
+                        </div>
+                        <figcaption>Furka Pass, Switzerland</figcaption>
+                    </figure>
+
+                    <figure class="after-work-card">
+                        <div class="after-work-card__image">
+                            <img src="assets/after-work/france.jpeg" alt="Cyclist on a forested climb in France" loading="lazy">
+                        </div>
+                        <figcaption>Hourquette d’Ancizan, France</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+
             <section class="section section--contact" id="contact-desktop">
                 <h2 class="project-card__title">Interested in collaborating?</h2>
                 <p>
-                    <a href="mailto:max.romanoff@hotmail.com">Reach out</a> for design consulting, critiques, or just
+                    <a href="mailto:max.romanoff@hotmail.com" style="font-style: italic;">Reach out</a> for design consulting, critiques, or just
                     coffee.
                 </p>
             </section>
+
+
 
             <footer class="site-footer">
                 <p>Product designer.</p>

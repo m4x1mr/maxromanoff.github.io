@@ -116,8 +116,10 @@ p {
     font-size: var(--font-size-tldr);
     line-height: var(--line-height-body);
     color: var(--color-text);
-    background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
+
+    /* Constrain width for improved readability on wide layouts */
+    max-width: 50ch;
 }
 
 .special-heading {
@@ -288,7 +290,20 @@ p {
 }
 
 .section {
-    margin-top: calc(var(--space-12) * 5);
+    margin-top: calc(var(--space-12) * 6);
+}
+
+#projects {
+    margin-bottom: calc(var(--space-12) * 6);
+}
+
+.section-separator {
+    width: 100%;
+    height: 1px;
+    margin: calc(var(--space-12) * 2) 0;
+    background-color: var(--color-text);
+    opacity: 0.25;
+    border-radius: 999px;
 }
 
 .section__note {
@@ -296,7 +311,7 @@ p {
 }
 
 .project-card {
-    margin-bottom: calc(var(--space-12) * 3);
+    margin-bottom: calc(var(--space-12) * 2);
     display: block;
     color: inherit;
     text-decoration: none;
@@ -316,11 +331,12 @@ p {
 .project-card__image {
     transition: box-shadow 180ms ease, transform 180ms ease;
 }
+
 .project-card:hover .project-card__image,
 .project-card:focus .project-card__image,
 .project-card:focus-visible .project-card__image {
     /* inset border so the card doesn't visually grow on hover; 20% opacity */
-    box-shadow: inset 0 0 0 1px rgba(255,248,230,0.2);
+    box-shadow: inset 0 0 0 1px rgba(255, 248, 230, 0.2);
 }
 
 /* Ensure images inside project cards scale/crop to fit without overflowing */
@@ -330,6 +346,119 @@ p {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+/* ---------- Selected Product Outcomes: grid + card styles ---------- */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* vertical, full-width cards */
+    gap: 24px;
+    /* fixed space between cards */
+    width: 100%;
+    margin-top: var(--space-6);
+}
+
+.project-grid .project-card {
+    position: relative;
+    /* anchor for the top-right icon */
+    padding: 16px 16px;
+    /* reduced padding */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* reduced internal spacing */
+    /* no fixed height so cards hug content */
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 0;
+    /* remove global large margin for cards inside the outcomes grid */
+}
+
+.project-grid .project-card__image {
+    /* keep image wrapper untouched for project cards elsewhere; outcomes removed images, so this rule is inert */
+}
+
+/* Meta top row for outcomes: centered inline muted items with icon */
+.project-card__meta-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* span the muted text across the full card width */
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.project-card__meta-top .muted {
+    opacity: 0.65;
+    color: var(--color-text);
+}
+
+.project-card__meta-top .meta-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.meta-right .zoom-icon svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--color-text);
+    opacity: 0.85;
+}
+
+/* Wrapper to control group margins for the outcomes block */
+.project-grid-wrapper {
+    margin: 0 0 0 0;
+}
+
+.project-outcomes__intro {
+    margin-bottom: 80px;
+    /* increased gap between intro and cards */
+}
+
+.resume-callout {
+    margin-top: 80px;
+    /* increased gap between cards and resume line */
+}
+
+.project-card:focus-visible {
+    outline: 3px solid rgba(255, 248, 230, 0.12);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+/* Remove hover outline for the outcomes grid cards (keep keyboard focus-visible) */
+.project-grid .project-card:hover .project-card__image {
+    box-shadow: none;
+}
+
+.project-card__footer {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.muted {
+    opacity: 0.5;
+    color: var(--color-text);
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 /* Generic placeholder used on index and elsewhere when real images are absent */
@@ -499,6 +628,12 @@ p {
     margin-top: calc(var(--space-12) * 3);
 }
 
+/* Compact TLDR variant: same TLDR styling but without the section top spacing
+   Use on the index intro to keep visual weight without the large gap. */
+.tldr--compact {
+    margin-top: 0 !important;
+}
+
 .project-hero {
     margin-bottom: calc(var(--space-12) * 2);
 }
@@ -531,9 +666,96 @@ p {
     opacity: 0.85;
 }
 
+/* Latest thinking cards */
+.thinking-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-top: calc(var(--space-8) * 2);
+}
+
+.thinking-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 8px;
+    padding: 36px 12px 16px 12px;
+    /* top 40, sides 16, bottom 24 */
+}
+
+.thinking-card__title {
+    font-family: "Instrument Serif", "Source Serif Pro", serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 0 var(--space-4);
+}
+
+@media (max-width: 1023px) {
+    .thinking-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .thinking-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* After work images grid */
+.after-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-top: calc(var(--space-8) * 2);
+}
+
+.after-work-card {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.after-work-card__image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+}
+
+.after-work-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.after-work-card figcaption {
+    font-size: var(--font-size-small);
+}
+
+@media (max-width: 1023px) {
+    .after-work-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .after-work-grid {
+        grid-template-rows: 1fr;
+        gap: 32px;
+
+    }
+}
+
 /* Footer */
 .section--contact {
-    margin-top: calc(var(--space-12) * 3);
+    margin-top: calc(var(--space-12) * 6);
 }
 
 .site-footer {
@@ -665,6 +887,14 @@ p {
         grid-template-columns: 1fr;
         grid-template-areas: "main";
         padding-top: calc(var(--page-padding-y) + 2.5rem);
+    }
+
+    .section {
+        margin-top: calc(var(--space-12) * 4);
+    }
+
+    #projects {
+        margin-bottom: calc(var(--space-12) * 4);
     }
 
     .page__nav,
