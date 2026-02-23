@@ -1,0 +1,537 @@
+/* Project Page Styles - V2 EXPERIMENTAL */
+
+/* Header */
+.project-page header {
+    font-family: "Geist Mono", monospace;
+    text-transform: uppercase;
+}
+
+.project-page .logo {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(50, 64, 79);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 8px;
+}
+
+.project-page .logo-title {
+    opacity: 0.5;
+}
+
+.project-page nav a {
+    color: rgb(50, 64, 79);
+    opacity: 0.5;
+}
+
+.project-page nav a:hover {
+    opacity: 1;
+}
+
+.project-page main {
+    padding-top: 72px;
+}
+
+.project-content {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Hero */
+.project-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 32px;
+}
+
+.project-hero h1 {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #000;
+    max-width: 600px;
+    margin-bottom: 24px;
+}
+
+.project-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Project metadata below hero image */
+.project-metadata {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.project-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.project-meta-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 0.5px;
+}
+
+.project-meta-value {
+    opacity: 0.65;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    color: #888;
+    font-family: "Geist Mono", monospace;
+    text-transform: uppercase;
+}
+
+/* Summary */
+.project-summary {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 24px 48px;
+}
+
+.project-summary p {
+    max-width: 600px;
+    color: rgb(50, 64, 79);
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 1;
+}
+
+/* Text sections */
+.project-text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 96px 24px 32px;
+}
+
+.project-text .section-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(50, 64, 79);
+    opacity: 0.5;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.5px;
+}
+
+.project-text h2 {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: rgb(50, 64, 79);
+    margin-bottom: 16px;
+    max-width: 600px;
+}
+
+.project-text p {
+    max-width: 600px;
+    margin-bottom: 16px;
+    opacity: 0.65;
+}
+
+.project-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Paragraphs with bold lead-ins: use color instead of opacity so strong can be darker */
+.project-text p:has(strong) {
+    opacity: 1;
+    color: rgb(122, 131, 141);
+    max-width: 600px;
+}
+
+.project-text p:has(strong) strong {
+    color: rgb(50, 64, 79);
+}
+
+.project-text ul.project-list {
+    max-width: 600px;
+    margin: 0 0 16px 0;
+    padding-left: 20px;
+}
+
+.project-text ul.project-list li {
+    margin-bottom: 8px;
+}
+
+.project-text ul.project-list li:last-child {
+    margin-bottom: 0;
+}
+
+.project-text ul.project-list + p {
+    margin-top: 16px;
+}
+
+/* ===================
+   IMAGES - V2 STYLES
+   =================== */
+
+/* Full width images */
+.project-image.full {
+    margin: 4px 12px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-image.full img {
+    width: 100%;
+    display: block;
+}
+
+/* Light grey background */
+.project-image.full.light {
+    background: #f0f0f0;
+}
+
+/* Process images - dark background */
+.project-image.full.process {
+    background: #2b2b2b;
+}
+
+/* Mockup images - pastel backgrounds */
+.project-image.full.mockup {
+    background: #e8f0e8; /* soft green */
+}
+
+/* Purple background */
+.project-image.full.purple {
+    background: rgb(86, 79, 143);
+}
+
+/* Green background */
+.project-image.full.green {
+    background: rgb(79, 147, 144);
+}
+
+/* Image grid (2-up) */
+.project-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin: 4px 12px;
+}
+
+.project-image-grid .project-image {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-image-grid .project-image img,
+.project-image-grid .project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-image-grid .project-image video {
+    display: block;
+    height: calc(100% + 5px);
+    margin-top: -1px;
+    margin-bottom: -4px;
+}
+
+.project-image-grid .project-image.has-video {
+    border: 1px solid #ededed;
+}
+
+/* Grid with process class - dark */
+.project-image-grid.process .project-image {
+    background: #2b2b2b;
+}
+
+/* Grid with light class - light grey */
+.project-image-grid.light .project-image {
+    background: #f0f0f0;
+}
+
+/* Grid with mockup class - pastel */
+.project-image-grid.mockup .project-image {
+    background: #f0e8f0; /* soft lavender */
+}
+
+/* Grid with green class */
+.project-image-grid.green .project-image {
+    background: rgb(79, 147, 144);
+}
+
+/* Specific ATC colors */
+.project-image.atc-1 {
+    background: rgb(86, 79, 143);
+}
+
+.project-image.atc-2 {
+    background: rgb(79, 147, 144);
+}
+
+/* Stats inline */
+.stats-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.stats-inline .stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-inline .stat-number {
+    font-size: 14px;
+}
+
+.stats-inline .stat-label {
+    font-size: 14px;
+}
+
+/* Stats card (inline with images) */
+.stats-card {
+    background: #2b2b2b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.stats-card-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.stat-large {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.stat-large .stat-value {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.stat-large .stat-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 4px;
+}
+
+/* Light stats card variant */
+.stats-card.light-card {
+    background: #f5f5f5;
+}
+
+.stat-large.dark-text .stat-value {
+    color: #000;
+}
+
+.stat-large.dark-text .stat-label {
+    color: #888;
+}
+
+/* Compact screenshot for grids */
+.teams-screenshot.compact {
+    padding: 24px;
+}
+
+.teams-screenshot.compact img {
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Stats visual block */
+.stats-visual {
+    background: #f0f0f0;
+    margin: 4px 12px;
+    border-radius: 12px;
+    padding: 48px 24px;
+}
+
+.stats-visual-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+.stat-block {
+    text-align: center;
+    color: #000;
+}
+
+.stat-num {
+    display: block;
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.stat-desc {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.4;
+}
+
+/* Navigation */
+.project-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 72px;
+}
+
+.project-nav a {
+    color: #888;
+}
+
+.project-nav a:hover {
+    color: #000;
+    opacity: 1;
+}
+
+/* Footer override for project pages */
+.project-page footer {
+    max-width: 1200px;
+}
+
+/* Image placeholders */
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.image-placeholder.dark {
+    background: #3a3a3a;
+}
+
+.image-placeholder .placeholder-label {
+    font-size: 14px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.image-placeholder.dark .placeholder-label {
+    color: #666;
+}
+
+/* Teams screenshot with shadow */
+.teams-screenshot {
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.teams-screenshot img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Principle cards */
+.project-image-grid.principles {
+    grid-template-columns: 1fr 1fr;
+}
+
+.principle-card {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 32px 144px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.principle-card h3 {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+.principle-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-hero {
+        padding: 32px 24px 24px;
+    }
+
+    .project-metadata {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .project-image-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .stats-inline {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .stats-visual {
+        padding: 32px 16px;
+    }
+
+    .stats-visual-inner {
+        gap: 32px;
+    }
+
+    .stat-num {
+        font-size: 24px;
+    }
+
+    .stat-desc {
+        font-size: 12px;
+    }
+
+    .principle-card {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .principle-card {
+        padding: 32px 16px;
+    }
+}

@@ -2,356 +2,251 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Async Subs — Max Romanoff</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY7BMYMZB7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-VY7BMYMZB7');
-    </script>
-
-    <!-- Fonts: adjust to your real font hosting later -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Subs | Max Romanoff</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project-v2.css">
 </head>
 
-<body>
-
-    <!-- Mobile header (only visible on mobile) -->
-    <header class="mobile-header">
-        <div class="mobile-header__logo special-logo">
-            <a href="index.html" aria-label="Back to home">max romanoff.</a>
-        </div>
-
-        <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
-            <span class="menu-toggle__line"></span>
-            <span class="menu-toggle__line"></span>
-            <span class="visually-hidden">Open navigation</span>
-        </button>
+<body class="project-page">
+    <header>
+        <a href="index.html" class="logo"><span>Max—R</span><span class="logo-title">Product Designer</span></a>
+        <nav>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#about">About</a>
+        </nav>
     </header>
 
-    <!-- Mobile full-screen menu overlay -->
-    <nav id="site-menu" class="menu-overlay" hidden>
-        <div class="menu-overlay__inner">
-            <ul class="menu-overlay__nav">
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#selected-outcomes">About</a></li>
-                <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
+    <main class="project-content">
+        <!-- Hero -->
+        <section class="project-hero">
+            <p class="project-eyebrow">Loblaw Digital · 2023</p>
+            <h1>Improving operational efficiency by optimizing grocery substitutions</h1>
+        </section>
 
-            <section class="menu-overlay__extra" id="contact">
-                <h2 class="heading special-heading">Interested in collaborating?</h2>
-                <p>
-                    <a href="mailto:max.romanoff@hotmail.com">Reach out</a> for design consulting, critiques, or just coffee.
-                </p>
-            </section>
-        </div>
-    </nav>
+        <!-- Hero Image -->
+        <section class="project-image full green">
+            <img src="assets/async/hero-1.png" alt="Async Subs hero">
+        </section>
 
-    <!-- PAGE GRID -->
-    <div class="page__project">
-
-        <!-- Left column / desktop nav -->
-        <aside class="page__nav">
-            <div class="logo special-logo">
-                <a href="index.html" aria-label="Back to home">max romanoff.</a>
+        <!-- Metadata -->
+        <section class="project-metadata">
+            <div class="project-meta-item">
+                <span class="project-meta-label">Timeline</span>
+                <span class="project-meta-value">Sept 2022 — Aug 2023</span>
             </div>
+            <div class="project-meta-item">
+                <span class="project-meta-label">Role</span>
+                <span class="project-meta-value">Lead Product Designer</span>
+            </div>
+        </section>
 
-            <nav class="side-nav">
-                <ul>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#selected-outcomes">About</a></li>
-                    <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                </ul>
-            </nav>
-        </aside>
+        <!-- Summary -->
+        <section class="project-summary">
+            <p>The asynchronous substitution management project (Async Subs) was highly successful. It enabled customers
+                to review grocery substitutions asynchronously instead of over a phonecall, resulting in savings of over
+                60,000 labour hours and over $3M in labour costs in just 2 months.</p>
+        </section>
 
-        <!-- Middle column / main content -->
-        <main class="page__main">
+        <!-- Context -->
+        <section class="project-text">
+            <p class="section-label">Context</p>
+            <h2>Substitutions cause churn and are costly</h2>
+            <p>Grocery substitutions are when a customer's orginal items can't be fulfilled, and are replaced with
+                something similar. This happens because Loblaws (or any other grocery brand) can't always guarantee that
+                a customer gets an item; another online order could've snagged the last item or since items are picked
+                directly from a physical store, product stock can't be accurately predicted. As a result, substitutions
+                help the customer by getting them a similar item, and help the business by still making a sale.</p>
+            <p>Though substitutions don't sound that bad, they were a leading cause for churn for 20% of customers. To
+                mitigate this stores send emails and even call customers prior to receiving their items. Though
+                customers love the call, Operations teams call it inefficient. The call gave customers the flexibility
+                to request new items entirely, which required employees to go out to the store and pick those items
+                sometimes minutes before the customer arrives for pick up (me shown below, picking an item).</p>
+        </section>
 
+        <section class="project-image full light">
+            <img src="assets/async/picking.png" alt="Picking groceries">
+        </section>
 
+        <!-- Digital experiences -->
+        <section class="project-text">
+            <p class="section-label">Problem</p>
+            <h2>Existing digital experiences were read-only</h2>
+            <p>Though customers could use their app or the website to see the status of their order, their order updates
+                were shown as read-only, and thus they relied on the call to make changes. The existing system was also
+                limited to substitutions or out of stock items, whereas the scope of the call could also cover things
+                like expiry dates.</p>
+        </section>
 
+        <section class="project-image-grid light">
+            <div class="project-image">
+                <img src="assets/async/current-desktop.png" alt="Current desktop experience">
+            </div>
+            <div class="project-image">
+                <img src="assets/async/current-mobile.png" alt="Current mobile experience">
+            </div>
+        </section>
 
+        <!-- Problem identification -->
+        <section class="project-text">
+            <p class="section-label">Process</p>
+            <h2>Identifying the right problem first</h2>
+            <p>Before this project even kicked off, the Product team on the Operations side came to us with the solution
+                already picked out. Though it made sense logically, our team (on the customer facing side) didn’t know
+                whether it was highest priority for us. We wanted to be involved from the problem identification phase,
+                rather than be brought in to execute on strategy already thought out.
+            </p>
+            <p>
+                I asked our Operations team if we could take a step back and work together on identifying all of the
+                problems that plague substitutions, and co-create solutions to build. What ensued was a series of
+                workshops to align on the various problems and narrow down a solution set to present back to our
+                leadership. One of the most important teams involved during workshopping were our developers — these
+                teams helped us identify the effort required for each approach.
+            </p>
+            <p>
+                In the end, the highest impact and lowest effort solution ended up being Async Subs regardless, however,
+                it aligned everyone on why and also helped populate our backlogs with additional opportunities.</p>
+        </section>
 
+        <section class="project-image-grid process">
+            <div class="project-image">
+                <img src="assets/async/miro-1.png" alt="Workshop Miro board 1">
+            </div>
+            <div class="project-image">
+                <img src="assets/async/miro-2.png" alt="Workshop Miro board 2">
+            </div>
+        </section>
 
-            <!-- TITLE SECTION -->
-            <header class="project-hero copy--wide">
-                <h3 class="project__title">
-                    Increasing efficiency by optimizing item substitutions
-                </h3>
-                <div class="project-card__meta">
-                    <span class="tag">Lead product designer</span>
-                    <span class="tag">September 2022 — August 2023</span>
-                    <span class="tag">+ Product, Operations, Engineering</span>
-                </div>
-            </header>
+        <section class="project-image full process">
+            <img src="assets/async/miro-3.png" alt="Workshop Miro board 3">
+        </section>
 
+        <!-- Approving and rejecting -->
+        <section class="project-text">
+            <p class="section-label">Design</p>
+            <h2>Approving and rejecting item exceptions</h2>
+            <p>That larger alignment allowed us to focus in on the post-order process for customers — as that’s when
+                substitutions happened. I worked closely with the Ops team to map out the blueprint at a macro scale to
+                validate where the impacts would be, and also understand the ideal path.
+            </p>
+            <p>Specific to the user-interaction, we wanted to constrain users to only be able to select whether they
+                approve or reject a item; this included substitutions and items that could be expiring soon. We strictly
+                avoided having an open text-field to reduce variability in the post-order process.
+            </p>
+            <p>At this point, I was in lock-step with my dev-team to make sure nothing we were proposing impact our
+                original effort estimates.</p>
+        </section>
 
+        <section class="project-image full process">
+            <img src="assets/async/service-blueprint.png" alt="Service blueprint">
+        </section>
 
+        <section class="project-image-grid process">
+            <div class="project-image">
+                <img src="assets/async/approval-flow.png" alt="Approval flow">
+            </div>
+            <div class="project-image">
+                <img src="assets/async/iter-mobile-1.png" alt="Mobile design">
+            </div>
+        </section>
 
+        <section class="project-image full process">
+            <img src="assets/async/iter-desktop-1.png" alt="Desktop design">
+        </section>
 
-            <!-- HERO IMAGE -->
-            <section class="gallery">
-                <div class="gallery__item" aria-label="Hero image">
-                    <img src="assets/async/hero-1.png" loading="lazy" alt="Async Subs hero image" />
-                </div>
-            </section>
+        <!-- Spinning on features -->
+        <section class="project-text">
+            <p class="section-label">Iteration</p>
+            <h2>Spinning on features, then removing them</h2>
+            <p>Despite this async design, the phone call was still the fall-back solution. If customers didn't see their app in-time, or missed the review window, they could still receive a call to review their order. An additional scenario came up where a user could miss the submit button and thus miss the submission. As a result, since we needed a review window anyway, I designed an approach for auto-submission of selections once the review window closes.</p>
+            <p>Though it solved some customer edge cases, Ops was skeptical because of the operational impacts of batch submissions on efficiency. Similarily, we started to question about the effectiveness of the entire solution and if a phone call was even needed as a fall-back. To test it's effectiveness, we wanted to explore a toggle to see if users would still request one, despite the async approach.</p>
+            <p>In the end, usability-testing feedback showed users wanted a submission to lock in their selections; and Ops said the toggle wasn't needed since it would ultimately get removed, regardless.</p>
+        </section>
 
+        <section class="project-image-grid process">
+            <div class="project-image">
+                <img src="assets/async/iter-mobile-2.png" alt="Mobile iteration 2">
+            </div>
+            <div class="project-image">
+                <img src="assets/async/testing-results.png" alt="Testing results">
+            </div>
+        </section>
 
+        <section class="project-image full process">
+            <img src="assets/async/miro-toggle.png" alt="Toggle exploration">
+        </section>
 
+        <!-- Final designs -->
+        <section class="project-text">
+            <p class="section-label">Outcomes</p>
+            <h2>Finalizing and launching</h2>
+            <p>We launched, and within 2 months had incredible results. Though we had hypotheses around customer experiences faltering due to the lack of the call, customer adoption reached over 60%. In the same period, the program contributed to 60,000 hours saved for store employees and over $3M in projected annual cost savings as a result of operational efficiency.</p>
+        </section>
 
-
-
-            <!-- TL;DR (slightly larger body copy) -->
-            <section class="tldr">
-                <p class="tldr__copy copy--wide">
-                    "Async Subs" enabled customers to review grocery substitutions asynchronously instead of by phone,
-                    improving customer satisfaction and saving 60,000 hours and $3M+ in labour costs in just 2 months.
-
-                </p>
-            </section>
-
-
-            <!-- CONTEXT + APPROACH (text blocks) -->
-            <section class="content-block copy">
-                <h2 class="heading">Context</h2>
-                <p>
-                    Substitutions are crucial for both customers and the business. When an item is unavailable, offering
-                    a comparable alternative allows customers to complete their order while helping the business
-                    preserve revenue. As a result, order fill-rate is a core KPI, with the target being as close to 100%
-                    as possible.
-                </p>
-                <p>
-                    However, substitutions are also a major source of frustration. “Too many substitutions” is a leading
-                    driver of churn on PC Express, accounting for roughly 20% of lost customers. Expensive or inaccurate
-                    replacements further erode trust and satisfaction.
-                </p>
-            </section>
-
-
-            <section class="gallery">
-                <div class="gallery__item">
-                    <img src="assets/async/picking.png" class="zoomable" loading="lazy" alt="Me picking groceries" />
-                </div>
-            </section>
-
-
-
-
-            <section class="content-block copy">
-                <h2 class="heading">Problem</h2>
-                <p>
-                    To mitigate these issues, stores rely on a manual process. Customers receive a read-only email
-                    showing substitutions and out-of-stock items, followed by a phone call shortly before pickup to
-                    approve or reject changes. Customers value the personal touch of the call, but from an operational
-                    standpoint it is inefficient, time-consuming, and difficult to scale across hundreds of stores.
-                </p>
-                <p>
-                    The existing digital experience offers visibility, but no control. Customers are dependent on the
-                    phone call to make changes, and store employees spend several minutes per order coordinating
-                    substitutions.
-                </p>
-                <p>
-                    Operations proposed removing phone calls altogether and enabling customers to manage substitutions
-                    online, framing it as an opportunity to save millions in labour costs annually. Before committing to
-                    that direction, we needed to align cross-functional teams on what the right problem to solve
-                    actually was—balancing customer trust, operational efficiency, and business impact—before defining a
-                    solution.
-                </p>
-            </section>
-            <section class="content-block copy">
-                <h2 class="heading">Approach</h2>
-                <p>
-                    I led the design of an asynchronous substitution management experience that allowed customers to
-                    review, approve, or reject substitutions digitally within a time-sensitive window.
-                </p>
-                <p>
-                    I started with designing and facilitating workshops to align teams on the real problem and define
-                    success metrics before jumping into solutions—Async Subs was aligned as the one with the highest
-                    impact. From there, I started to iterate through designs, mainly building on the existing
-                    experience. I tested an autosave option, but found from customers that they preferred to explicitly
-                    save their selections.
-                </p>
-            </section>
-
-            <!-- IMAGE GALLERY (stacked) -->
-            <section class="gallery">
-                <div class="gallery__item" aria-label="Gallery image 1">
-                    <img src="assets/async/workshop-1.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 1" />
-                </div>
-                <div class="gallery__item" aria-label="Gallery image 2">
-                    <img src="assets/async/workshop-2.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 2" />
-                </div>
-                <div class="gallery__item" aria-label="Gallery image 3">
-                    <img src="assets/async/workshop-3.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 3" />
-                </div>
-
-                <div class="gallery__item" aria-label="Gallery image 4">
-                    <img src="assets/async/service-blueprint.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 4" />
-                </div>
-                <div class="gallery__item" aria-label="Gallery image 5">
-                    <img src="assets/async/review-flow.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 5" />
-                </div>
-                <div class="gallery__item" aria-label="Gallery image 5">
-                    <img src="assets/async/init-designs.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 5" />
-                </div>
-                <div class="gallery__item" aria-label="Gallery image 5">
-                    <img src="assets/async/testing.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 5" />
-                </div>
-
-                <!-- IMAGE GALLERY (2-up on desktop, 1-col on mobile via CSS) 
-                <div class="gallery--two">
-                    <div class="gallery__item project-image-placeholder" aria-label="Two-up image placeholder"></div>
-                    <div class="gallery__item project-image-placeholder" aria-label="Two-up image placeholder"></div>
-                </div>-->
-            </section>
-
-
-
-
-
-            <!-- CHALLENGES -->
-            <section class="content-block copy">
-                <h2 class="heading">Challenges</h2>
-                <p>
-                    Though operational efficiency was a key goal, we didn't want to skimp on the customer experience.
-                    Research told us customers loved the call, due to its personal touch and immediacy, so my PM and I
-                    wanted to test if this async experience could truly deliver the same level of trust and
-                    satisfaction. The idea was to have a toggle allowing customers to opt into a phone call if they
-                    preferred.
-                </p>
-                <p>
-                    Though the Ops team agreed, our leadership team said that since our goal was to get rid of the call
-                    entirely, it didn't make sense to offer it as an option. Ultimately, we had to prioritize
-                    operational goals
-                    over customer preferences in this case, which was a tough but necessary trade-off.
-                </p>
-
-            </section>
-
-
-
-
-            <!-- IMAGE GALLERY (stacked) -->
-            <section class="gallery">
-                <div class="gallery__item" aria-label="Gallery image 5">
-                    <img src="assets/async/call-toggle.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 5" />
-                </div>
-            </section>
-
-
-
-
-            <!-- OUTCOMES + STATS (pills) -->
-            <section class="content-block copy">
-                <h2 class="heading">Outcomes</h2>
-
-                <div class="pill-list">
-                    <div class="pill">
-                        <span class="tldr__copy">60,000 hours</span>
-                        <p>in 2 months</p>
+        <section class="project-image-grid green">
+            <div class="project-image">
+                <img src="assets/async/mobile-final-1.png" alt="Final mobile design 1">
+            </div>
+            <div class="stats-card">
+                <div class="stats-card-inner">
+                    <div class="stat-large">
+                        <span class="stat-value">60,000</span>
+                        <span class="stat-label">hours saved</span>
                     </div>
-                    <div class="pill">
-                        <span class="tldr__copy">$3M+ saved</span>
-                        <p>in 2 months</p>
+                    <div class="stat-large">
+                        <span class="stat-value">$3M+</span>
+                        <span class="stat-label">cost savings</span>
+                    </div>
+                    <div class="stat-large">
+                        <span class="stat-value">60%</span>
+                        <span class="stat-label">customer adoption</span>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <p>
-                    The solution had incredible results. Within 2 months, customer adoption reached over 60%, with
-                    measurable reductions in store labour. In the same period, the program contributed to
-                    60,000 hours saved and over $3M in projected annual cost savings.
-                </p>
-                <p>
-                    While broader customer metrics like retention were planned for longer-term evaluation, early signals
-                    showed improved clarity and confidence in managing substitutions.
-                </p>
+        <section class="project-image full process">
+            <img src="assets/async/desktop-final-1.png" alt="Final desktop design">
+        </section>
 
-            </section>
+        <section class="project-image full green">
+            <img src="assets/async/mobile-final-3.png" alt="Final mobile design 3">
+        </section>
 
+        <!-- Learnings -->
+        <section class="project-text">
+            <h2>Learnings</h2>
+            <p>Balancing business needs with customer wants was a constant theme throughout this project. The Operations
+                team was initially hesitant about the workshops, as they felt confident in their proposed solution, but
+                ultimately found value in the process as the outcomes helped inform the roadmap.</p>
+            <p>Despite the contextual complexity of the problem, the solution itself remained intentionally simple. I
+                enjoyed owning this project end to end—from discovery and solution definition through detailed design
+                and launch. It was a rewarding challenge and an opportunity to design something that made a meaningful
+                impact for both store employees and customers.</p>
+        </section>
 
-            <section class="gallery">
-                <div class="gallery__item" aria-label="Gallery image 5">
-                    <img src="assets/async/mvp-scope.png" class="zoomable" loading="lazy"
-                        alt="Async Subs gallery image 5" />
-                </div>
-            </section>
+        <!-- Back link -->
+        <section class="project-nav">
+            <a href="index.html" class="secondary">← Back to all work</a>
+        </section>
+    </main>
 
-            <section class="content-block copy">
-                <h2 class="heading">Learnings</h2>
-                <p>
-                    Balancing business needs with customer wants was a constant theme throughout this project. The
-                    Operations team was initially hesitant about the workshops, as they felt confident in their proposed
-                    solution, but ultimately found value in the process as the outcomes helped inform the roadmap. One
-                    of the biggest challenges we faced came from consistently shifting business priorities, where
-                    decisions were occasionally retracted and led to redesigns—most notably around the phone call
-                    toggle.
-
-                </p>
-                <p>
-                    Despite the contextual complexity of the problem, the solution itself remained intentionally simple.
-                    I felt like I was learning something new from the Operations team every week, and I enjoyed owning
-                    this project end to end—from discovery and solution definition through detailed design and launch.
-                    It was a rewarding challenge and an opportunity to design something that made a meaningful impact
-                    for both store employees and customers.
-                </p>
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- Footer (same pattern as index) -->
-            <footer class="site-footer">
-                <p>Product designer.</p>
-                <p>Designed and built in 2025.</p>
-            </footer>
-
-        </main>
-
-        <!-- Right column (empty, reserved for future contextual nav) -->
-        <aside class="page__side"></aside>
-
-    </div>
-
-    <dialog class="lightbox" id="lightbox">
-        <button class="lightbox__close" aria-label="Close">
-            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M6 6 L18 18 M6 18 L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    fill="none" />
-            </svg>
-        </button>
-        <img class="lightbox__img" alt="">
-    </dialog>
-
-
-    <script src="js/main.js"></script>
+    <footer>
+        <span class="secondary">Available for projects</span>
+        <div class="footer-links">
+            <a href="mailto:max.romanoff@hotmail.com">Email</a>
+            <span class="footer-dot">·</span>
+            <a href="https://linkedin.com/in/maxim-romanoff/" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
 </body>
 
 </html>

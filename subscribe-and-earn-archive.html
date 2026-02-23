@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe & Earn — Max Romanoff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project.css">
+</head>
+<body class="project-page">
+    <header>
+        <a href="index.html" class="name">Max Romanoff</a>
+        <nav>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </header>
+
+    <main class="project-content">
+        <!-- Hero -->
+        <section class="project-hero">
+            <h1>Creating a subscribe and earn program — from scratch</h1>
+            <div class="project-meta">
+                <span>Lead Product Designer</span>
+                <span>July 2023 — January 2024</span>
+                <span>Loblaw</span>
+            </div>
+        </section>
+
+        <!-- Hero Image -->
+        <section class="project-image full">
+            <img src="assets/s&e/hero-1.png" alt="Subscribe & Earn hero">
+        </section>
+
+        <!-- Summary -->
+        <section class="project-summary">
+            <p>Subscribe & Earn explored whether loyalty points could incentivize recurring grocery purchases. Early results showed that customers consistently preferred immediate discounts over subscription-based rewards.</p>
+        </section>
+
+        <!-- Context -->
+        <section class="project-text">
+            <h2>Context</h2>
+            <p>PC Express is the grocery e-commerce platform for Loblaw, serving over 3 million active customers and generating nearly $2B in annual revenue. Alongside it sits PC Optimum, the largest loyalty program in Canada.</p>
+            <p>Subscribe & Earn started as a "Sharktank" idea—an internal pitch competition where teams propose new product concepts. The idea set out to connect these two powerful systems, rewarding customers with PC Optimum points when they committed to recurring purchases of frequently bought items—every week, two weeks, or month. The hypothesis was that subscriptions could increase retention and repeat purchase behavior by removing friction from habitual shopping.</p>
+        </section>
+
+        <section class="project-image full">
+            <img src="assets/s&e/sharktank.png" alt="Sharktank pitch">
+        </section>
+
+        <!-- Approach -->
+        <section class="project-text">
+            <h2>Approach</h2>
+            <p>I led the design for the program on the UI side, and worked closely with Operations teams to understand impacts to existing systems and design new processes. I kicked off this work by looking into competitor programs and designing flows for how this could work in PC Express.</p>
+        </section>
+
+        <section class="project-image full">
+            <img src="assets/s&e/detailed-competitors.png" alt="Competitor analysis">
+        </section>
+
+        <section class="project-image full">
+            <img src="assets/s&e/service-blueprints.png" alt="Service blueprints">
+        </section>
+
+        <section class="project-image-grid">
+            <div class="project-image">
+                <img src="assets/s&e/atc-1.png" alt="Add to cart flow">
+            </div>
+            <div class="project-image">
+                <img src="assets/s&e/atc-2.png" alt="Add to cart flow 2">
+            </div>
+        </section>
+
+        <section class="project-image full">
+            <img src="assets/s&e/testing-iterations.png" alt="Testing iterations">
+        </section>
+
+        <!-- Challenges -->
+        <section class="project-text">
+            <h2>Challenges</h2>
+            <p>Based on existing business rules, our system only allowed one open order at a time to boost AOV, alongside a $35 minimum. If a user already placed an order to arrive for next week, and tried to place another one right now to arrive for tomorrow, those items would be added to the open order for next week.</p>
+            <p>This meant unless all subscriptions had the same set frequency, and they added up to over $35, the user wouldn't receive their items. In addition, we had a risk that a user could have a subscription overlap with a regular order.</p>
+            <p>I first designed a process to allow customers to merge their subscription order with their regular weekly shop if their subscription was coming up soon. I then designed for "consolidation" where once you set up your first subscription, all future subscriptions are automatically scheduled to arrive on the same day of the week.</p>
+        </section>
+
+        <section class="project-image full">
+            <img src="assets/s&e/challenge-1.png" alt="Challenge visualization">
+        </section>
+
+        <section class="project-image-grid">
+            <div class="project-image">
+                <img src="assets/s&e/solution-1.png" alt="Solution 1">
+            </div>
+            <div class="project-image">
+                <img src="assets/s&e/solution-2.png" alt="Solution 2">
+            </div>
+        </section>
+
+        <section class="project-image-grid">
+            <div class="project-image">
+                <img src="assets/s&e/consol-merge.png" alt="Consolidation and merge">
+            </div>
+            <div class="project-image">
+                <img src="assets/s&e/updated-atc.png" alt="Updated add to cart">
+            </div>
+        </section>
+
+        <!-- Outcomes -->
+        <section class="project-text">
+            <h2>Outcomes</h2>
+            <div class="stats-inline">
+                <div class="stat-item">
+                    <span class="stat-number">600</span>
+                    <span class="stat-label secondary">customers (vs. 70K target)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1,100</span>
+                    <span class="stat-label secondary">subscriptions (vs. 60K target)</span>
+                </div>
+            </div>
+            <p>Two months after launch, adoption was well below expectations. Roughly 600 customers had an active subscription compared to an expectation of 70,000 in the first year. About 1,100 subscriptions were active versus an expected 60,000 subscription orders annually.</p>
+            <p>While longer-term metrics like retention required more time to evaluate, early signals were clear. Customers understood the feature and could use it successfully, but consistently chose sale pricing over committing to subscriptions for future rewards.</p>
+        </section>
+
+        <section class="project-image full">
+            <img src="assets/s&e/final-designs.png" alt="Final designs">
+        </section>
+
+        <!-- Learnings -->
+        <section class="project-text">
+            <h2>Learnings</h2>
+            <p>Subscribe & Earn reinforced that strong UX can't compensate for a weak value proposition. In grocery, immediate savings mattered more than deferred loyalty benefits, even when flexibility was built into the system.</p>
+            <p>In hindsight, deeper validation earlier—particularly around customer motivation and cost-to-serve—could have reduced risk. A smaller experiment, such as automatically adding frequently purchased items to cart without a subscription commitment, may have tested the underlying behavior before introducing fulfillment complexity.</p>
+            <p>Although outcomes fell short, the work clarified where subscriptions do and don't make sense in grocery e-commerce, and informed future roadmap decisions with a clearer understanding of customer tradeoffs.</p>
+        </section>
+
+        <!-- Back link -->
+        <section class="project-nav">
+            <a href="index.html" class="secondary">← Back to all work</a>
+        </section>
+    </main>
+
+    <footer>
+        <span class="secondary">Available for projects</span>
+        <a href="mailto:max.romanoff@hotmail.com">max.romanoff@hotmail.com</a>
+    </footer>
+</body>
+</html>

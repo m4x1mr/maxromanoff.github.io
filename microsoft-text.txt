@@ -1,0 +1,92 @@
+
+
+
+AI Agents in Teams
+
+Simplifying acquisition to prioritize mental model clarity over short-term gains
+
+TL;DR: AI agents had low engagement in Teams and were a big platform bet. I worked to simplify our acquisition surfaces to prioritize a clear mental model over short-term acquisition gains.
+
+
+What are AI agents?
+Agents are essentially chatbots, but they’re powered by LLMs. And inside of Teams, they were either built by Microsoft (1P), or built by third-party developers (3P) for Teams (i.e. Asana). The purpose of these agents is to augment Teams users’ productivity and collaboration; it’s up to developers to define how they do that.
+
+Our team enables developers to build apps and agents for Teams; my role specifically is on the lifecycle and mental model for agents in Teams. At time of writing, agents are a brand new thing, and moving fast. Each new technological development creates new capabilities for agents, and thus internal teams move quickly on these developments, whereas I focused on establishing frameworks and consistent patterns that these teams could build from. 
+
+
+Collaborative agent acquisition was fragmented.
+To enable users to augment how they collaborate with others using agents, users could add these agents to group chats, channels, and meetings. The problem was, acquisition for agents to groups was fragmented to compared to other patterns for acquiring apps. 
+
+(1) For acquiring things, users could see either a modal or a side panel; the side panel specifically was fragmented. In meetings, the side panel was exclusive to acquiring apps, but in chats and channels, it was exclusive to acquiring agents. 
+
+(2) Since the side panel was initially developed for apps, interaction patterns were optimized for apps. The problem was if an agent was added to a chat/channel from the side panel, it remained in the side panel rather than being removed. This was necessary for apps, but created redundancy for agents as engagement and management happened in other surfaces. The side panel is designed as a surface to remain open and display contextual information to the main canvas; this pattern is broken when it behaves as a transactional acquisition surface. 
+
+(3) The side panel as a surface for acquisition broke the Teams “contextual” panel framework. All other side panels in a given surface house unique content, as a subset of that surface (i.e. Notes or Threads), however the agent acquisition surface showed content from an external store.
+
+(4) Lastly, from leadership, we had a push to explore treating agents more like people and collaborators, and the side panel broke that mental model, because people were never discovered or added in a side panel. 
+
+
+
+The surface was a political mess
+What I found out late into this work, was that the side panel was worked on for 3 years. People didn't want to let go of it. And the data on it was strong, when looking at acquisition only (13% vs 4% in another model for acquisition of apps). The biggest problem? The PM that I was working on this solution with was who led this solution. That gave me another layer to push against. 
+
+Despite the fragmentation that it caused, people pushed against removing or changing it historically due to the data, and obviously their own internal biases. 
+
+
+Redirecting our definition of success
+Knowing the political nature, I wanted to focus on creating alignment on a single solution that created more consistency in our platform, and also helped build the agent mental model. 
+
+Though we took the data seriously, we also had to understand that it harmed the larger perception of agents for users; acquisition as a number couldn’t only be looked at in isolation. For example: if a user acquired 0 agents all year, but during that year they used 3 agents consistently every day... is that a failure? Or a massive success?
+
+The opportunity changed, and how we framed it to the larger org shifted from “how might we optimize acquisition” to “how might we better define the agent mental model and enable users to acquire the agents that they are most likely to engage with in their collaborative space?”
+
+
+
+Grounding principles
+To best align everyone on the thinking behind this work, I defined design principles:
+- Simplicity
+    - Reduce concepts where possible and reduce the number of things a user has to remember
+- Consistency across all surfaces
+    - Have a single pattern across chats, channels, and meetings, with zero differences
+- acquisition focused
+    - Scope the resulting surface to acquisition, as the rest of interactions with agents can happen elsewhere
+- relevancy in suggestions
+    - Display agents that we have high confidence users will acquire into a group-space again
+
+
+Reusing patterns to enable relevant agent discovery
+
+Since we already had a modal being used for apps, I proposed repurposing this pattern for agents. To enable a clearer understanding of agents, I designed for having clear labelling to better educate users on what they’re seeing and why. This contrasts with the existing app modals, which have close to no labelling.
+
+To support our 1P offerings, since they were contextual to a space, they would appear at the top of the modal. Recently used agents would follow and take the rest of the initial view (if a user has them). Again this constrasts existing modals which have these appear in a truncated horizontal list with no labels. Lastly, agents that were promoted by an organization would appear, in case a company had partnerships or tools they wanted their employees to use.
+
+To scale within our directive of exploring people patterns, I showed how an entry point within the people roster could support this modal pattern. To fully build this mental model of agents as collaborators, I then designed how our other surfaces could adjust to build the mental model that agents are collaborators like people.
+
+
+
+Existing research said users don’t see agents as people 
+In parallel, as we continued down this path, I worked with researchers to find out users’ existing perceptions on agents. Almost overwhelmingly, most users said they don’t see it that way, nor do they want agents to fall under an existing category. 
+
+They wanted to know exactly when agents were present or when AI was listening to a conversation. Some saw the sparkle as being the representation of AI, and thus I used this as a kickoff to another set of proposals. 
+
+
+
+
+Attempting to improve discoverability
+If we kept agents under people, we incurred a high overhead cost for users discovering the modal in the first place. 
+
+Akin to how people were treated in Teams, I explored and proposed to elevate agents into the header to make them easier to find. The modal would still be in-play, but this way we would create a new mental model unique to agents. Through enabling easier discovery for acquisition, and easier discovery for management, we wouldn’t have to make one-off changes to so many other surfaces. 
+
+
+
+Outcome: 
+We got great feedback and alignment to push forward on the agents as people concept because it was an easier pill to swallow. 
+
+The future opportunity for improved discoverabiity evoked strong feelings — people wanted Teams to be simple and wanted to reduce concepts in the header... however this logic was flawed as agents were net new, and simplifying headers didn't make sense when our actual number of capabilities was expanding. We were adding new features, and hiding them under legacy symbols and surfaces, and then being surprised about their poor performance. 
+
+
+
+Learnings
+This was a difficult challenge to try and align everyone on a mental model for something so new. Everyone had their own idea of what agents should be like. In addition, with most people involved in this project being at Microsoft for over 5 years, and some closer to 10, politics became super difficult to navigate. It was tough to decipher what was an actual problem, versus what someone thought to be a problem.
+
+I also learned to focus on the goal, rather than optimizing for a single metric. With large, disparate teams, it’s easy to get carried away with optimizing for a single metric that’s important to that team, but in the end, it just creates more fragmentation. The quantitative is important, but only when it’s properly looked at qualitatively.

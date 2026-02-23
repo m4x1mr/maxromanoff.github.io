@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Max Romanoff – Product Designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY7BMYMZB7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VY7BMYMZB7');
+    </script>
+
+    <!-- Fonts: adjust to your real font hosting later -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Source Serif Pro + Instrument Serif. Helvetica Neue will use system fallbacks -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!-- Mobile header (only visible on mobile) -->
+    <header class="mobile-header">
+        <div class="mobile-header__logo special-logo">
+            <a href="index.html" aria-label="Back to home">max romanoff.</a>
+        </div>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="visually-hidden">Open navigation</span>
+        </button>
+    </header>
+
+    <!-- Mobile full-screen menu overlay -->
+    <nav id="site-menu" class="menu-overlay" hidden>
+        <div class="menu-overlay__inner">
+            <ul class="menu-overlay__nav">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#selected-outcomes">About</a></li>
+                <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+
+            <section class="menu-overlay__extra" id="contact">
+                <h2 class="heading special-heading">Interested in collaborating?</h2>
+                <p>
+                    <a href="mailto:max.romanoff@hotmail.com">Reach out</a> for design consulting, critiques, or just
+                    coffee.
+                </p>
+            </section>
+        </div>
+    </nav>
+
+    <!-- PAGE GRID -->
+    <div class="page">
+        <!-- Left column / desktop nav -->
+        <aside class="page__nav">
+            <div class="logo special-logo">
+                max romanoff.
+            </div>
+
+            <nav class="side-nav">
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#selected-outcomes">About</a></li>
+                    <li><a href="https://www.linkedin.com/in/maxim-romanoff/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Middle column / main content -->
+        <main class="page__main">
+            <!-- Intro / hero (TLDR styling) -->
+            <section class="tldr intro tldr--compact" id="about">
+                <p class="tldr__copy">Product designer with 6+ years in strategy and research across complex systems</p>
+                <p>Currently designing AI agents @ Microsoft Teams</p>
+            </section>
+
+            <!-- Selected work -->
+            <section class="section" id="projects">
+                <h2 class="heading">Recent work</h2>
+
+                <!-- Placeholder project card -->
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/msft/hero-1.png" loading="lazy" alt="MSFT hero image" />
+                    </div>
+
+                    <header class="project-card__header">
+                        <h3 class="project-card__title">
+                            Agent discovery & trust in Microsoft Teams
+                        </h3>
+                        <div class="project-card__meta">
+                            <span class="tag tag--locked" role="img" aria-label="Project locked" title="Project locked">
+                                <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" focusable="false">
+                                    <rect x="4" y="12" width="16" height="9" rx="2" ry="2" fill="none"
+                                        stroke="currentColor" stroke-width="1.6" />
+                                    <path d="M7 11V8a5 5 0 0110 0v3" fill="none" stroke="currentColor"
+                                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span class="tag">Product designer</span>
+                            <span class="tag">January 2025 — Present</span>
+                        </div>
+                    </header>
+                </article>
+
+
+
+
+
+                <a class="project-card" href="subscribe-and-earn.html">
+                    <div class="project-card__image">
+                        <img src="assets/s&e/hero-1.png" loading="lazy" alt="S&E hero image" />
+                    </div>
+
+                    <header class="project-card__header">
+                        <h3 class="project-card__title">
+                            Creating a subscribe and save program — from scratch
+                        </h3>
+                        <div class="project-card__meta">
+                            <span class="tag">Lead product designer</span>
+                            <span class="tag">July 2023 — January 2024</span>
+                        </div>
+                    </header>
+                </a>
+
+
+
+                <a class="project-card" href="async.html">
+                    <div class="project-card__image">
+                        <img src="assets/async/hero-1.png" loading="lazy" alt="Async Subs hero image" />
+                    </div>
+                    <header class="project-card__header">
+                        <h3 class="project-card__title">
+                            Increasing efficiency by optimizing item substitutions
+                        </h3>
+                        <div class="project-card__meta">
+                            <span class="tag">Lead product designer</span>
+                            <span class="tag">September 2022 — August 2023</span>
+                        </div>
+                    </header>
+                </a>
+
+
+                <!-- Add more project-card blocks later -->
+            </section>
+
+            <div class="section-separator" aria-hidden="true"></div>
+
+
+
+
+
+            <!-- Reflections placeholder
+            <section class="section">
+                <h2 class="heading">Reflections</h2>
+                <p>
+                    Key learnings from recent work that have shaped how I approach product design.
+                </p>
+                <div class="project-card__image project-image-placeholder"></div>
+
+            </section>
+
+
+            <section class="section">
+                <h2 class="heading">How I work</h2>
+                <p>
+                    A concise overview of my process and how I collaborate with teams.
+                </p>
+                <div class="project-card__image project-image-placeholder"></div>
+
+            </section>-->
+
+            <!-- Selected product outcomes (three-card grid) -->
+            <section class="section" id="selected-outcomes">
+                <h2 class="heading">Notable impact</h2>
+
+                <p class="project-outcomes__intro">Beyond usability, my work is focused on driving real business
+                    outcomes. I’ve shipped products with organizations like UPS, Academy Sports, Loblaw Digital, and
+                    Microsoft—many of which are live today. Here are a few notable impacts.</p>
+
+                <div class="project-grid-wrapper">
+                    <div class="project-grid">
+
+                        <a class="project-card" href="async.html" aria-label="$3M+ saved in costs — details">
+                            <div class="project-card__header">
+                                <div class="project-card__meta-top">
+                                    <div class="muted">Async Subs</div>
+                                    <div class="meta-right">
+                                        <div class="muted">Loblaw Digital—2024</div>
+                                        <span class="zoom-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true" focusable="false">
+                                                <path d="M14 3h7v7" fill="none" stroke="currentColor" stroke-width="1.6"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10 14L21 3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M21 21H3V3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <p class="tldr__copy">$3M+ saved in costs</p>
+                                <p>+ 60% adoption rate amongst customers</p>
+                            </div>
+                        </a>
+                        <a class="project-card" href="https://www.pcexpress.ca/pass"
+                            aria-label="21% conversion — details">
+                            <div class="project-card__header">
+                                <div class="project-card__meta-top">
+                                    <div class="muted">PC Express Pass</div>
+                                    <div class="meta-right">
+                                        <div class="muted">Loblaw Digital—2023</div>
+                                        <span class="zoom-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true" focusable="false">
+                                                <path d="M14 3h7v7" fill="none" stroke="currentColor" stroke-width="1.6"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10 14L21 3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M21 21H3V3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <p class="tldr__copy">21% conversion</p>
+                                <p>+ 10% increase in retention, year-over-year</p>
+                            </div>
+                        </a>
+                        <a class="project-card"
+                            href="https://apps.apple.com/us/app/academy-sports-outdoors/id1572699554"
+                            aria-label="25% higher AOV — details">
+                            <div class="project-card__header">
+                                <div class="project-card__meta-top">
+                                    <div class="muted">Academy Sports</div>
+                                    <div class="meta-right">
+                                        <div class="muted">Publicis Sapient—2021</div>
+                                        <span class="zoom-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true" focusable="false">
+                                                <path d="M14 3h7v7" fill="none" stroke="currentColor" stroke-width="1.6"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10 14L21 3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M21 21H3V3" fill="none" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <p class="tldr__copy">25% higher AOV</p>
+                                <p>+ 4.9/5.0 rating from 80,000+ reviews</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="resume-callout">
+                    <a href="https://drive.google.com/file/d/1zqNqpXfdFD_6gZ9Nz7KLWx7RIUKv0uzE/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" style="font-style: italic;">Read my resume</a>
+                    for more details.
+                </p>
+            </section>
+
+            <!-- Latest thinking (three text-only cards) -->
+            <section class="section" id="latest-thinking">
+                <h2 class="heading">Latest thinking</h2>
+                <p>My approach to design iterates as I learn. Rather than following a fixed process, I adapt based on
+                    the industry, scale, and urgency. Here are some principles that have been shaping how I approach
+                    problems recently.</p>
+
+                <div class="thinking-grid">
+                    <article class="thinking-card">
+                        <h2 class="heading">Designing for root causes</h2>
+                        <p>It’s easy (and fast) to ship solutions that solve symptoms. I work with Product teams to
+                            question whether we’re addressing a symptom or if immediately solving the root
+                            cause could be more fruitful.</p>
+                    </article>
+
+                    <article class="thinking-card">
+                        <h2 class="heading">Edge cases impact craft</h2>
+                        <p>
+                            Certain problems require extra attention. I love exploring edge cases to make sure large,
+                            high-impact systems can scale appropriately, and to avoid costly rework later on.
+                        </p>
+                    </article>
+
+                    <article class="thinking-card">
+                        <h2 class="heading">Progress with subtraction</h2>
+                        <p>Design shouldn't just be about adding new features. Consolidation, removal, and
+                            simplification are often more impactful, especially across legacy platforms and systems.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- After work ends (three images with captions) -->
+            <section class="section" id="after-work">
+                <h2 class="heading">After work ends</h2>
+                <p>Outside of work, you can catch me on my bike, gaslighting myself into thinking long climbs are "fun".
+                </p>
+
+                <div class="after-work-grid">
+                    <figure class="after-work-card">
+                        <div class="after-work-card__image">
+                            <img src="assets/after-work/italy.jpeg" alt="Cyclist riding toward mountains in Italy"
+                                loading="lazy">
+                        </div>
+                        <figcaption>Passo Gardena, Italy</figcaption>
+                    </figure>
+
+                    <figure class="after-work-card">
+                        <div class="after-work-card__image">
+                            <img src="assets/after-work/switzerland.jpeg"
+                                alt="Group ride climbing a Swiss mountain pass" loading="lazy">
+                        </div>
+                        <figcaption>Furka Pass, Switzerland</figcaption>
+                    </figure>
+
+                    <figure class="after-work-card">
+                        <div class="after-work-card__image">
+                            <img src="assets/after-work/france.jpeg" alt="Cyclist on a forested climb in France"
+                                loading="lazy">
+                        </div>
+                        <figcaption>Hourquette d’Ancizan, France</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+
+            <section class="section section--contact" id="contact-desktop">
+                <h2 class="project-card__title">Interested in collaborating?</h2>
+                <p>
+                    <a href="mailto:max.romanoff@hotmail.com" style="font-style: italic;">Reach out</a> for design
+                    consulting, critiques, or just
+                    coffee.
+                </p>
+            </section>
+
+
+
+            <footer class="site-footer">
+                <p>Product designer.</p>
+                <p>Designed and built in 2025.</p>
+            </footer>
+        </main>
+
+        <!-- Right column / currently empty but padded -->
+        <aside class="page__side">
+            <!-- intentionally blank for now -->
+        </aside>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

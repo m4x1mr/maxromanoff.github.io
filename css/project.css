@@ -1,0 +1,164 @@
+/* Project Page Styles */
+
+.project-page main {
+    padding-top: 72px;
+}
+
+.project-content {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Hero */
+.project-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 32px;
+}
+
+.project-hero h1 {
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 600px;
+    margin-bottom: 16px;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    color: #888;
+}
+
+/* Summary */
+.project-summary {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+}
+
+.project-summary p {
+    max-width: 600px;
+    color: #000;
+}
+
+/* Text sections */
+.project-text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.project-text h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.project-text p {
+    max-width: 600px;
+    margin-bottom: 16px;
+}
+
+.project-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Images - full width with grey background */
+.project-image.full {
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin: 4px 12px;
+    overflow: hidden;
+}
+
+.project-image.full img {
+    width: 100%;
+    display: block;
+}
+
+/* Image grid (2-up) */
+.project-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin: 4px 12px;
+}
+
+.project-image-grid .project-image {
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.project-image-grid .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Stats inline */
+.stats-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.stats-inline .stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-inline .stat-number {
+    font-size: 14px;
+}
+
+.stats-inline .stat-label {
+    font-size: 14px;
+}
+
+/* Navigation */
+.project-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 72px;
+}
+
+.project-nav a {
+    color: #888;
+}
+
+.project-nav a:hover {
+    color: #000;
+    opacity: 1;
+}
+
+/* Footer override for project pages */
+.project-page footer {
+    max-width: 1200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-hero {
+        padding: 32px 24px 24px;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .project-image-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .stats-inline {
+        flex-direction: column;
+        gap: 16px;
+    }
+}

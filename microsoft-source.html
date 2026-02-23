@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft | Max Romanoff</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/project-v2.css?v=2">
+</head>
+
+<body class="project-page">
+    <header>
+        <a href="index.html" class="logo"><span>Max—R</span><span class="logo-title">Product Designer</span></a>
+        <nav>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </header>
+
+    <main class="project-content">
+        <!-- Hero -->
+        <section class="project-hero">
+            <p class="project-eyebrow">Microsoft · 2025</p>
+            <h1>Simplifying the AI agent acquisition framework</h1>
+        </section>
+
+        <!-- Hero Image -->
+        <section class="project-image full light">
+            <img src="assets/msft/hero-1.png" alt="Hero">
+        </section>
+
+        <!-- Metadata -->
+        <section class="project-metadata">
+            <div class="project-meta-item">
+                <span class="project-meta-label">Timeline</span>
+                <span class="project-meta-value">Jan 2025 — Present</span>
+            </div>
+            <div class="project-meta-item">
+                <span class="project-meta-label">Role</span>
+                <span class="project-meta-value">Lead Product Designer</span>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="project-summary">
+            <p>AI agents had low engagement in Teams and were a big platform bet. I worked to simplify our acquisition
+                surfaces to prioritize a clear mental model over short-term acquisition gains.</p>
+        </section>
+
+        <!-- What are AI agents -->
+        <section class="project-text">
+            <p class="section-label">Context</p>
+            <h2>AI agents help users be more productive in Teams</h2>
+            <p>Agents are essentially chatbots, but they’re powered by LLMs. And inside of Teams, they were either built
+                by Microsoft (1P), or built by third-party developers (3P) for Teams (i.e. Asana). The purpose of these
+                agents is to augment Teams users’ productivity and collaboration; it’s up to developers to define how
+                they do that.
+            </p>
+            <p>Our team enables developers to build apps and agents for Teams; my role specifically is on the lifecycle
+                and mental model for agents in Teams. At time of writing, agents are a brand new thing, and moving fast.
+                Each new technological development creates new capabilities for agents, and thus internal teams move
+                quickly on these developments, whereas I focused on establishing frameworks and consistent patterns that
+                these teams could build from.
+            </p>
+        </section>
+
+        <section class="project-image-grid process">
+            <div class="project-image has-video">
+                <video src="assets/msft/messaging-flow.mov" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-image">
+                <img src="assets/msft/init-journey.png" alt="Journey">
+            </div>
+        </section>
+
+
+        <!-- Summary -->
+        <section class="project-summary">
+            <p>Our platform was at an inflection point, facing a ton of fragmentation from a surge of new AI agent
+                capabilities and unresolved debt from legacy app patterns. We had to start creating clarity soon.
+            </p>
+        </section>
+
+
+
+
+        <!-- Fragmentation -->
+        <section class="project-text">
+            <p class="section-label">Our current situation</p>
+            <h2>Fragmented app acquisition and legacy debt impacted agent engagement</h2>
+            <p>Agents are an app type. You install them from the app store, and then use them in Teams. This pattern
+                broke when you tried to add an agent inside of a collaborative space like a Chat, Channel, or Meeting.
+            </p>
+            <p><strong>Entry points to apps were fragmented:</strong> Despite the store pattern, agents had a separate
+                acquisition surface from apps. This was initially designed as an experiment to improve discoverability,
+                but it was never resolved.</p>
+            <p><strong>The side panel was a flawed acquisition pattern:</strong> The side panel is designed as a surface
+                to remain open and display contextual information to the main canvas; this pattern is broken when it
+                behaves as a transactional acquisition surface.</p>
+            <p><strong>Agents lacked an acquisition surface in Meetings:</strong> In meetings, the side panel was
+                exclusive to acquiring apps, but in chats and channels, it was exclusive to acquiring agents.</p>
+
+        </section>
+
+        <section class="project-image full light">
+            <img src="assets/msft/frag-mult-entries.png" alt="Multiple entry points">
+        </section>
+
+        <section class="project-image-grid light">
+            <div class="project-image">
+                <img src="assets/msft/frag-catalogue.png" alt="Catalogue">
+            </div>
+            <div class="project-image">
+                <img src="assets/msft/frag-surface-diff.png" alt="Surface differences">
+            </div>
+        </section>
+
+        <!-- Political mess -->
+        <section class="project-text">
+            <p class="section-label">Challenges</p>
+            <h2>Leadership wanted agents to be designed like people, despite opposing research</h2>
+            <p>One of the largest pushes from a strategic level was to treat agents akin to people. Leadership’s
+                hypothesis here was this would simplify the mental model for agents. Though we had research that opposed
+                exactly that, they weren’t receptive.
+            </p>
+            <p>Despite design (my entire team) disagreeing with the approach to treat them like people, I understood the
+                need to simplify the agent mental model.
+            </p>
+        </section>
+
+        <section class="project-image-grid light">
+            <div class="project-image">
+                <img src="assets/msft/people-pattern-1.png" alt="People pattern 1">
+            </div>
+            <div class="project-image">
+                <img src="assets/msft/people-pattern-2.png" alt="People pattern 2">
+            </div>
+        </section>
+
+        <section class="project-image full process">
+            <img src="assets/msft/research-findings.png" alt="Research findings">
+        </section>
+
+
+
+
+
+
+        <!-- Redirecting -->
+        <section class="project-text">
+            <p class="section-label">Strategy</p>
+            <h2>Success required a mental model shift, not more installs
+            </h2>
+            <p>Though the side panel created fragmentation, not everyone wanted to let it go. It was a result of a
+                3-year project and the data showed its install rate was higher than the modal approach for apps (13%
+                install rate vs. 4%).
+            </p>
+            <p>I took the data seriously, but I also knew install rate in isolation served no value (i.e. one user can
+                install 100 agents, but use none all year). I framed our existing user journey as the experience that
+                defines a users’ mental model; the opportunity shifted from “how might we improve acquisition” to “how
+                might we better define the agent mental model and enable users to acquire the agents that they are most
+                likely to engage with in their collaborative space?”
+            </p>
+        </section>
+
+        <section class="project-image-grid process">
+            <div class="stats-card dark-card">
+                <div class="stats-card-inner">
+                    <div class="stat-large light-text">
+                        <span class="stat-value">13% vs. 4%</span>
+                        <span class="stat-label">side panel conversion for agents</span>
+                        <span class="stat-label">over the modal for apps</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="project-image">
+                <img src="assets/msft/journey-mental-model.png" alt="Journey with Underlying Mental Model">
+
+            </div>
+        </section>
+
+
+
+
+        <!-- Grounding principles -->
+        <section class="project-text">
+            <p class="section-label">Principles</p>
+            <h2>Grounding the design with principles focused on simplicity</h2>
+            <p>To best align everyone on the thinking behind this work, I defined design principles. My primary goal was
+                to simplify as many things as we could and reduce concepts where possible. I saw opportunity to do this
+                through reusing and reworking established concepts.</p>
+        </section>
+
+        <section class="project-image-grid principles">
+            <div class="principle-card">
+                <h3>Simplicity</h3>
+                <p>Reduce concepts where possible and reduce the number of things a user has to remember</p>
+            </div>
+            <div class="principle-card">
+                <h3>Consistency across all surfaces</h3>
+                <p>Have a single pattern across chats, channels, and meetings, with zero differences</p>
+            </div>
+            <div class="principle-card">
+                <h3>Acquisition focused</h3>
+                <p>Scope the resulting surface to acquisition, as the rest of interactions with agents can happen
+                    elsewhere</p>
+            </div>
+            <div class="principle-card">
+                <h3>Relevancy in suggestions</h3>
+                <p>Display agents that we have high confidence users will acquire into a group-space again</p>
+            </div>
+        </section>
+
+        <!-- Reusing patterns -->
+        <section class="project-text">
+            <p class="section-label">Scalable app acquisition</p>
+            <h2>Reusing patterns to enable relevant agent discovery
+            </h2>
+            <p>To consolidate UI, I proposed repurposing the app modal for agents. To enable a clearer understanding of
+                agents, I designed for having clear labelling to better educate users on what they’re seeing and why.
+                This contrasts with the existing app modals, which have close to no labelling.
+            </p>
+            <p>To support our 1P offerings, since they were contextual to a space, they would appear at the top of the
+                modal. Recently used agents would follow and take the rest of the initial view (if a user has them).
+                Again this contrasts existing modals which have these appear in a truncated horizontal list with no
+                labels. Lastly, agents that were promoted by an organization would appear, in case a company had
+                partnerships or tools they wanted their employees to use.</p>
+        </section>
+
+        <section class="project-image full light">
+            <img src="assets/msft/panel-explores.png" alt="Panel explores">
+        </section>
+
+        <section class="project-image full light">
+            <img src="assets/msft/panel-lifecycle.png" alt="Panel lifecycle">
+        </section>
+
+        <section class="project-image full light">
+            <img src="assets/msft/panel-image-1.png" alt="Panel image">
+        </section>
+
+        <!-- Research -->
+        <section class="project-text">
+            <p class="section-label">Short term alignment</p>
+            <h2>Scaling a clear mental model
+            </h2>
+            <p>Knowing the LT push for agents appearing like teammates (despite the research), I proposed what this
+                could look like short term, but also what we would need for creating clarity.
+            </p>
+            <p>Across all surfaces, users could get to the modal from the roster. The roster would show a placeholder
+                section for agents, so users begin to understand that management happens there. Once they open the
+                modal, we could inform users of how they could engage with agents, and post-acquisition, the agent could
+                automatically be @-mentioned in the chat to kick-start engagement. Once the agent is acquired, we could
+                also include a link to 'Manage' in the status message, to send users back to the roster.
+            </p>
+        </section>
+
+        <section class="project-image-grid light">
+            <div class="project-image">
+                <img src="assets/msft/mental-model-1.png" alt="Mental model 1">
+            </div>
+            <div class="project-image">
+                <img src="assets/msft/mental-model-2.png" alt="Mental model 2">
+            </div>
+        </section>
+
+        <section class="project-image full light">
+            <img src="assets/msft/mental-model-3-meetings.png" alt="Mental model meetings">
+        </section>
+
+
+
+
+
+        <!-- Discoverability -->
+        <section class="project-text">
+            <p class="section-label">Ambitious goals</p>
+            <h2>Proposing a northstar to treat agents as their own entity
+            </h2>
+            <p>Now I also proposed what our northstar could look like if we followed the research and used people
+                patterns to inform our UI.
+            </p>
+            <p>Customer feedback informed us that the sparkle icon was most recognizable when it came to AI. Rather than
+                hiding agents under people patterns, we could surface this directly for users in the header, and
+                complete the lifecycle and develop the reinforcement loop for awareness with agents.
+            </p>
+        </section>
+
+        <section class="project-image-grid light">
+            <div class="project-image">
+                <img src="assets/msft/northstar-1.png" alt="Northstar 1">
+            </div>
+            <div class="project-image">
+                <img src="assets/msft/northstar-2.png" alt="Northstar 2">
+            </div>
+        </section>
+
+        <section class="project-image full light">
+            <img src="assets/msft/northstar-3.png" alt="Northstar 3">
+        </section>
+
+        <!-- Outcome -->
+        <section class="project-text">
+            <p class="section-label">Outcomes</p>
+            <h2>Socializing the rationale and proposed changes</h2>
+            <p>The following step, which was relatively simple, was to socialize this change to the many partner teams I
+                worked with and gather feedback and unique scenarios from their teams. The mental model would continue
+                to be defined as agents are still getting more complex. For the near term, agents will continue to be
+                represented as people to help users understand their capabilities and interaction patterns.
+            </p>
+            <p>The future opportunity for improved discoverability evoked strong feelings — people wanted Teams to be
+                simple and wanted to reduce concepts in the header... however this logic was flawed as agents were net
+                new, and simplifying headers didn't make sense when our actual number of capabilities was expanding. We
+                were adding new features, and hiding them under legacy symbols and surfaces, and then being surprised
+                about their poor performance.</p>
+        </section>
+
+        <section class="project-image full process">
+            <img src="assets/msft/design-pres.png" alt="Design presentation">
+        </section>
+
+        <!-- Learnings -->
+        <section class="project-text">
+            <p class="section-label">Reflection</p>
+            <h2>Learnings</h2>
+            <p>This was a difficult challenge to try and align everyone on a mental model for something so new. Everyone
+                had their own idea of what agents should be like. In addition, with most people involved in this project
+                being at Microsoft for over 5 years, and some closer to 10, politics became super difficult to navigate.
+                It was tough to decipher what was an actual problem, versus what someone thought to be a problem.</p>
+            <p>I also learned to focus on the goal, rather than optimizing for a single metric. With large, disparate
+                teams, it's easy to get carried away with optimizing for a single metric that's important to that team,
+                but in the end, it just creates more fragmentation. The quantitative is important, but only when it's
+                properly looked at qualitatively.</p>
+        </section>
+
+        <!-- Back link -->
+        <section class="project-nav">
+            <a href="index.html" class="secondary">← Back to all work</a>
+        </section>
+    </main>
+
+    <footer>
+        <span class="secondary">Available for projects</span>
+        <div class="footer-links">
+            <a href="mailto:max.romanoff@hotmail.com">Email</a>
+            <span class="footer-dot">·</span>
+            <a href="https://linkedin.com/in/maxim-romanoff/" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+
+</html>
