@@ -114,6 +114,65 @@
     opacity: 1;
 }
 
+/* Project Overview Section */
+.project-overview {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 24px 64px;
+}
+
+.project-overview-text {
+    max-width: 600px;
+    color: rgb(50, 64, 79);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 48px;
+}
+
+.project-overview-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 64px;
+}
+
+.overview-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.overview-stat-value {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgb(50, 64, 79);
+    line-height: 1.1;
+}
+
+.overview-stat-label {
+    font-size: 14px;
+    color: rgb(50, 64, 79);
+    opacity: 0.5;
+    margin-top: 6px;
+}
+
+/* Full-width divider */
+.project-divider {
+    margin: 0 12px;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .project-overview-stats {
+        gap: 32px 48px;
+    }
+
+    .overview-stat-value {
+        font-size: 32px;
+    }
+}
+
 /* Text sections */
 .project-text {
     max-width: 1200px;
