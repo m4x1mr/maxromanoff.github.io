@@ -18,7 +18,11 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="preload">
+    <div class="preloader">
+        <span class="preloader-text">loading</span>
+        <div class="preloader-bar"></div>
+    </div>
     <header>
         <a href="index.html" class="logo"><span>Max—R</span><span class="logo-title">Product Designer</span></a>
         <nav>
@@ -65,7 +69,7 @@
         <!-- Projects 2x2 -->
         <section class="projects" id="work">
             <a href="subscribe-and-earn.html" class="project">
-                <div class="project-media purple">
+                <div class="project-media light">
                     <img src="assets/s&e/hero-1.png" alt="Subscribe & Earn">
                 </div>
                 <div class="project-info">
@@ -74,18 +78,8 @@
                 </div>
             </a>
 
-            <a href="microsoft.html" class="project">
-                <div class="project-media video-preview">
-                    <video src="assets/msft/messaging-flow.mov" autoplay loop muted playsinline></video>
-                </div>
-                <div class="project-info">
-                    <span>Gaining alignment on a simplified acquisition framework</span>
-                    <span class="secondary">Microsoft · 2025 <span class="pill">Password Required</span></span>
-                </div>
-            </a>
-
             <a href="async.html" class="project">
-                <div class="project-media green">
+                <div class="project-media light">
                     <img src="assets/async/hero-1.png" alt="Async Substitutions">
                 </div>
                 <div class="project-info">
@@ -93,6 +87,16 @@
                     <span class="secondary">Loblaw Digital · 2023</span>
                 </div>
             </a>
+
+            <div class="project coming-soon">
+                <div class="project-media">
+                    <img src="assets/msft/hero-1.png" alt="Microsoft">
+                </div>
+                <div class="project-info">
+                    <span>Gaining alignment on a simplified acquisition framework</span>
+                    <span class="secondary">Microsoft · 2025 <span class="pill">Coming Soon</span></span>
+                </div>
+            </div>
 
             <div class="project coming-soon">
                 <div class="project-media red">
@@ -169,6 +173,79 @@
         });
 
         fadeImages.forEach(img => observer.observe(img));
+    </script>
+
+    <script>
+        // Preloader - wait for critical images to load
+        const criticalImages = document.querySelectorAll('.projects .project-media img');
+        let loadedCount = 0;
+        const totalImages = criticalImages.length;
+        const startTime = Date.now();
+        const MIN_DISPLAY_TIME = 500;
+
+        function checkAllLoaded() {
+            loadedCount++;
+            if (loadedCount >= totalImages) {
+                const elapsed = Date.now() - startTime;
+                const delay = Math.max(0, MIN_DISPLAY_TIME - elapsed);
+
+                setTimeout(() => {
+                    document.body.classList.remove('preload');
+                    document.body.classList.add('loaded');
+                    // Remove preloader from DOM after animation
+                    setTimeout(() => {
+                        const preloader = document.querySelector('.preloader');
+                        if (preloader) preloader.remove();
+                    }, 600);
+                }, delay);
+            }
+        }
+
+        criticalImages.forEach(img => {
+            if (img.complete) {
+                checkAllLoaded();
+            } else {
+                img.addEventListener('load', checkAllLoaded);
+                img.addEventListener('error', checkAllLoaded);
+            }
+        });
+
+        // Fallback if no images or all cached
+        if (totalImages === 0) {
+            setTimeout(() => {
+                document.body.classList.remove('preload');
+                document.body.classList.add('loaded');
+            }, MIN_DISPLAY_TIME);
+        }
+    </script>
+
+    <script>
+        // Page transition - exit animation
+        document.querySelectorAll('a.project').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                // Only animate for internal project links
+                if (href && href.endsWith('.html') && !href.startsWith('http')) {
+                    e.preventDefault();
+                    sessionStorage.setItem('pageTransition', 'true');
+                    document.body.classList.add('page-exit');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400); // Match animation duration
+                }
+            });
+        });
+    </script>
+    <script>
+        // Handle back/forward navigation via bfcache
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                // Page was restored from bfcache
+                document.body.classList.remove('page-exit');
+                document.body.classList.remove('preload');
+                document.body.classList.add('loaded');
+            }
+        });
     </script>
 </body>
 

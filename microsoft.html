@@ -864,7 +864,59 @@ exports.init = init;
         const templateConfig = {
             rememberExpirationKey: "staticrypt_expiration",
             rememberPassphraseKey: "staticrypt_passphrase",
-            replaceHtmlCallback: null,
+            replaceHtmlCallback: function(plainHTML) {
+                // Show loading state
+                const container = document.querySelector('.password-container');
+                if (container) {
+                    container.innerHTML = '<p class="preloader-text" style="font-family: Geist Mono, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #888; text-align: center;">loading</p><div style="width: 50px; height: 2px; background: #e0e0e0; border-radius: 1px; position: relative; overflow: hidden; margin: 12px auto;"><div style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: #888; border-radius: 1px; animation: preloader-slide 1s ease-in-out infinite;"></div></div><style>@keyframes preloader-slide { 0% { transform: translateX(-100%); } 50% { transform: translateX(100%); } 100% { transform: translateX(200%); } }</style>';
+                }
+
+                // Parse HTML to find all images
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(plainHTML, 'text/html');
+                const images = doc.querySelectorAll('img');
+                const imageUrls = Array.from(images).map(img => img.src).filter(src => src);
+
+                let loadedCount = 0;
+                const totalImages = imageUrls.length;
+                const startTime = Date.now();
+                const MIN_DISPLAY_TIME = 400;
+
+                function finishLoading() {
+                    const elapsed = Date.now() - startTime;
+                    const delay = Math.max(0, MIN_DISPLAY_TIME - elapsed);
+
+                    setTimeout(() => {
+                        // Check for page transition flag and inject class if needed
+                        const shouldAnimate = sessionStorage.getItem('pageTransition') === 'true';
+                        if (shouldAnimate) {
+                            sessionStorage.removeItem('pageTransition');
+                            // Inject page-enter class into body
+                            plainHTML = plainHTML.replace(/<body([^>]*)class="([^"]*)"/, '<body$1class="$2 page-enter"');
+                            plainHTML = plainHTML.replace(/<body(?![^>]*class)/, '<body class="page-enter"');
+                        }
+                        document.write(plainHTML);
+                        document.close();
+                    }, delay);
+                }
+
+                if (totalImages === 0) {
+                    finishLoading();
+                    return;
+                }
+
+                // Preload all images
+                imageUrls.forEach(url => {
+                    const img = new Image();
+                    img.onload = img.onerror = function() {
+                        loadedCount++;
+                        if (loadedCount >= totalImages) {
+                            finishLoading();
+                        }
+                    };
+                    img.src = url;
+                });
+            },
             clearLocalStorageCallback: null,
         };
 
@@ -910,5 +962,6 @@ exports.init = init;
             }
         });
     </script>
+
 </body>
 </html>

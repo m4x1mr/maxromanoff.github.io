@@ -19,7 +19,11 @@
     <link rel="stylesheet" href="css/project-v2.css">
 </head>
 
-<body class="project-page">
+<body class="project-page preload">
+    <div class="preloader">
+        <span class="preloader-text">loading</span>
+        <div class="preloader-bar"></div>
+    </div>
     <header>
         <a href="index.html" class="logo"><span>Max—R</span><span class="logo-title">Product Designer</span></a>
         <nav>
@@ -36,7 +40,7 @@
         </section>
 
         <!-- Hero Image -->
-        <section class="project-image full green">
+        <section class="project-image full light">
             <img src="assets/async/hero-1.png" alt="Async Subs hero">
         </section>
 
@@ -108,7 +112,7 @@
                 sometimes minutes before the customer arrives for pick up (me shown below, picking an item).</p>
         </section>
 
-        <section class="project-image full light">
+        <section class="project-image full process">
             <img src="assets/async/picking.png" alt="Picking groceries">
         </section>
 
@@ -122,7 +126,7 @@
                 like expiry dates.</p>
         </section>
 
-        <section class="project-image-grid light">
+        <section class="project-image-grid process">
             <div class="project-image">
                 <img src="assets/async/current-desktop.png" alt="Current desktop experience">
             </div>
@@ -238,21 +242,21 @@
                 annual cost savings as a result of operational efficiency.</p>
         </section>
 
-        <section class="project-image-grid green">
+        <section class="project-image-grid light">
             <div class="project-image">
                 <img src="assets/async/mobile-final-1.png" alt="Final mobile design 1">
             </div>
-            <div class="stats-card">
+            <div class="stats-card light-card">
                 <div class="stats-card-inner">
-                    <div class="stat-large">
+                    <div class="stat-large dark-text">
                         <span class="stat-value">60,000</span>
                         <span class="stat-label">hours saved</span>
                     </div>
-                    <div class="stat-large">
+                    <div class="stat-large dark-text">
                         <span class="stat-value">$3M+</span>
                         <span class="stat-label">cost savings</span>
                     </div>
-                    <div class="stat-large">
+                    <div class="stat-large dark-text">
                         <span class="stat-value">60%</span>
                         <span class="stat-label">customer adoption</span>
                     </div>
@@ -260,11 +264,11 @@
             </div>
         </section>
 
-        <section class="project-image full process">
+        <section class="project-image full light">
             <img src="assets/async/desktop-final-1.png" alt="Final desktop design">
         </section>
 
-        <section class="project-image full green">
+        <section class="project-image full light">
             <img src="assets/async/mobile-final-3.png" alt="Final mobile design 3">
         </section>
 
@@ -294,6 +298,61 @@
             <a href="https://linkedin.com/in/maxim-romanoff/" target="_blank">LinkedIn</a>
         </div>
     </footer>
+
+    <script>
+        // Preloader - wait for all images to load
+        const allImages = document.querySelectorAll('img');
+        let loadedCount = 0;
+        const totalImages = allImages.length;
+        const startTime = Date.now();
+        const MIN_DISPLAY_TIME = 400;
+
+        function checkAllLoaded() {
+            loadedCount++;
+            if (loadedCount >= totalImages) {
+                const elapsed = Date.now() - startTime;
+                const delay = Math.max(0, MIN_DISPLAY_TIME - elapsed);
+
+                setTimeout(() => {
+                    document.body.classList.remove('preload');
+                    // Check for page transition entrance animation
+                    if (sessionStorage.getItem('pageTransition') === 'true') {
+                        sessionStorage.removeItem('pageTransition');
+                        document.body.classList.add('page-enter');
+                    } else {
+                        document.body.classList.add('loaded');
+                    }
+                    // Remove preloader from DOM after animation
+                    setTimeout(() => {
+                        const preloader = document.querySelector('.preloader');
+                        if (preloader) preloader.remove();
+                    }, 600);
+                }, delay);
+            }
+        }
+
+        allImages.forEach(img => {
+            if (img.complete) {
+                checkAllLoaded();
+            } else {
+                img.addEventListener('load', checkAllLoaded);
+                img.addEventListener('error', checkAllLoaded);
+            }
+        });
+
+        // Fallback if no images
+        if (totalImages === 0) {
+            setTimeout(() => {
+                document.body.classList.remove('preload');
+                if (sessionStorage.getItem('pageTransition') === 'true') {
+                    sessionStorage.removeItem('pageTransition');
+                    document.body.classList.add('page-enter');
+                } else {
+                    document.body.classList.add('loaded');
+                }
+            }, MIN_DISPLAY_TIME);
+        }
+    </script>
 </body>
 
 </html>

@@ -264,19 +264,19 @@
     background: #2b2b2b;
 }
 
-/* Mockup images - pastel backgrounds */
+/* Mockup images - light grey background */
 .project-image.full.mockup {
-    background: #e8f0e8; /* soft green */
+    background: #f0f0f0;
 }
 
-/* Purple background */
+/* Purple background - now light grey */
 .project-image.full.purple {
-    background: rgb(86, 79, 143);
+    background: #f0f0f0;
 }
 
-/* Green background */
+/* Green background - now light grey */
 .project-image.full.green {
-    background: rgb(79, 147, 144);
+    background: #f0f0f0;
 }
 
 /* Image grid (2-up) */
@@ -321,23 +321,23 @@
     background: #f0f0f0;
 }
 
-/* Grid with mockup class - pastel */
+/* Grid with mockup class - light grey */
 .project-image-grid.mockup .project-image {
-    background: #f0e8f0; /* soft lavender */
+    background: #f0f0f0;
 }
 
-/* Grid with green class */
+/* Grid with green class - now light grey */
 .project-image-grid.green .project-image {
-    background: rgb(79, 147, 144);
+    background: #f0f0f0;
 }
 
-/* Specific ATC colors */
+/* Specific ATC colors - now light grey */
 .project-image.atc-1 {
-    background: rgb(86, 79, 143);
+    background: #f0f0f0;
 }
 
 .project-image.atc-2 {
-    background: rgb(79, 147, 144);
+    background: #f0f0f0;
 }
 
 /* Stats inline */
