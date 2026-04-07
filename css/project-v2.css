@@ -121,6 +121,38 @@
     padding: 0 24px 64px;
 }
 
+/* Compact variant: more top gap, removes bottom padding for use before a project-text section */
+.project-overview.compact {
+    margin-top: 128px;
+    padding-bottom: 0;
+    margin-bottom: -56px;
+}
+
+.project-overview.compact .project-overview-text {
+    font-size: 28px;
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+}
+
+/* Image with caption */
+.project-image-captioned {
+    margin: 4px 12px;
+}
+
+.project-image-captioned img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.project-image-caption {
+    font-family: "Geist Mono", monospace;
+    font-size: 14px;
+    color: #000;
+    margin-top: 10px;
+    padding: 0 12px;
+}
+
 .project-overview-text {
     max-width: 600px;
     color: rgb(50, 64, 79);
@@ -262,6 +294,12 @@
 /* Process images - dark background */
 .project-image.full.process {
     background: #2b2b2b;
+}
+
+/* Dot-grid background (designer notebook style) */
+.project-image.full.dotted {
+    background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
+    background-size: 18px 18px;
 }
 
 /* Mockup images - light grey background */
